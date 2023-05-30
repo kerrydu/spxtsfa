@@ -1,0 +1,122 @@
+
+\section{Introduction}\label{sec_intro}
+%[background]
+
+
+Producers might fail in optimizing their production activities, causing deviation from the maximum output or the minimum cost. Economic researchers proposed the concept of technical efficiency, which measures how well a producer is utilizing its resources to produce goods or services. A technically efficient organization makes the maximum outputs given the amount of inputs or uses the minimum amount of inputs to produce a given level of output. On the contrary, technically inefficient organization produce fewer outputs given the same inputs or uses more inputs than necessary to produce the same output. Technical efficiency is important because it allows organizations or economies to achieve their goals with the least amount of resources possible, which can lead to cost savings and increased profitability. 
+
+\cite{aignerFormulationEstimationStochastic1977} and \cite{meeusen1977efficiency} introduced stochastic frontier models for evaluating technical efficiency. The essential concept behind these models is to divide the observed output of a production process into two components, namely the "frontier" output, signifying the maximum feasible output, given the inputs utilized in the production process, and the "residual" output, denoting the production process's inefficiency. Following these initial works, stochastic frontier models gained extensive use as a tool for scrutinizing productivity and efficiency. 
+
+Methodologically,econometricians have expanded the horizons of stochastic frontier models in various directions. To name a few, \cite{battese1995model} incorporated the determinants of inefficiency. \cite{wang2003stochastic} developed the stochastic frontier model with scaling properties to capture the shape of the distribution of inefficiency. \cite{greene2005fixed} extended the stochastic models with the random effects and the “true” fixed effects. \cite{belotti2018consistent}, \cite{chen2014consistent}, and \cite{ wang2010estimating} circumvented the ‘incidental parameters problem’’ in the fixed effects stochastic frontier model through model transformation. \cite{karakaplan2017handling} developed an endogenous stochastic frontier model to control for the endogeneity in the frontier or inefficiency. 
+
+
+In recent years, stochastic frontier models have undergone further extension to account for spatial dependence and spatial spillover effects. \cite{glass2016spatial} constructed a spatial Durbin stochastic model considering both global and local spatial dependence. \cite{kutluSpatialStochasticFrontier2020} proposed a spatial stochastic frontier model with endogenous frontier and environmental variables. \cite{glass2016spatial} and \cite{kutluSpatialStochasticFrontier2020} combine the concepts of spatial econometrics and stochastic frontier analysis by including the spatial lag of the dependent variable. On the other hand, \cite{orea2019new} developed a new stochastic frontier model with spatial correlation in both noise and inefficiency terms. \cite{galli2022spatial} integrated the two different modeling ideas to specify four different sources of spatial dependence  fully. 
+
+
+Extending the stochastic frontier models to account for spatial dependence and spillover effects not only allows getting more accurate inefficiency scores \citep{orea2018spatial} but also examining relevant economic issues that a non-spatial stochastic frontier model tends to overlook. In microdata applications, the addition of a spatial or cross-sectional correlation in the frontier can be used to test whether the firm controls all the inputs and hence the production/cost function can be viewed as a purely deterministic (engineering) process \citep{druska2004generalized}. A model with cross-sectional correlation in the inefficiency term is useful where some firms benefit from best practices implemented in adjacent firms due to, for instance, agglomeration economies, knowledge spillovers, technology diffusion or R\&D spillovers. This could especially be the case if (local) firms belong to communitarian networks (e.g. cooperatives) or common technicians (consultants) are advising all local firms. 
+
+
+As \cite{orea2019new} point out, the spatial stochastic frontier model can be implemented using macro-level data, e.g. data of countries, regions or industries. They state that abundant evidence of important feedback processes between neighboring or non-distant regions might justify the use of SAR and Durbin frontier functions. The spatial weight matrix specification commonly adopted in regional economics is based on geographical distance. \cite{liu2023industry} state that the mode of production in the world economy is characterized by the division of global value chains (GVCs) and, hence, the spatial weights matrix should be constructed using the economic distance between industries within/across national economies. In this case, the spatial SAR and Durbin frontier functions allow the examination of the diffusion of knowledge and technology among the participants in the international production network. It is also makes sense to estimate a SF model with cross-sectional correlation in the inefficiency term using macro-level data. In this case, the existence of spatially-correlated inefficiency terms likely captures barriers and distortions to the efficient allocation of resources across firms within a region (industry) that are common to several regions (industries), such as regulation, labor market trends or common institutions \citep{orea2023industry}.  
+
+
+With the increasing demand in the last decades to analyze technical efficiency, Stata provides official commands frontier and xtfrontier for cross-sectional and panel stochastic model estimation, respectively. \cite{belotti2013stochastic} developed sfcross and sfpanel commands accommodating more different distribution assumptions and allowing fixed-effect and random-effect models with the consideration of heteroscedasticity. \cite{karakaplan2017fitting} introduced the sfkk command for estimating endogenous stochastic frontier models. \cite{mustafaugurkarakaplan2018xtsfkk} supplemented the xtsfkk command for fitting the endogenous panel stochastic frontier model. \cite{kumbhakarpractitioner} provides a practitioner’s guide to stochastic frontier analysis with a suite of Stata commands (including sfmodel, sfpan, sf\_fixeff, and sfprim).
+ In this article, we introduce spxtsfa, a new command for fitting spatial stochastic frontier models in the style of \cite{orea2019new} and \cite{galli2022spatial}.  The proposed spxtsfa command not only allows capturing spatial spillovers but also other cross-sectional effects that might be caused by non-spatial factors (e.g., the regulation environment).  In practice, the spxtsfa command can be useful to capture a kind of behavioral correlation, for instance when firms tend to “keep an eye” on the decisions of other peer firms trying to overcome the limitations caused by the lack of information or they simply emulate each other.  
+
+
+The remainder of this article unfolds as follows: Section 2 provides a brief description of the models in \cite{orea2019new} and \cite{galli2022spatial}; Section 3 explain the syntax and options of spxtsfa; Section 4 and 5 present simulated data examples to illustrate the usage of the command; and section 6 concludes the article.
+
+
+\section{The model}\label{sec_method}
+%[intro]
+In this section, we briefly describe the spatial stochastic frontier models developed by \cite{orea2019new} and \cite{galli2022spatial}. The exposition here is only introductory. Please refer to the cited papers for more technical details.  
+
+Based on the transposed version of \cite{wang2010estimating} model, \cite{orea2019new}  proposed a spatial stochastic frontier model which accommodates spatially-correlated inefficiency and noise terms. The model is formulated as in Eqs.\eqref{eq1}-\eqref{eq3}, for $i=1,...,N$ and $t=1,..,T$:
+
+\begin{equation}\label{eq1}
+ Y_{it} = X_{it}'\beta + \tilde{v}_{it}-s\tilde{u}_{it}
+\end{equation}
+
+\begin{equation}\label{eq2}
+	\tilde{v}_{it} =v_{it}+ \gamma W_{i}^{vt}\tilde{v}_{.t} 
+\end{equation}
+
+\begin{equation}\label{eq3}
+	\tilde{u}_{it} =u_{it}+ \tau W_{i}^{ut}\tilde{u}_{.t} 
+\end{equation}
+
+ Eq.\eqref{eq1}  describes the stochastic frontier function where $Y_{it}$ is the dependent variable and $X_{it}$ is a $k \times 1$ vector of variables shaping the frontier; $s=1$ for the production function and  $s=-1$ for the cost function; $\tilde{v}_{it}$ and $\tilde{u}_{it}$ represent  idiosyncratic noise and inefficiency, respectively. In  Eqs.\eqref{eq2} and \eqref{eq3}, $W_{i}^{vt}=(W_{i1}^{vt},...,W_{iN}^{vt})$ and $W_{i}^{vt}=(W_{i1}^{vt},...,W_{iN}^{vt})$ are two known $1 \times N$ cross-sectional weight vectors  depicting the structure of the  cross-sectional relationship for idiosyncratic noise and inefficiency terms, respectively; $\tilde{v}_{.t}=(\tilde{v}_{1t},...,\tilde{v}_{Nt})' $ and $\tilde{u}_{.t}=(\tilde{u}_{1t},...,\tilde{u}_{Nt})'$; $v_{it}$  is a random variable following the distribution $N(0,\sigma_v^2)$ and $u_{it}=h(Z_{it}'\delta)u_t^*$. $h(Z_{it}'\delta)$ is the scaling function where $Z_{it}$ is a $l \times 1$ vector of variables affecting individuals' inefficiency  and $u_t^*$ is a non-negative random variable following the distribution $N^+(0,\sigma_{u}^2)$.  Using matrix notation, we can rewrite Eqs.\eqref{eq2} and \eqref{eq3} as
+ 
+ \begin{equation}\label{eq2b}
+ 	\tilde{v}_{.t} =(I_N-\gamma W^{vt})^{-1}v_{.t} 
+ \end{equation}
+ 
+ \begin{equation}\label{eq3b}
+ 		\tilde{u}_{.t} =(I_N-\tau W^{ut})^{-1}h(Z_{.t}\delta)u_t^* = \tilde{h}_{.t}u_t^*
+ \end{equation}
+ where $Z_{.t}=(Z_{1t},...,Z_{Nt})'$;$\tilde{h}_{.t}=(I_N-\tau W^{ut})^{-1}h(Z_{.t}\delta)$.
+ 
+  The above model captures the spatial correlation of  the random error and inefficiency terms with the spatial autoregressive (SAR) process \footnote{\cite{orea2019new} also considered a specification of the spatial moving average process.}.  Referring to \cite{wang2010estimating}, we can obtain the following log-likelihood function for each period $t$:
+  \begin{equation}\label{eq5}
+ 	\begin{aligned}
+ 		\ln L_{t}= & -\frac{N}{2} \ln (2 \pi)-\frac{1}{2} \ln |\Pi|-\frac{1}{2} \tilde{\varepsilon}_{.t} \Pi^{-1} \tilde{\varepsilon}_{.t} \\
+ 		& +\frac{1}{2}\left(\frac{\mu_{*}^{2}}{\sigma_{*}^{2}}\right)+\ln \left[\sigma_{*} \Phi\left(\frac{\mu_{*}}{\sigma_{*}}\right)\right]-\ln \left(\frac{1}{2}\sigma_{u} \right)
+ 	\end{aligned}
+ \end{equation}
+where $\Pi=\sigma_v^2(I_N-\rho W^{yt})^{-1}[(I_N-\rho W^{yt})^{-1}]'$; $ \tilde{\varepsilon}_{.t} = ( \tilde{\varepsilon}_{1t},..., \tilde{\varepsilon}_{Nt})', \tilde{\varepsilon}_{it}=s(Y_{it}-X_{it}' \beta)$, and 
+\begin{equation}
+	\mu_*  =\frac{-\tilde{\varepsilon}_{.t}^{\prime} \Pi^{-1} \tilde{h}_{.t}}{\tilde{h}_{.t}' \Pi^{-1} \tilde{h}_{.t}+1 / \sigma_u^2}
+\end{equation}
+\begin{equation}
+	\sigma_*^2  =\frac{1}{\tilde{h}_{.t}^{\prime} \Pi^{-1} \tilde{h}_{.t}+1 / \sigma_u^2}
+\end{equation}
+
+ 
+\cite{galli2022spatial} further incorporated the spatial lags of the dependent variable and the input variables into \cite{orea2019new} model, which additionally measures global and local spatial spillovers affecting the frontier function.  The model is expressed as
+\begin{equation}\label{gallimodel}
+	Y_{it} = \rho W_{i}^{yt}Y_{.t}+X_{it}'\beta+ W_{i}^{xt}X_{.t} \theta + \tilde{v}_{it}+s\tilde{u}_{it}
+\end{equation}
+where $W_{i}^{yt}=(W_{i1}^{yt},...,W_{iN}^{yt})$ and $W_{i}^{xt}=(W_{i1}^{xt},...,W_{iN}^{xt})$ are two known $1 \times N$ cross-sectional weight vectors \footnote{We index $W_{i}^{yt}$, $W_{i}^{xt}$, $W_{i}^{ut}$, and $W_{i}^{vt}$ with superscript $yt$, $xt$, $ut$, and $vt$, respectively. This indicates the spatial weight matrix can be time-varying and different across various spatial components}; $Y_{.t} = (Y_{1t},..., Y_{Nt})'$; $X_{.t} = (X_{1t},..., X_{Nt})'$.  This model gives rise to the following log-likelihood function for each period $t$: 
+
+  \begin{equation}\label{gallilik}
+	\begin{aligned}
+		\ln L_{t}= & ln|I_N - \rho W^{yt}|-\frac{N}{2} \ln (2 \pi)-\frac{1}{2} \ln |\Pi|-\frac{1}{2} \tilde{\varepsilon}_{.t} \Pi^{-1} \tilde{\varepsilon}_{.t} \\
+		& +\frac{1}{2}\left(\frac{\mu_{*}^{2}}{\sigma_{*}^{2}}\right)+\ln \left[\sigma_{*} \Phi\left(\frac{\mu_{*}}{\sigma_{*}}\right)\right]-\ln \left(\frac{1}{2}\sigma_{u} \right)
+	\end{aligned}
+\end{equation}
+where $ \tilde{\varepsilon}_{.t} = ( \tilde{\varepsilon}_{1t},..., \tilde{\varepsilon}_{Nt})', \tilde{\varepsilon}_{it}=s(Y_{it}-X_{it}' \beta - \rho W_{i}^{yt}Y_{.t} -W_{i}^{xt}X_{.t} \theta)$. 
+
+Summing the time-specific log-likelihood  functions over all periods yields the overall likelihood function for the whole sample, i.e., $lnL=\sum_{t=1}^TlnL_{t}$. Then, numerically maximize the overall log-likelihood function to obtain consistent estimates of the parameters in the above models.  Specifically, we use Stata {\tt ml model} routine with the {\tt method-d0} evaluator to program the {\tt spxtsfa} command. Following \cite{gude2018heterogeneous}, we parameterize $\rho$, $\gamma$, and $\tau$ as Eq.\eqref{para} to ensure the standard regularity condition for the spatial autoregressive models.
+\begin{equation}\label{para}
+\begin{aligned}
+	& \eta=\left(\frac{1}{r_{\text {min }}}\right)(1-p)+\left(\frac{1}{r_{\max }}\right) p \\
+	& 0 \leq p=\frac{\exp \left(\delta_0\right)}{1+\exp \left(\delta_0\right)} \leq 1
+\end{aligned}
+\end{equation}
+where $\eta$ stands for one of $\rho$, $\gamma$, and $\tau$;  $r_{\text {min }}$ and $r_{\text {max}}$ are respectively the minimum and maximum eigenvalues of the corresponding spatial weight matrix. 
+
+In summary, \cite{galli2022spatial} provided a fully comprehensive specification of four different types of spatial dependence: global spillovers of dependent variable $Y_{it}$, local spillovers of input variables $X_{it}$, cross-sectional correlation of idiosyncratic noise  $v_{it}$ and inefficiency $u_{it}$. We term this full model "$yxuv-SAR$." Some restrictions can be imposed on the specific parameters to generate the following  models (summarized in Table \ref{Tab01}), which can be estimated by the {\tt spxtsfa} command.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[htbp]
+	%\scriptsize
+	
+	\centering
+	
+	\caption{Specific  models with restricted parameters}
+	
+	\label{Tab01}
+	\begin{tabular}{@{}llllllllllll@{}}
+		\toprule
+		 & $yuv$ & $xuv$ & $yv$ & $yu$ & $y$ & $xuv$ & $xv$ & $xu$ & $uv$ & $u$ & $v$  \\ \midrule
+		$\rho$   &     & 0   &    &    &   & 0   & 0  & 0  & 0  & 0 & 0 \\
+		$\theta$ & 0   &     & 0  & 0  & 0 &     &    &    & 0  & 0 & 0 \\
+		$\gamma$ &     &     &    & 0  & 0 &     &    & 0  &    & 0 &   \\
+		$\tau$   &     &     & 0  &    & 0 &     & 0  &    &    &   & 0 \\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\endinput

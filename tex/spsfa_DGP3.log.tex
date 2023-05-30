@@ -1,0 +1,50 @@
+. use spxtsfa_DGP3.dta
+{\smallskip}
+. xtset id t 
+{\smallskip}
+Panel variable: id (strongly balanced)
+ Time variable: t, 1 to 10
+         Delta: 1 unit
+{\smallskip}
+. * importing spatial weight matrices from spxtsfa_wmat2.mmat
+. mata mata matuse spxtsfa_wmat2.mmat,replace
+(loading w1[300,300], w10[300,300], w2[300,300], w3[300,300], w4[300,300], 
+w5[300,300], w6[300,300], w7[300,300], w8[300,300], w9[300,300])
+{\smallskip}
+. * fitting the model
+. local w w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+{\smallskip}
+. mat b = (1,1,1,1,-1,-1,0.5,0.5)
+{\smallskip}
+. spxtsfa y x, uhet(z) wu(w2,mata) wv(w1,mata) wxvars(x) ///
+>              wx(`w',mata) cost init(b) genwxvars nolog
+{\smallskip}
+Spatial frontier model(xuv-SAR)                       Number of obs =    3,000
+                                                      Wald chi2(2)  = 57430.99
+Log likelihood = -872.06794                           Prob > chi2   =   0.0000
+{\smallskip}
+\HLI{13}{\TOPT}\HLI{64}
+           y {\VBAR} Coefficient  Std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+frontier     {\VBAR}
+           x {\VBAR}   1.995734   .0083857   237.99   0.000     1.979298    2.012169
+         W_x {\VBAR}   .5065867   .0221169    22.90   0.000     .4632384     .549935
+       _cons {\VBAR}   .9916378   .0126993    78.09   0.000     .9667476    1.016528
+\HLI{13}{\PLUS}\HLI{64}
+uhet         {\VBAR}
+           z {\VBAR}    1.99976   .0010759  1858.74   0.000     1.997652    2.001869
+\HLI{13}{\PLUS}\HLI{64}
+ /lnsigma2_u {\VBAR}  -1.699017   .4472788    -3.80   0.000    -2.575668    -.822367
+ /lnsigma2_v {\VBAR}  -1.615448   .0260424   -62.03   0.000     -1.66649   -1.564406
+\HLI{13}{\PLUS}\HLI{64}
+Wu           {\VBAR}
+       _cons {\VBAR}   .6214083   .0008566   725.44   0.000     .6197294    .6230872
+\HLI{13}{\PLUS}\HLI{64}
+Wv           {\VBAR}
+       _cons {\VBAR}   .6001869   .0595911    10.07   0.000     .4833905    .7169833
+\HLI{13}{\PLUS}\HLI{64}
+    sigma2_u {\VBAR}   .1828631   .0817908     2.24   0.025      .076103    .4393904
+    sigma2_v {\VBAR}   .1988017   .0051773    38.40   0.000      .188909    .2092123
+         tau {\VBAR}   .3010474   .0003894   773.04   0.000      .300284    .3018105
+       gamma {\VBAR}    .291369   .0272628    10.69   0.000     .2370726    .3438504
+\HLI{13}{\BOTT}\HLI{64}

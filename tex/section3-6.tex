@@ -1,0 +1,176 @@
+
+\section{The spxtsfa command}
+{\tt spxtsfa} estimates spatial stochastic frontier models in the style of \cite{orea2019new} and \cite{galli2022spatial}.
+
+\subsection{Syntax}
+
+Estimation syntax
+
+\begin{stsyntax}
+	spxtsfa\
+    \depvar\
+    \optindepvars\,
+	uhet(\varlist)
+	\optional{
+		noconstant
+		cost
+		wy({\it wyspec})
+		wx({\it wxspec})
+		wu({\it wuspec})
+		wv({\it wvspec})
+		normalize({\it norm\_method})
+		wxvars(\varlist)
+		\underbar{init}ial({\it matname})
+		mlmodel({\it model\_options})
+		mlsearch({\it search\_options})
+		mlplot
+		mlmax({\it maximize\_options})
+		nolog
+		mldisplay({\it display\_options})
+		level(\num)
+		lndetmc({\it numlist})
+		te(\newvarname)
+		genwxvars
+		constraints(\it constraints)
+	}
+\end{stsyntax}
+
+
+
+\noindent Version syntax
+
+\begin{stsyntax}
+	spxtsfa\,
+	version
+\end{stsyntax}
+
+
+\noindent Replay syntax
+
+\begin{stsyntax}
+	spxtsfa\
+	\optional{, level(\num) }
+\end{stsyntax}
+
+\subsection{Options}
+
+\hangpara
+{\tt uhet(\varlist)} specifies explanatory variables for technical inefficiency variance  function depending on a linear combination of \varlist. It is required.
+
+\hangpara
+{\tt noconstant} suppresses suppress constant term.
+
+\hangpara
+{\tt cost} specifies the frontier as a cost function. By default, the production function is assumed.
+
+\hangpara
+{\tt wy({\it wyspec})} specifies the spatial weight matrix for lagged dependent variable. The expression is wy($W_1$ $ [W_2 ... W_T]$ [,{\it mata array}]).  By default, the weight matrices are {\tt Sp} objects. mata declares weight matrices are mata matrices. If one weight matrix is specified, it assumes a time-constant weight matrix. For time-varying cases, $T$ weight matrices should be specified in time order. Alternatively, using array to declare weight matrices are stored in an array.  If only one matrix is stored in the specified array, the time-constant weight matrix is assumed.  Otherwise, the keys of the array specify time information, and the values store time-specific weight matrices.
+
+\hangpara
+{\tt wx({\it wxspec})} specifies the spatial weight matrix for lagged independent variable. The expression is the same as {\tt wy({\it wyspec})}.
+
+\hangpara
+{\tt wu({\it wuspec})} specifies the spatial weight matrix for lagged independent variable. The expression is the same as {\tt wy({\it wyspec})}.
+
+\hangpara
+{\tt wv({\it wvspec})} specifies the spatial weight matrix for lagged independent variable. The expression is the same as {\tt wy({\it wyspec})}.
+
+\hangpara
+{\tt normalize({\it norm\_method})} specifies  one of the four available normalization techniques: row, col, minmax, and spectral.
+
+\hangpara
+{\tt wxvars(\varlist)} specifies spatially lagged independent variables.
+
+
+\hangpara
+{\tt \underbar{init}ial({\it matname}))} specifies  the initial values of the estimated parameters with matrix {\it matname}.
+
+\hangpara
+{\tt mlmodel({\it model\_options})} specifies the  {\tt ml model} options.
+
+\hangpara
+{\tt mlsearch({\it search\_options})} specifies the  {\tt ml search} options.
+
+\hangpara
+{\tt mlplot} specifies using  {\tt ml plot} to search better initial values of spatial dependence parameters.
+
+\hangpara
+{\tt mlmax({\it maximize\_options})} specifies the  {\tt ml maximize} options.
+
+\hangpara
+{\tt nolog} suppresses the display of the criterion function iteration log.
+
+\hangpara
+{\tt mldisplay({\it display\_options})} specifies the  {\tt ml display} options.
+
+\hangpara
+{\tt level(\num)} sets confidence level; default is level(95).
+
+\hangpara
+{\tt lndetmc({\it numlist})} uses the trick of \cite{BARRY199941} to solve the inverse of $(I_N - \rho W)$.  The order of {\it numlist} is iterations, maxorder. {\tt lndetmc(50 100)} specifies that the number of iterations is 50 and the maximum order of moments is 100. 
+
+\hangpara
+{\tt genwxvars} generates the spatial Durbin terms. It is activated only when {\tt wxvars(\varlist)} is specified.
+
+\hangpara
+{\tt constraints(\it constraints)}  specifies specified linear constraints for the estimated model. 
+
+
+\subsection{Dependency of spxtsfa}
+{\tt spxtsfa} depends on the {\it moremata }package. If not already installed, you can install it by typing ssc install moremata.
+
+
+%\section{Examples with simulated data}\label{sec_example}
+\section{Examples}\label{sec_example}
+In this section, we use simulated data to  exemplify the use of the $spxtsfa$ command.  Referring to , we first consider the $yxuv-SAR$ model specified by the following data-generating process (DGP 1) with $i=1,...,300$ and $t=1,..,20$,
+
+\begin{equation}\label{dgp1}
+	Y_{it} = 0.3W_{i}Y_{.t}+2X_{it}+ 0.3W_{i}X_{.t}  + \tilde{v}_{it}-\tilde{u}_{it}
+\end{equation}
+where $\tilde{v}_{it}$ and $\tilde{u}_{it}$ are defined as in Eqs.\eqref{eq2} and \eqref{eq3} with $\gamma=0.3$, $\tau=0.3$, $\delta=2$, $\sigma_{u}^2=0.2$ and $\sigma_v^2 =0.2$. All the spatial matrices for the four spatial components are the same and time-invariant, created from a binary contiguity spatial weight matrix. We generate the exogenous variables $X_{it}$ and $Z_{it}$ from the standard normal distribution, respectively. With the sample generated by DGP 1, we can fit the model in the following syntax.
+
+\begin{stlog}
+	\input{spsfa_DGP1.log.tex}
+\end{stlog}
+
+The output shows that the command fits seven equations with {\tt ml model}. The frontier equation has two explanatory variables $X_it$ and $W_iX_{.t}$. The scaling function uhet() has one explanatory variable $Z_{it}$.  Two equations ( /lnsigma2\_u and /lnsigma2\_v) are constructed for the variance parameters $\sigma_u^2$ and $\sigma_v^2$ which are transformed by the function $exp(\cdot)$. Three Equations (Wy, Wu, and Wv) handle the spatial dependence parameters $\rho$, $\tau$, and $\gamma$, which are parameterized as Eq.\eqref{para}. We directly include the spatial Durbin term $W_iX_{.t}$ in the frontier equation such that we do not need to fit a separate equation.  The bottom of the table reports the transformed parameters in the original metric.
+
+We consider the restricted model $uv-SAR$ with time-varying spatial weight matrices as the second example. The DGP 2 is described as
+
+\begin{equation}\label{dgp2}
+	Y_{it} = 1+2X_{it} + \tilde{v}_{it}-\tilde{u}_{it}, i=1,..,300; t=1,..,10
+\end{equation}
+where the other parameters are set the same as the DGP 1 except for $W_{i}^{ut}=W_{i}^{vt}=W_{i}^t$. The following syntax estimates the model alongside the results.
+
+\begin{stlog}
+	\input{spsfa_DGP2.log.tex}
+\end{stlog}
+
+In the second example, we use option {\tt te(efficiency)} to store the estimated efficiency score in a new variable {\tt efficiency}. Finally, we consider another restricted model $xuv-SAR$ with different spatial weight matrices, one of which is time-varying, and the others are time-constant.  The model is described as DGP 3:
+\begin{equation}\label{dgp3}
+	Y_{it} = 1+2X_{it}+ 0.5W_{i}^{xt} + \tilde{v}_{it}+\tilde{u}_{it}, i=1,..,300; t=1,..,10
+\end{equation}
+where the other parameters are set the same as the DGP 1 except for $W_{i}^{ut}=W_{i}^u$ and $W_{i}^{vt}=W_{i}^v$.  Different from DGP 1 and DGP 2, which set the production function frontier, DGP 3 specifies a cost function. The estimation of the model is shown as follows.
+
+\begin{stlog}
+	\input{spsfa_DGP3.log.tex}
+\end{stlog}
+
+In the third example, we use {\tt cost} option to specify the type of frontier.  The matrix {\tt b} is used as the initial value for the maximum likelihood estimation. The likelihood function of spatial stochastic frontier models is complicated, and generally difficult to obtain the optimal global solutions. Thus, good initial values would be helpful for fitting spatial stochastic models. Practitioners might fit the non-spatial stochastic models using  {\tt fronteir} and {\tt sfpanel} commands to obtain the initial values of the parameters involved in the frontier and the scaling function and then use the {\tt mlplot} option to search initial values for spatially-correlated parameters.
+ 
+%\section{Empirical applications}
+
+\section{Conclusion}\label{sec_conclusion}
+
+Geospatial units are not isolated or separated but connected. For example, the economic trade, social activities, and cultural exchange between different regions affect each other. Such spatial interdependence challenges the traditional econometric methods, which generally assume cross-sectional independence. Spatial econometrics is developed to handle spatial correlation. Recently, researchers combined stochastic frontier models with spatial econometrics to account for various types of spatial effects in the field of efficiency and productivity analysis \citep{galli2022spatial,orea2019new}.  This article presented a community-contributed command for fitting spatial stochastic frontier models with different sources of spatial dependence. We hope the developed command can provide some convenience to practitioners and reduce the difficulty of model applications, thereby promoting sound empirical research. 
+%Finally, there are some limitations that should be duly noted. First, the spatial stochastic frontier models require prior information on the spatial weight matrices. Second, the distribution of the inefficiency is assumed to be half-normal. These settings might affect the estimated results.
+
+
+
+
+\section{Acknowledgments}
+Kerui Du thanks the financial support of the National Natural Science Foundation of China (72074184).  We are grateful to Federica Galli for his Matlab codes, Federico Belotti, Silvio Daidone, Giuseppe Ilardi and Vincenzo Atella for the sfcross/sfpanel package, Mustafa U. Karakaplan for the sfkk package, and Jan Ditzen, William Grieser and Morad Zekhnini for the nwxtregress package which inspired our design of the {\tt spxtsfa} command. 
+
+
+
+\endinput

@@ -1,0 +1,1118 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.16)  30 MAY 2023 18:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**manuscript.tex
+(./manuscript.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-05>
+(d:/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(d:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(d:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(d:/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(d:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+))
+(d:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(d:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(d:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(d:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (./sj.sty
+Package: sj 2003/12/10 v1.22 Stata Journal package
+
+(d:/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (./chapterbib.sty
+\c@inputfile=\count271
+Package: chapterbib 2010/09/18  v 1.17
+)
+\c@chapter=\count272
+\sj@tagfile=\write3
+\openout3 = `manuscript.tag'.
+
+\columnpicbox=\box53
+\columnpichght=\count273
+\sj@len@max@title=\skip52
+\sj@len@a=\skip53
+\sj@len@b=\skip54
+\sj@pp@file=\write4
+\c@sj@pp@thispage=\count274
+)
+(d:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(d:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(d:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(d:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(d:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(d:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(d:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(d:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(d:/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(d:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(d:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(d:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(d:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(d:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(d:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(./kbordermatrix.sty
+Package: kbordermatrix 2011/09/21 Bordered matrix with brackets
+\kbcolsep=\skip55
+\kbrowsep=\skip56
+\br@kwd=\skip57
+\k@bordht=\skip58
+)
+(d:/texlive/2022/texmf-dist/tex/latex/blkarray/blkarray.sty
+Package: blkarray 2015/02/27 v0.07 Block array (dpc)
+\c@BAenumi=\count275
+\BA@col=\count276
+\BA@block@cnt=\count277
+\BA@final@box=\box54
+\BA@first@box=\box55
+\BA@colsep=\dimen150
+\BA@ftn=\toks22
+\BAextrarowheight=\dimen151
+\BAextraheightafterhline=\dimen152
+\BAarrayrulewidth=\dimen153
+\BAdoublerulesep=\dimen154
+\BAfootskip=\dimen155
+\BA@dashbox=\box56
+\BA@ddashbox=\box57
+)
+(d:/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen156
+\lightrulewidth=\dimen157
+\cmidrulewidth=\dimen158
+\belowrulesep=\dimen159
+\belowbottomsep=\dimen160
+\aboverulesep=\dimen161
+\abovetopsep=\dimen162
+\cmidrulesep=\dimen163
+\cmidrulekern=\dimen164
+\defaultaddspace=\dimen165
+\@cmidla=\count278
+\@cmidlb=\count279
+\@aboverulesep=\dimen166
+\@belowrulesep=\dimen167
+\@thisruleclass=\count280
+\@lastruleclass=\count281
+\@thisrulewidth=\dimen168
+)
+(d:/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip59
+\multirow@cntb=\count282
+\multirow@dima=\skip60
+\bigstrutjot=\dimen169
+)
+(d:/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
+
+(d:/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(d:/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count283
+)
+\@linkdim=\dimen170
+\Hy@linkcounter=\count284
+\Hy@pagecounter=\count285
+
+(d:/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(d:/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(d:/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count286
+
+(d:/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4408.
+\c@Hy@tempcnt=\count287
+
+(d:/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4746.
+\XeTeXLinkMargin=\dimen171
+
+(d:/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(d:/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count288
+\Field@Width=\dimen172
+\Fld@charsize=\dimen173
+Package hyperref Info: Hyper figures OFF on input line 6024.
+Package hyperref Info: Link nesting OFF on input line 6029.
+Package hyperref Info: Hyper index ON on input line 6032.
+Package hyperref Info: backreferencing OFF on input line 6039.
+Package hyperref Info: Link coloring OFF on input line 6044.
+Package hyperref Info: Link coloring with OCG OFF on input line 6049.
+Package hyperref Info: PDF/A mode OFF on input line 6054.
+
+(d:/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count289
+\c@Item=\count290
+\c@Hfootnote=\count291
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(d:/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-06-20 v7.00s Hyperref driver for pdfTeX
+
+(d:/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count292
+\c@bookmark@seq@number=\count293
+
+(d:/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(d:/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip61
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 22.
+
+(./stata.sty
+Package: stata 2013/10/23 v1.34 LaTeX package for Stata code
+ (d:/texlive/2022/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 2021/01/29 v2.0g defines alltt environment
+)
+(d:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count294
+\calc@Bcount=\count295
+\calc@Adimen=\dimen174
+\calc@Bdimen=\dimen175
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count296
+\calc@Cskip=\skip64
+)
+\st@box=\box58
+\st@box@wd=\dimen176
+\st@box@ht=\dimen177
+\st@box@dp=\dimen178
+\stsyndent=\skip65
+\streswidth=\skip66
+\st@parindent=\skip67
+\stexamplehskip=\skip68
+\sttechhskip=\skip69
+\st@ttbox@box=\box59
+\st@ttbox@framesep=\dimen179
+\ttboxIndent=\dimen180
+\ttboxWd=\dimen181
+\st@ttbox@boxwd=\dimen182
+\st@box=\box60
+\st@emptywidth=\skip70
+\st@linesize=\skip71
+\st@maxdepth=\skip72
+\st@maxheight=\skip73
+\st@mbdepth=\skip74
+\st@mtdepth=\skip75
+\st@xheight=\skip76
+\st@xwidth=\skip77
+\st@N=\count297
+)
+(d:/texlive/2022/texmf-dist/tex/latex/shadow/shadow.sty
+Package: shadow 2003/02/19 v1.3 shadow boxes (M.O.)
+\txtwdth=\dimen183
+\sht=\dimen184
+\shw=\dimen185
+\shbox=\box61
+\sboxsep=\dimen186
+\sboxrule=\dimen187
+\sdim=\dimen188
+)
+(d:/texlive/2022/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+
+(d:/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+
+(d:/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 112.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
+
+(d:/texlive/2022/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks23
+\@arclen=\dimen189
+\@arcrad=\dimen190
+\pIIe@tempdima=\dimen191
+\pIIe@tempdimb=\dimen192
+\pIIe@tempdimc=\dimen193
+\pIIe@tempdimd=\dimen194
+\pIIe@tempdime=\dimen195
+\pIIe@tempdimf=\dimen196
+)
+(d:/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen197
+\ar@mcellbox=\box62
+\extrarowheight=\dimen198
+\NC@list=\toks24
+\extratabsurround=\skip78
+\backup@length=\skip79
+\ar@cellbox=\box63
+)
+\diagbox@boxa=\box64
+\diagbox@boxb=\box65
+\diagbox@boxm=\box66
+\diagbox@wd=\dimen199
+\diagbox@ht=\dimen256
+\diagbox@insepl=\dimen257
+\diagbox@insepr=\dimen258
+\diagbox@outsepl=\dimen259
+\diagbox@outsepr=\dimen260
+)
+(d:/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip80
+\bibsep=\skip81
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count298
+)
+(d:/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip82
+\subfigcapskip=\skip83
+\subfigcaptopadj=\dimen261
+\subfigbottomskip=\skip84
+\subfigcapmargin=\dimen262
+\subfiglabelskip=\skip85
+\c@subfigure=\count299
+\c@lofdepth=\count300
+\c@subtable=\count301
+\c@lotdepth=\count302
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(d:/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip86
+\subfig@bottom=\skip87
+)
+(d:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count303
+\float@exts=\toks25
+\float@box=\box67
+\@float@everytoks=\toks26
+\@floatcapt=\box68
+)
+(d:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-08-05 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count304
+\l__pdf_internal_box=\box69
+)
+(./manuscript.aux)
+\openout1 = `manuscript.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+
+(d:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count305
+\scratchdimen=\dimen263
+\scratchbox=\box70
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen264
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks28
+) (d:/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+
+(d:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(d:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+Package hyperref Info: Link coloring ON on input line 49.
+
+(./manuscript.out) (./manuscript.out)
+\@outlinefile=\write5
+\openout5 = `manuscript.out'.
+
+ (./body.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+
+
+(d:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+
+
+(d:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+New article: (chapter 1: dest notag1)
+Package sj Info: New article: (chapter 1: dest notag1) on input line 35.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cleaders' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hss' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hss' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hfill' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cleaders' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hss' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hss' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hfill' on input line 35.
+
+(./section1-2.tex [1
+
+
+
+{d:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (2.36176pt too wide) in paragraph at lines 22--24
+\OT1/cmr/m/n/10 ciency, Stata pro-vides of-fi-cial com-mands fron-tier and xtfr
+on-tier for cross-sectional
+ []
+
+[3] [4]) (./section3-6.tex [5] [6
+pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.69 \hangpara
+              ]
+Overfull \hbox (35.56659pt too wide) in paragraph at lines 112--114
+\OT1/cmtt/m/n/10 genwxvars \OT1/cmr/m/n/10 gen-er-ates the spa-tial Durbin term
+s. It is ac-ti-vated only when \OT1/cmtt/m/n/10 wxvars(\OT1/cmr/m/it/10 varlist
+\OT1/cmtt/m/n/10 )
+ []
+
+[7] (./spsfa_DGP1.log.tex
+Overfull \hbox (96.50601pt too wide) in paragraph at lines 14--14
+ []\OT1/cmtt/m/n/8 . spxtsfa y x, uhet(z) noconstant  wy(w1,mata) wx(w1,mata) w
+u(w1,mata) wv(w1,mata) wxvars(x) nolog[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 16--16
+ []\OT1/cmtt/m/n/8 Spatial frontier model(yxuv-SAR)                     Number 
+of obs =     6,000[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 17--17
+ []                                                     \OT1/cmtt/m/n/8 Wald ch
+i2(2)  = 118937.24[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 18--18
+ []\OT1/cmtt/m/n/8 Log likelihood = -1727.016                           Prob > 
+chi2   =    0.0000[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 20--20
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 21--21
+ []           \OT1/cmtt/m/n/8 y  | Coefficient  Std. err.      z    P>|z|     [
+95% conf. interval][] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 22--22
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 24--24
+ []           \OT1/cmtt/m/n/8 x  |   1.993915   .0065251   305.58   0.000     1
+.981126    2.006704[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 25--25
+ []         \OT1/cmtt/m/n/8 W_x  |   .4435823   .0373189    11.89   0.000     .
+3704386     .516726[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 26--26
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 28--28
+ []           \OT1/cmtt/m/n/8 z  |   2.000371   .0013412  1491.49   0.000     1
+.997742    2.002999[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 29--29
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 30--30
+ [] \OT1/cmtt/m/n/8 /lnsigma2_u  |  -2.098104   .3163094    -6.63   0.000    -2
+.718059   -1.478149[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 31--31
+ [] \OT1/cmtt/m/n/8 /lnsigma2_v  |  -1.637609    .018401   -89.00   0.000    -1
+.673674   -1.601544[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 32--32
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 34--34
+ []       \OT1/cmtt/m/n/8 _cons  |   .6605993   .0317043    20.84   0.000     .
+5984599    .7227386[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 35--35
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 37--37
+ []       \OT1/cmtt/m/n/8 _cons  |   .5806681   .0318346    18.24   0.000     .
+5182735    .6430627[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 38--38
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 40--40
+ []       \OT1/cmtt/m/n/8 _cons  |   .5745429    .051903    11.07   0.000     .
+4728148     .676271[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 41--41
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 42--42
+ []    \OT1/cmtt/m/n/8 sigma2_u  |   .1226888   .0388076     3.16   0.002     .
+0660027    .2280593[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 43--43
+ []    \OT1/cmtt/m/n/8 sigma2_v  |   .1944444    .003578    54.34   0.000     .
+1875567    .2015851[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 44--44
+ []         \OT1/cmtt/m/n/8 rho  |   .3187581   .0142397    22.39   0.000     .
+2905787    .3463849[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 45--45
+ []         \OT1/cmtt/m/n/8 tau  |    .282414    .014646    19.28   0.000     .
+2534626    .3108598[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 46--46
+ []       \OT1/cmtt/m/n/8 gamma  |   .2795936     .02392    11.69   0.000     .
+2320763    .3257792[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 47--47
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+) [8] (./spsfa_DGP2.log.tex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 17.
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 19--19
+ []\OT1/cmtt/m/n/8 Spatial frontier model(uv-SAR)                        Number
+ of obs =    3,000[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 20--20
+ []                                                      \OT1/cmtt/m/n/8 Wald c
+hi2(1)  = 43686.91[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 21--21
+ []\OT1/cmtt/m/n/8 Log likelihood = -1336.482                            Prob >
+ chi2   =   0.0000[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 23--23
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 24--24
+ []           \OT1/cmtt/m/n/8 y  | Coefficient  Std. err.      z    P>|z|     [
+95% conf. interval][] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 25--25
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 27--27
+ []           \OT1/cmtt/m/n/8 x  |   2.015288   .0096419   209.01   0.000      
+1.99639    2.034186[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 28--28
+ []       \OT1/cmtt/m/n/8 _cons  |   .9415143   .0160786    58.56   0.000     .
+9100008    .9730278[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 29--29
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 31--31
+ []           \OT1/cmtt/m/n/8 z  |   2.000242   .0020671   967.66   0.000      
+1.99619    2.004293[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 32--32
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 33--33
+ [] \OT1/cmtt/m/n/8 /lnsigma2_u  |  -2.006684   .4473506    -4.49   0.000    -2
+.883475   -1.129893[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 34--34
+ [] \OT1/cmtt/m/n/8 /lnsigma2_v  |  -1.300024   .0260099   -49.98   0.000    -1
+.351002   -1.249045[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 35--35
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 37--37
+ []       \OT1/cmtt/m/n/8 _cons  |    .582383   .0031549   184.59   0.000     .
+5761995    .5885666[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 38--38
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 40--40
+ []       \OT1/cmtt/m/n/8 _cons  |   .5374655   .0601775     8.93   0.000     .
+4195198    .6554113[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 41--41
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 42--42
+ []    \OT1/cmtt/m/n/8 sigma2_u  |   .1344337    .060139     2.24   0.025      
+ .05594    .3230678[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 43--43
+ []    \OT1/cmtt/m/n/8 sigma2_v  |   .2725253   .0070883    38.45   0.000     .
+2589806    .2867784[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 44--44
+ []         \OT1/cmtt/m/n/8 tau  |   .2832028   .0014508   195.21   0.000     .
+2803569    .2860438[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 45--45
+ []       \OT1/cmtt/m/n/8 gamma  |    .262419   .0280135     9.37   0.000      
+.206716    .3164261[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 46--46
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+) [9] (./spsfa_DGP3.log.tex
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 22--22
+ []\OT1/cmtt/m/n/8 Spatial frontier model(xuv-SAR)                       Number
+ of obs =    3,000[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 23--23
+ []                                                      \OT1/cmtt/m/n/8 Wald c
+hi2(2)  = 57430.99[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 24--24
+ []\OT1/cmtt/m/n/8 Log likelihood = -872.06794                           Prob >
+ chi2   =   0.0000[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 26--26
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 27--27
+ []           \OT1/cmtt/m/n/8 y  | Coefficient  Std. err.      z    P>|z|     [
+95% conf. interval][] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 28--28
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 30--30
+ []           \OT1/cmtt/m/n/8 x  |   1.995734   .0083857   237.99   0.000     1
+.979298    2.012169[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 31--31
+ []         \OT1/cmtt/m/n/8 W_x  |   .5065867   .0221169    22.90   0.000     .
+4632384     .549935[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 32--32
+ []       \OT1/cmtt/m/n/8 _cons  |   .9916378   .0126993    78.09   0.000     .
+9667476    1.016528[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 33--33
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 35--35
+ []           \OT1/cmtt/m/n/8 z  |    1.99976   .0010759  1858.74   0.000     1
+.997652    2.001869[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 36--36
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 37--37
+ [] \OT1/cmtt/m/n/8 /lnsigma2_u  |  -1.699017   .4472788    -3.80   0.000    -2
+.575668    -.822367[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 38--38
+ [] \OT1/cmtt/m/n/8 /lnsigma2_v  |  -1.615448   .0260424   -62.03   0.000     -
+1.66649   -1.564406[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 39--39
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 41--41
+ []       \OT1/cmtt/m/n/8 _cons  |   .6214083   .0008566   725.44   0.000     .
+6197294    .6230872[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 42--42
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 44--44
+ []       \OT1/cmtt/m/n/8 _cons  |   .6001869   .0595911    10.07   0.000     .
+4833905    .7169833[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 45--45
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 46--46
+ []    \OT1/cmtt/m/n/8 sigma2_u  |   .1828631   .0817908     2.24   0.025      
+.076103    .4393904[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 47--47
+ []    \OT1/cmtt/m/n/8 sigma2_v  |   .1988017   .0051773    38.40   0.000      
+.188909    .2092123[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 48--48
+ []         \OT1/cmtt/m/n/8 tau  |   .3010474   .0003894   773.04   0.000      
+.300284    .3018105[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 49--49
+ []       \OT1/cmtt/m/n/8 gamma  |    .291369   .0272628    10.69   0.000     .
+2370726    .3438504[] 
+ []
+
+
+Overfull \hbox (11.50479pt too wide) in paragraph at lines 50--50
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+) [10]) (./manuscript.bbl [11] [12]))
+\openout4 = `manuscript.pp1'.
+
+ [13] (./manuscript.aux)
+Package rerunfilecheck Info: File `manuscript.out' has not changed.
+(rerunfilecheck)             Checksum: CD6A5DAEFA226E5707B47E24BA40F134;530.
+ ) 
+Here is how much of TeX's memory you used:
+ 11671 strings out of 477678
+ 179986 string characters out of 5833467
+ 504530 words of memory out of 5000000
+ 30186 multiletter control sequences out of 15000+600000
+ 479349 words of font info for 65 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,12n,67p,1448b,624s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2022/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2022/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><d:/texlive/2022/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><d:/texlive/2022/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.
+pfb>
+Output written on manuscript.pdf (13 pages, 265131 bytes).
+PDF statistics:
+ 329 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+
