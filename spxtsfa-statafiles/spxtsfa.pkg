@@ -21,12 +21,12 @@ f distinct2.ado
 
 
 
-a spsfa_DGP1.dta 
-a  spsfa_DGP2.dta 
-a spsfa_DGP3.dta 
-a spxtsfa_wmat.mmat 
-a spxtsfa_wmat1.mmat 
-a spxtsfa_wmat2.mmat 
-a yuvexample.dta 
-a uvexample.dta 
-a yxexample.dta
+f spsfa_DGP1.dta 
+f  spsfa_DGP2.dta 
+f spsfa_DGP3.dta 
+f spxtsfa_wmat.mmat 
+f spxtsfa_wmat1.mmat 
+f spxtsfa_wmat2.mmat 
+f yuvexample.dta 
+f uvexample.dta 
+f yxexample.dta
