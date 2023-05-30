@@ -51,3 +51,32 @@ If you use this module, please cite the following papers:
 
 > Du, K., Orea, Luis and Álvarez, Inmaculada C. Fitting spatial stochastic frontier models in Stata, working paper, 2023.
 
+
+
+```
+@article{orea2018spatial,
+  title={A spatial stochastic frontier model with omitted variables: Electricity distribution in Norway},
+  author={Orea, Luis and {\'A}lvarez, Inmaculada C and Jamasb, Tooraj},
+  journal={The Energy Journal},
+  volume={39},
+  number={3},
+  year={2018},
+  publisher={International Association for Energy Economics}
+}  
+```
+
+> Orea, L., I. C.  Alvarez, and T. Jamasb. 2018. A spatial stochastic frontier  model with omitted variables: Electricity distribution in Norway. The Energy Journal 39(3) .
+
+ 
+
+```
+@article{orea2023industry,
+  title={The structural and productivity effects of infrastructure provision in developed and developing countries},
+  author = {Orea, Luis and {\'A}lvarez, Inmaculada C. and Servén, L.},
+  journal={in Parmeter, C. and Wang, H.J.  (Eds.). Essays in Honor of Subal Kumbhakar (Advances in Econometrics), Emerald Publishing Limited},
+  year={2023},
+  publisher={Wiley Online Library}
+}
+```
+
+> Orea, L., I. C. Alvarez, and L. Serven. 2023. The structural and productivity ´ effects of infrastructure provision in developed and developing countries. in Parmeter, C. and Wang, H.J. (Eds.). Essays in Honor of Subal Kumbhakar (Advances in Econometrics), Emerald Publishing Limited .  
