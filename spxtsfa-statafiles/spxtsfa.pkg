@@ -21,9 +21,9 @@ f distinct2.ado
 
 
 
-f spsfa_DGP1.dta 
-f  spsfa_DGP2.dta 
-f spsfa_DGP3.dta 
+f spxtsfa_DGP1.dta 
+f spxtsfa_DGP2.dta 
+f spxtsfa_DGP3.dta 
 f spxtsfa_wmat.mmat 
 f spxtsfa_wmat1.mmat 
 f spxtsfa_wmat2.mmat 

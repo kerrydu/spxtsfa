@@ -21,7 +21,7 @@ Author 3 email: inmaculada.alvarez@uam.es
 
 Help keywords:  "stochastic frontier model" "maximium likelihood estimation" "spatial econometrics" "technical efficiency" "productivity" "frontier" "xtfroniter" "spxtsfa"
 
-File list: spxtsfa.ado spxtsfa.sthlp lspxtsfa.mlib spxtsfay.ado spxtsfayu.ado spxtsfayv.ado spxtsfayuv0.ado spxtsfayuv.ado spxtsfau.ado spxtsfav.ado spxtsfauv.ado spxtsfauv0.ado distinct2.ado examples.do spsfa_DGP1.dta spsfa_DGP2.dta spsfa_DGP3.dta spxtsfa_wmat.mmat spxtsfa_wmat1.mmat spxtsfa_wmat2.mmat yuvexample.dta uvexample.dta yxexample.dta
+File list: spxtsfa.ado spxtsfa.sthlp lspxtsfa.mlib spxtsfay.ado spxtsfayu.ado spxtsfayv.ado spxtsfayuv0.ado spxtsfayuv.ado spxtsfau.ado spxtsfav.ado spxtsfauv.ado spxtsfauv0.ado distinct2.ado examples.do spxtsfa_DGP1.dta spxtsfa_DGP2.dta spxtsfa_DGP3.dta spxtsfa_wmat.mmat spxtsfa_wmat1.mmat spxtsfa_wmat2.mmat yuvexample.dta uvexample.dta yxexample.dta
            
 
 Notes: spxtsfa depends on the moremata package. If not already installed, you can
