@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.16)  30 MAY 2023 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.16)  30 MAY 2023 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1093,7 +1093,7 @@ Here is how much of TeX's memory you used:
  30186 multiletter control sequences out of 15000+600000
  479349 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,67p,1448b,624s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60i,12n,67p,1490b,624s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/tex
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2022/texmf-dis
@@ -1109,10 +1109,10 @@ e1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.
 pfb>
-Output written on manuscript.pdf (13 pages, 265131 bytes).
+Output written on manuscript.pdf (13 pages, 265137 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
+ 328 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
  66 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
