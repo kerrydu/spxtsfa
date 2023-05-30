@@ -1,0 +1,47 @@
+. use spxtsfa_DGP1.dta
+{\smallskip}
+. xtset id t 
+{\smallskip}
+Panel variable: id (strongly balanced)
+ Time variable: t, 1 to 20
+         Delta: 1 unit
+{\smallskip}
+. * importing spatial weight matrix from spxtsfa_wmat1.mmat
+. mata mata matuse spxtsfa_wmat1.mmat,replace
+(loading w1[300,300])
+{\smallskip}
+. * fitting the model
+. spxtsfa y x, uhet(z) noconstant  wy(w1,mata) wx(w1,mata) wu(w1,mata) wv(w1,mata) wxvars(x) nolog
+{\smallskip}
+Spatial frontier model(yxuv-SAR)                     Number of obs =     6,000
+                                                     Wald chi2(2)  = 118937.24
+Log likelihood = -1727.016                           Prob > chi2   =    0.0000
+{\smallskip}
+\HLI{13}{\TOPT}\HLI{64}
+           y {\VBAR} Coefficient  Std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+frontier     {\VBAR}
+           x {\VBAR}   1.993915   .0065251   305.58   0.000     1.981126    2.006704
+         W_x {\VBAR}   .4435823   .0373189    11.89   0.000     .3704386     .516726
+\HLI{13}{\PLUS}\HLI{64}
+uhet         {\VBAR}
+           z {\VBAR}   2.000371   .0013412  1491.49   0.000     1.997742    2.002999
+\HLI{13}{\PLUS}\HLI{64}
+ /lnsigma2_u {\VBAR}  -2.098104   .3163094    -6.63   0.000    -2.718059   -1.478149
+ /lnsigma2_v {\VBAR}  -1.637609    .018401   -89.00   0.000    -1.673674   -1.601544
+\HLI{13}{\PLUS}\HLI{64}
+Wy           {\VBAR}
+       _cons {\VBAR}   .6605993   .0317043    20.84   0.000     .5984599    .7227386
+\HLI{13}{\PLUS}\HLI{64}
+Wu           {\VBAR}
+       _cons {\VBAR}   .5806681   .0318346    18.24   0.000     .5182735    .6430627
+\HLI{13}{\PLUS}\HLI{64}
+Wv           {\VBAR}
+       _cons {\VBAR}   .5745429    .051903    11.07   0.000     .4728148     .676271
+\HLI{13}{\PLUS}\HLI{64}
+    sigma2_u {\VBAR}   .1226888   .0388076     3.16   0.002     .0660027    .2280593
+    sigma2_v {\VBAR}   .1944444    .003578    54.34   0.000     .1875567    .2015851
+         rho {\VBAR}   .3187581   .0142397    22.39   0.000     .2905787    .3463849
+         tau {\VBAR}    .282414    .014646    19.28   0.000     .2534626    .3108598
+       gamma {\VBAR}   .2795936     .02392    11.69   0.000     .2320763    .3257792
+\HLI{13}{\BOTT}\HLI{64}
