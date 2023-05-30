@@ -12,10 +12,10 @@ See the [manuscript](https://github.com/kerrydu/spxtsfa/blob/main/manuscript.pdf
 
  ```
  ** install from github
- net install spxtfsa, from("https://raw.githubusercontent.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/") replace
+ net install spxtsfa, from("https://raw.githubusercontent.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/") replace
  
  **install from gitee
- net install spxtfsa, from(https://gitee.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/") replace
+ net install spxtsfa, from(https://gitee.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/") replace
  ```
 
 

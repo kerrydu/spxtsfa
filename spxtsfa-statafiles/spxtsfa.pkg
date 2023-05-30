@@ -19,3 +19,14 @@ f spxtsfauv.ado
 f spxtsfauv0.ado 
 f distinct2.ado 
 
+
+
+a spsfa_DGP1.dta 
+a  spsfa_DGP2.dta 
+a spsfa_DGP3.dta 
+a spxtsfa_wmat.mmat 
+a spxtsfa_wmat1.mmat 
+a spxtsfa_wmat2.mmat 
+a yuvexample.dta 
+a uvexample.dta 
+a yxexample.dta
