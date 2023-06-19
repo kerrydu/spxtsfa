@@ -163,6 +163,8 @@ initial values. The default is to use {helpb ml search:ml search} with default o
 {cmd:lndetmc({it:numlist})} settings for BarryPace Trick to solve the inverse of (I−ρW). 
 Order is iterations, maxorder. lndetmc(50 100) is recommended.
 
+{phang}
+{opt delmissing} deletes the units with missing oservations from spmatrix.
 
 {dlgtab:Reporting}
 
@@ -201,7 +203,7 @@ This option can be used in the replay syntax or in
 
 {phang}
 {cmdab:constraints(}{it:{help estimation options##constraints():constraints}}{cmd:)}
-specifies specified linear constraints for the estimated model.
+specifies linear constraints for the estimated model.
 
 {marker examples}{...}
 {title:Examples}

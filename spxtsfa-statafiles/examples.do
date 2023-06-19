@@ -22,6 +22,20 @@ spxtsfa y x, uhet(z) wu(`w',mata) wv(`w',mata) te(efficiency) nolog
 sjlog close, replace
 
 
+sjlog using spsfa_DGP2a, replace
+* replace the first observation of y to be missing
+replace y=. in 1
+local w w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+* estimation is aborted
+cap noi spxtsfa y x, uhet(z) wu(`w',mata) wv(`w',mata)  nolog
+sjlog close, replace
+
+sjlog using spsfa_DGP2b, replace
+* re-estimation with delmissing option 
+local w w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+spxtsfa y x, uhet(z) wu(`w',mata) wv(`w',mata) delmissing nolog
+sjlog close, replace
+
 
 clear all
 sjlog using spsfa_DGP3, replace

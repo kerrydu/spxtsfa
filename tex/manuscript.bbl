@@ -72,6 +72,13 @@ Gude, A., I.~{\'A}lvarez, and L.~Orea. 2018.
   Spatial Stochastic Frontier Model.
 \newblock \emph{Journal of Productivity Analysis} 50(3): 155--173.
 
+\bibitem[{Karakaplan(2018)}]{mustafaugurkarakaplan2018xtsfkk}
+Karakaplan, M. 2018.
+\newblock {{XTSFKK}}: {{Stata}} Module to Estimate Endogenous Panel Stochastic
+  Frontier Models in the Style of {{Karakaplan}} and {{Kutlu}}.
+\newblock \emph{Boston College Department of Economics} Statistical Software
+  Components S458445.
+
 \bibitem[{Karakaplan and Kutlu(2017)}]{karakaplan2017handling}
 Karakaplan, M., and L.~Kutlu. 2017.
 \newblock Handling Endogeneity in Stochastic Frontier Analysis.
@@ -108,13 +115,6 @@ Meeusen, W., and J.~{van Den Broeck}. 1977.
 \newblock Efficiency {{Estimation}} from {{Cobb-Douglas Production Functions}}
   with {{Composed Error}}.
 \newblock \emph{International Economic Review} 18(2): 435.
-
-\bibitem[{{Mustafa Ugur Karakaplan}(2018)}]{mustafaugurkarakaplan2018xtsfkk}
-{Mustafa Ugur Karakaplan}. 2018.
-\newblock {{XTSFKK}}: {{Stata}} Module to Estimate Endogenous Panel Stochastic
-  Frontier Models in the Style of {{Karakaplan}} and {{Kutlu}}.
-\newblock \emph{Boston College Department of Economics} Statistical Software
-  Components S458445.
 
 \bibitem[{Orea and {\'A}lvarez(2019)}]{orea2019new}
 Orea, L., and I.~C. {\'A}lvarez. 2019.

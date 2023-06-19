@@ -202,12 +202,13 @@ local nwy = r(nw)
    }  	
    	if(`nummissing'>0){
 		di "Missing values found"
-		di "The regression sample recorded by variable _touse"
-		qui cap gen byte _touse = 0
-		label var _touse "e(sample)"
-		mata: getdatafmata(_touse,_order_0,"`_touse'")
-		cap mata mata drop  _touse		
-	}	
+		di "The regression sample recorded by variable __e_sample__"
+		cap drop __e_sample__
+		qui cap gen byte __e_sample__ = 0
+		label var __e_sample__ "e(sample)"
+		mata: getdatafmata(J(length(_order_0),1,1),_order_0,"__e_sample__")
+		//cap mata mata drop  _touse		
+	}	 	
    cap mata mata drop _order_0
 end
 

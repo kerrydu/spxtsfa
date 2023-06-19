@@ -31,6 +31,7 @@ Estimation syntax
 		lndetmc({\it numlist})
 		te(\newvarname)
 		genwxvars
+		delmissing
 		constraints(\it constraints)
 	}
 \end{stsyntax}
@@ -58,7 +59,7 @@ Estimation syntax
 {\tt uhet(\varlist)} specifies explanatory variables for technical inefficiency variance  function depending on a linear combination of \varlist. It is required.
 
 \hangpara
-{\tt noconstant} suppresses suppress constant term.
+{\tt noconstant} suppresses constant term.
 
 \hangpara
 {\tt cost} specifies the frontier as a cost function. By default, the production function is assumed.
@@ -113,7 +114,10 @@ Estimation syntax
 {\tt genwxvars} generates the spatial Durbin terms. It is activated only when {\tt wxvars(\varlist)} is specified.
 
 \hangpara
-{\tt constraints(\it constraints)}  specifies specified linear constraints for the estimated model. 
+{\tt delmissing} allows estimation  when missing values are present by  removing the corresponding units from spatial matrix. 
+
+\hangpara
+{\tt constraints(\it constraints)}  specifies linear constraints for the estimated model. 
 
 
 \subsection{Dependency of spxtsfa}
@@ -122,7 +126,7 @@ Estimation syntax
 
 %\section{Examples with simulated data}\label{sec_example}
 \section{Examples}\label{sec_example}
-In this section, we use simulated data to  exemplify the use of the $spxtsfa$ command.  Referring to , we first consider the $yxuv-SAR$ model specified by the following data-generating process (DGP 1) with $i=1,...,300$ and $t=1,..,20$,
+In this section, we use simulated data to  exemplify the use of the \textit{spxtsfa} command.  Referring to , we first consider the $yxuv$-SAR model specified by the following data-generating process (DGP 1) with $i=1,...,300$ and $t=1,..,20$,
 
 \begin{equation}\label{dgp1}
 	Y_{it} = 0.3W_{i}Y_{.t}+2X_{it}+ 0.3W_{i}X_{.t}  + \tilde{v}_{it}-\tilde{u}_{it}
@@ -135,7 +139,7 @@ where $\tilde{v}_{it}$ and $\tilde{u}_{it}$ are defined as in Eqs.\eqref{eq2} an
 
 The output shows that the command fits seven equations with {\tt ml model}. The frontier equation has two explanatory variables $X_it$ and $W_iX_{.t}$. The scaling function uhet() has one explanatory variable $Z_{it}$.  Two equations ( /lnsigma2\_u and /lnsigma2\_v) are constructed for the variance parameters $\sigma_u^2$ and $\sigma_v^2$ which are transformed by the function $exp(\cdot)$. Three Equations (Wy, Wu, and Wv) handle the spatial dependence parameters $\rho$, $\tau$, and $\gamma$, which are parameterized as Eq.\eqref{para}. We directly include the spatial Durbin term $W_iX_{.t}$ in the frontier equation such that we do not need to fit a separate equation.  The bottom of the table reports the transformed parameters in the original metric.
 
-We consider the restricted model $uv-SAR$ with time-varying spatial weight matrices as the second example. The DGP 2 is described as
+We consider the restricted model $uv$-SAR with time-varying spatial weight matrices as the second example. The DGP 2 is described as
 
 \begin{equation}\label{dgp2}
 	Y_{it} = 1+2X_{it} + \tilde{v}_{it}-\tilde{u}_{it}, i=1,..,300; t=1,..,10
@@ -146,7 +150,17 @@ where the other parameters are set the same as the DGP 1 except for $W_{i}^{ut}=
 	\input{spsfa_DGP2.log.tex}
 \end{stlog}
 
-In the second example, we use option {\tt te(efficiency)} to store the estimated efficiency score in a new variable {\tt efficiency}. Finally, we consider another restricted model $xuv-SAR$ with different spatial weight matrices, one of which is time-varying, and the others are time-constant.  The model is described as DGP 3:
+In the second example, we use option {\tt te(efficiency)} to store the estimated efficiency score in a new variable {\tt efficiency}.  To show the usage of the \textit{delmissin}g option, we replace the first observation of $Y_{it}$ with missing value and re-run the above codes which gives rise to error information "\textit{missing values found. use delmissing to remove the units from the spmatrix}".  The inclusion of the \textit{delmissing} option addresses this issue and the generated variable \_\_e\_sample\_\_ records the regression sample. 
+
+\begin{stlog}
+	\input{spsfa_DGP2a.log.tex}
+\end{stlog}
+
+\begin{stlog}
+	\input{spsfa_DGP2b.log.tex}
+\end{stlog}
+
+Finally, we consider another restricted model $xuv$-SAR with different spatial weight matrices, one of which is time-varying, and the others are time-constant.  The model is described as DGP 3:
 \begin{equation}\label{dgp3}
 	Y_{it} = 1+2X_{it}+ 0.5W_{i}^{xt} + \tilde{v}_{it}+\tilde{u}_{it}, i=1,..,300; t=1,..,10
 \end{equation}
