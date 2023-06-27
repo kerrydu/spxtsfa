@@ -41,8 +41,8 @@ Estimation syntax
 \noindent Version syntax
 
 \begin{stsyntax}
-	spxtsfa\,
-	version
+	spxtsfa\
+	, version
 \end{stsyntax}
 
 
@@ -111,6 +111,9 @@ Estimation syntax
 {\tt lndetmc({\it numlist})} uses the trick of \cite{BARRY199941} to solve the inverse of $(I_N - \rho W)$.  The order of {\it numlist} is iterations, maxorder. {\tt lndetmc(50 100)} specifies that the number of iterations is 50 and the maximum order of moments is 100. 
 
 \hangpara
+{\tt te({\it newvarname})} specifies a new variable name to store the estimates of technical efficiency.
+
+\hangpara
 {\tt genwxvars} generates the spatial Durbin terms. It is activated only when {\tt wxvars(\varlist)} is specified.
 
 \hangpara
@@ -137,7 +140,7 @@ where $\tilde{v}_{it}$ and $\tilde{u}_{it}$ are defined as in Eqs.\eqref{eq2} an
 	\input{spsfa_DGP1.log.tex}
 \end{stlog}
 
-The output shows that the command fits seven equations with {\tt ml model}. The frontier equation has two explanatory variables $X_it$ and $W_iX_{.t}$. The scaling function uhet() has one explanatory variable $Z_{it}$.  Two equations ( /lnsigma2\_u and /lnsigma2\_v) are constructed for the variance parameters $\sigma_u^2$ and $\sigma_v^2$ which are transformed by the function $exp(\cdot)$. Three Equations (Wy, Wu, and Wv) handle the spatial dependence parameters $\rho$, $\tau$, and $\gamma$, which are parameterized as Eq.\eqref{para}. We directly include the spatial Durbin term $W_iX_{.t}$ in the frontier equation such that we do not need to fit a separate equation.  The bottom of the table reports the transformed parameters in the original metric.
+The output shows that the command fits seven equations with {\tt ml model}. The frontier equation has two explanatory variables $X_{it}$ and $W_iX_{.t}$. The scaling function uhet() has one explanatory variable $Z_{it}$.  Two equations ( /lnsigma2\_u and /lnsigma2\_v) are constructed for the variance parameters $\sigma_u^2$ and $\sigma_v^2$ which are transformed by the function $exp(\cdot)$. Three Equations (Wy, Wu, and Wv) handle the spatial dependence parameters $\rho$, $\tau$, and $\gamma$, which are parameterized as Eq.\eqref{para}. We directly include the spatial Durbin term $W_iX_{.t}$ in the frontier equation  (represented as W\_x) such that we do not need to fit a separate equation.  The bottom of the table reports the transformed parameters in the original metric.
 
 We consider the restricted model $uv$-SAR with time-varying spatial weight matrices as the second example. The DGP 2 is described as
 
