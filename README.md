@@ -3,6 +3,8 @@ Fitting Spatial Panel SF models in STATA
 
 See the [manuscript](https://github.com/kerrydu/spxtsfa/blob/main/manuscript.pdf) for details
 
+The matterials posetd in this repository are under review in Stata Journal
+
 ## Requirement
  * Stata 16 or later version
 
