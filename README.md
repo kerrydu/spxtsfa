@@ -17,7 +17,7 @@ The matterials posetd in this repository are under review in Stata Journal
  net install spxtsfa, from("https://raw.githubusercontent.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/") replace
  
  **install from gitee
- net install spxtsfa, from(https://gitee.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/") replace
+ net install spxtsfa, from("https://gitee.com/kerrydu/spxtsfa/raw/main/spxtsfa-statafiles") replace
  ```
 
 
