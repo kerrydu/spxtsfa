@@ -379,8 +379,8 @@ end
 /////////
 cap program drop checkupdate
 program define checkupdate
-local url1 https://raw.githubusercontent.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/
-local url2 https://gitee.com/kerrydu/spxtsfa/raw/main/spxtsfa-statafiles/
+local url1 https://raw.githubusercontent.com/kerrydu/spxtsfa/main/spxtsfa-statafiles
+local url2 https://gitee.com/kerrydu/spxtsfa/raw/main/spxtsfa-statafiles
 cap mata: vfile = cat(`"`url1'/`0'.ado"')
 if _rc{
 	cap mata: vfile = cat(`"`url2'/`0'.ado"')
