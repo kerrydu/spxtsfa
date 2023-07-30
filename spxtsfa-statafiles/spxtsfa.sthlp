@@ -57,6 +57,7 @@ Replay syntax
 {synopt :{cmd:mlmodel(}{it:{help ml##model_options:model_options}}{cmd:)}}control {cmd:ml model} options{p_end}
 {synopt :{cmd:mlmax({it:{help ml##ml_maximize_options:maximize_options}})}}control {cmd:ml maximize} options{p_end}
 {synopt :{cmd:lndetmc({it:numlist})}}settings for BarryPace Trick. Order is iterations, maxorder.{p_end}
+{synopt :{opt delmissing}}delete the units with missing observations from spmatrix{p_end}
 
 {syntab :Reporting}
 {synopt :{cmd:nolog}}omit the display of the criterion function iteration log{p_end}
@@ -164,7 +165,7 @@ initial values. The default is to use {helpb ml search:ml search} with default o
 Order is iterations, maxorder. lndetmc(50 100) is recommended.
 
 {phang}
-{opt delmissing} deletes the units with missing oservations from spmatrix.
+{opt delmissing} deletes the units with missing observations from spmatrix.
 
 {dlgtab:Reporting}
 

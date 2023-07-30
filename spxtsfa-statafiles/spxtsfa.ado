@@ -1,3 +1,8 @@
+*! version 1.0.1
+*30July2023
+* checkupdate bug fixes
+* _checkspmat bug fixes
+
 *! version 1.0
 *27May2023
 /*-------------------------------------------------------------------------------*/
@@ -349,7 +354,7 @@ program define spxtsfa_vparse,rclass
 syntax [varlist], [VERSION *]
 
 if("`version'"!=""){
-  return local version 1.0
+  return local version 1.0.1
 }
 
 end
@@ -403,9 +408,9 @@ local versionuse `vers'
 if(`versionuse'<`versiongit'){
 	di "New version available, `versionuse' =>`versiongit'"
 	di "It can be updated by:"
-	di "  net install `0',from(`url1') replace"
+	di "  net install `0',from(`url1') replace force"
 	di "or,"
-	di "  net install `0',from(`url2') replace"
+	di "  net install `0',from(`url2') replace force"
 }
 
 
