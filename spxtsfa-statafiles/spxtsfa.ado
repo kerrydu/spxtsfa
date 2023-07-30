@@ -351,11 +351,12 @@ end
 cap program drop spxtsfa_vparse
 program define spxtsfa_vparse,rclass
 
-syntax [varlist], [VERSION *]
+syntax [varlist], [VERSION Gitee *]
 
 if("`version'"!=""){
   return local version 1.0.1
 }
+if "`gitee'"!="" global gitee gitee
 
 end
 
@@ -381,11 +382,17 @@ cap program drop checkupdate
 program define checkupdate
 local url1 https://raw.githubusercontent.com/kerrydu/spxtsfa/main/spxtsfa-statafiles
 local url2 https://gitee.com/kerrydu/spxtsfa/raw/main/spxtsfa-statafiles
-cap mata: vfile = cat(`"`url1'/`0'.ado"')
-if _rc{
+if `"$gitee"' != ""{
 	cap mata: vfile = cat(`"`url2'/`0'.ado"')
+	if _rc exit
 }
-if _rc exit
+else{
+	cap mata: vfile = cat(`"`url1'/`0'.ado"')
+	if _rc{
+		cap mata: vfile = cat(`"`url2'/`0'.ado"')
+	}
+	if _rc exit
+}
 
 mata: vfile = select(vfile,vfile:!="")
 mata: vfile = usubinstr(vfile,char(9)," ",.)
