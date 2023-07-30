@@ -405,7 +405,7 @@ local versionuse = ustrregexrf("`versionuse'","^[\D]+","")
 gettoken vers versionuse:versionuse, p(", ")
 local versionuse `vers'
 
-if(`versionuse'<`versiongit'){
+if("`versionuse'"!="`versiongit'"){
 	di "New version available, `versionuse' =>`versiongit'"
 	di "It can be updated by:"
 	di "  net install `0',from(`url1') replace force"
