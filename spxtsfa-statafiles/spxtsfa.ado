@@ -356,7 +356,7 @@ program define spxtsfa_vparse,rclass
 syntax [varlist], [VERSION Gitee *]
 
 if("`version'"!=""){
-  return local version 1.0.1
+  return local version 1.0.2
 }
 if "`gitee'"!="" global gitee gitee
 
