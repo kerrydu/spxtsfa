@@ -13,7 +13,7 @@ end
 program Estimate, eclass sortpreserve
 
 syntax varlist, Uhet(varlist) [INItial(name) NOCONstant NORMalize(string) ///
-                              wu(string)  te(name) mldisplay(string)  wx(string) wxvars(varlist) ///
+                              wv(string)  te(name) mldisplay(string)  wx(string) wxvars(varlist) ///
                               DELmissing MLPLOT NOGraph MLMODELopt(string) level(real 95) COST ///
 							  MLSEarch(string) MLMAXopt(string) DELVE CONSTraints(string) ///
 							  lndetmc(numlist >0 min=2 max=2) GENWXVARS NOLOG] 

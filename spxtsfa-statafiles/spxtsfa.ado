@@ -1,3 +1,5 @@
+*! version 1.0.2
+*18Sep2023
 *! version 1.0.1
 *30July2023
 * checkupdate bug fixes
@@ -156,22 +158,22 @@ if ("`wy'"!="" & "`wu'"=="" & "`wv'"!=""){
 	exit
 }
 ** case 4, wu=wv
-if ("`wy'"=="" & ("`wu'"!="" | "`wv'"!="")){
+if ("`wy'"=="" & ("`wu'"!="" & "`wv'"=="`wu'")){
 	spxtsfauv0 `0'
 	exit
 }
 ** case 5, wu,wv
-if ("`wy'"=="" & ("`wu'"!="" | "`wv'"!="")){
+if ("`wy'"=="" & ("`wu'"!="" & "`wv'"!="")){
 	spxtsfauv `0'
 	exit
 }
 ** case 6, wu
-if ("`wy'"=="" & ("`wu'"!="" | "`wv'"!="")){
+if ("`wy'"=="" & ("`wu'"!="" & "`wv'"=="")){
 	spxtsfau `0'
 	exit
 }
 ** case 7, wv
-if ("`wy'"=="" & ("`wu'"!="" | "`wv'"!="")){
+if ("`wy'"=="" & ("`wu'"=="" & "`wv'"!="")){
 	spxtsfav `0'
 	exit
 }
@@ -393,6 +395,7 @@ else{
 	}
 	if _rc exit
 }
+
 
 mata: vfile = select(vfile,vfile:!="")
 mata: vfile = usubinstr(vfile,char(9)," ",.)
