@@ -1,0 +1,38 @@
+{com}. * re-estimation with delmissing option 
+. local w w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+{txt}
+{com}. cap noi xtsfsp y x, cost uhet(z) wu(w2,mata) wv(w1,mata) wxvars(x) wx(`w',mata) init(b) delmissing nolog
+{res}missing values found. The corresponding units are deleted from the spmatrix
+
+{txt}{col 1}Spatial frontier model(xuv-SAR){col 55}{lalign 13:Number of obs}{col 68} = {res}{ralign 8:2,998}
+{txt}{col 55}{lalign 13:Wald chi2({res:2})}{col 68} = {res}{ralign 8:57433.89}
+{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 10:-1909.3843}{txt}{col 55}{lalign 13:Prob > chi2}{col 68} = {res}{ralign 8:0.0000}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           y{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}frontier     {txt}{c |}
+{space 11}x {c |}{col 14}{res}{space 2} 1.996019{col 26}{space 2}  .008386{col 37}{space 1}  238.02{col 46}{space 3}0.000{col 54}{space 4} 1.979583{col 67}{space 3} 2.012455
+{txt}{space 9}W_x {c |}{col 14}{res}{space 2} .5065641{col 26}{space 2} .0221295{col 37}{space 1}   22.89{col 46}{space 3}0.000{col 54}{space 4} .4631912{col 67}{space 3} .5499371
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .9914628{col 26}{space 2}  .012715{col 37}{space 1}   77.98{col 46}{space 3}0.000{col 54}{space 4} .9665418{col 67}{space 3} 1.016384
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}/lnsigv2 {c |}{col 14}{res}{space 2}-1.615516{col 26}{space 2} .0260341{col 37}{space 1}  -62.05{col 46}{space 3}0.000{col 54}{space 4}-1.666542{col 67}{space 3} -1.56449
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}uhet         {txt}{c |}
+{space 11}z {c |}{col 14}{res}{space 2} 3.999476{col 26}{space 2} .0021537{col 37}{space 1} 1857.01{col 46}{space 3}0.000{col 54}{space 4} 3.995254{col 67}{space 3} 4.003697
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.698894{col 26}{space 2} .4472168{col 37}{space 1}   -3.80{col 46}{space 3}0.000{col 54}{space 4}-2.575423{col 67}{space 3}-.8223653
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wv           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .5864895{col 26}{space 2} .0584501{col 37}{space 1}   10.03{col 46}{space 3}0.000{col 54}{space 4} .4719295{col 67}{space 3} .7010496
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wu           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .6214135{col 26}{space 2} .0008525{col 37}{space 1}  728.95{col 46}{space 3}0.000{col 54}{space 4} .6197427{col 67}{space 3} .6230843
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         tau {c |}{col 14}{res}{space 2} .3010498{col 26}{space 2} .0003876{col 37}{space 1}  776.78{col 46}{space 3}0.000{col 54}{space 4}   .30029{col 67}{space 3} .3018092
+{txt}       gamma {c |}{col 14}{res}{space 2}   .28509{col 26}{space 2} .0268466{col 37}{space 1}   10.62{col 46}{space 3}0.000{col 54}{space 4} .2316575{col 67}{space 3} .3368072
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+Note: Wv:_cons and Wu:_cons are the transformed parameters;
+      gamma and tau are their origin metrics in spatial components, repsectively.
+      W_(x) represent Spatial Durbin terms W(x)
+      Missing values found
+      The regression sample recorded by variable __e_sample__

@@ -6,7 +6,7 @@ See the [manuscript](https://github.com/kerrydu/spxtsfa/blob/main/manuscript.pdf
 The matterials posetd in this repository are under review in Stata Journal
 
 ## Requirement
- * Stata 16 or later version
+ * Stata 16.1 or later version
 
 
 
@@ -14,10 +14,10 @@ The matterials posetd in this repository are under review in Stata Journal
 
  ```
  ** install from github
- net install spxtsfa, from("https://raw.githubusercontent.com/kerrydu/spxtsfa/main/spxtsfa-statafiles/") replace
+ net install xtsfsp, from("https://raw.githubusercontent.com/kerrydu/spxtsfa/main/xtsfsp/ado/") replace
  
  **install from gitee
- net install spxtsfa, from("https://gitee.com/kerrydu/spxtsfa/raw/main/spxtsfa-statafiles") replace
+ net install xtsfsp, from("https://gitee.com/kerrydu/spxtsfa/raw/main/xtsfsp/ado") replace
  ```
 
 

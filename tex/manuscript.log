@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.2.6)  27 JUN 2023 20:53
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.2.6)  29 OCT 2023 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,7 +174,11 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf Warning: Drivers other than `pdftex' and `luatex' are not supp
 orted.
 
-)) (./kbordermatrix.sty
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box53
+) (./kbordermatrix.sty
 Package: kbordermatrix 2011/09/21 Bordered matrix with brackets
 \kbcolsep=\skip55
 \kbrowsep=\skip56
@@ -186,8 +190,8 @@ Package: blkarray 2015/02/27 v0.07 Block array (dpc)
 \c@BAenumi=\count271
 \BA@col=\count272
 \BA@block@cnt=\count273
-\BA@final@box=\box53
-\BA@first@box=\box54
+\BA@final@box=\box54
+\BA@first@box=\box55
 \BA@colsep=\dimen150
 \BA@ftn=\toks22
 \BAextrarowheight=\dimen151
@@ -195,8 +199,8 @@ Package: blkarray 2015/02/27 v0.07 Block array (dpc)
 \BAarrayrulewidth=\dimen153
 \BAdoublerulesep=\dimen154
 \BAfootskip=\dimen155
-\BA@dashbox=\box55
-\BA@ddashbox=\box56
+\BA@dashbox=\box56
+\BA@ddashbox=\box57
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -311,7 +315,7 @@ File: hxetex.def 2022-02-21 v7.00n Hyperref driver for XeTeX
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box57
+\pdfm@box=\box58
 \c@Hy@AnnotLevel=\count287
 \HyField@AnnotCount=\count288
 \Fld@listcount=\count289
@@ -332,7 +336,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 22.
+Package hyperref Info: Option `colorlinks' set `true' on input line 23.
  (./stata.sty
 Package: stata 2013/10/23 v1.34 LaTeX package for Stata code
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/alltt.sty
@@ -351,7 +355,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count293
 \calc@Cskip=\skip64
 )
-\st@box=\box58
+\st@box=\box59
 \st@box@wd=\dimen176
 \st@box@ht=\dimen177
 \st@box@dp=\dimen178
@@ -360,12 +364,12 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \st@parindent=\skip67
 \stexamplehskip=\skip68
 \sttechhskip=\skip69
-\st@ttbox@box=\box59
+\st@ttbox@box=\box60
 \st@ttbox@framesep=\dimen179
 \ttboxIndent=\dimen180
 \ttboxWd=\dimen181
 \st@ttbox@boxwd=\dimen182
-\st@box=\box60
+\st@box=\box61
 \st@emptywidth=\skip70
 \st@linesize=\skip71
 \st@maxdepth=\skip72
@@ -381,7 +385,7 @@ Package: shadow 2003/02/19 v1.3 shadow boxes (M.O.)
 \txtwdth=\dimen183
 \sht=\dimen184
 \shw=\dimen185
-\shbox=\box61
+\shbox=\box62
 \sboxsep=\dimen186
 \sboxrule=\dimen187
 \sdim=\dimen188
@@ -414,16 +418,16 @@ File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen197
-\ar@mcellbox=\box62
+\ar@mcellbox=\box63
 \extrarowheight=\dimen198
 \NC@list=\toks24
 \extratabsurround=\skip78
 \backup@length=\skip79
-\ar@cellbox=\box63
+\ar@cellbox=\box64
 )
-\diagbox@boxa=\box64
-\diagbox@boxb=\box65
-\diagbox@boxm=\box66
+\diagbox@boxa=\box65
+\diagbox@boxb=\box66
+\diagbox@boxm=\box67
 \diagbox@wd=\dimen199
 \diagbox@ht=\dimen256
 \diagbox@insepl=\dimen257
@@ -462,9 +466,9 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count300
 \float@exts=\toks25
-\float@box=\box67
+\float@box=\box68
 \@float@everytoks=\toks26
-\@floatcapt=\box68
+\@floatcapt=\box69
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
@@ -474,39 +478,39 @@ File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
 \l__color_backend_stack_int=\count302
 \g__color_backend_stack_int=\count303
 \g__graphics_track_int=\count304
-\l__pdf_internal_box=\box69
+\l__pdf_internal_box=\box70
 \g__pdf_backend_object_int=\count305
 \g__pdf_backend_annotation_int=\count306
 \g__pdf_backend_link_int=\count307
 ) (./manuscript.aux)
 \openout1 = `manuscript.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
+0.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
@@ -516,7 +520,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 49.
+Package hyperref Info: Link coloring ON on input line 50.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -530,9 +534,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count308
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
  (./manuscript.out) (./manuscript.out)
 \@outlinefile=\write5
 \openout5 = `manuscript.out'.
@@ -604,23 +608,33 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-] [2] [3] [4] [5]) (./section3-6.tex [6]
-Overfull \hbox (1.06003pt too wide) in paragraph at lines 79--81
+] [2] [3] [4]
+Overfull \hbox (2.02327pt too wide) in paragraph at lines 61--63
+\TU/lmr/m/n/10 where $\OT1/cmr/m/n/10 ^^E[] = (\OML/cmm/m/it/10 I[] \OMS/cmsy/m
+/n/10 ^^@ \OML/cmm/m/it/10 ^^ZW[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 diag\OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/n/10 )[(\OML/cmm/m/it/10 I[] \OMS/c
+msy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^ZW[]\OT1/cmr/m/n/10 )[]][]$ [][][][][]\TU/lmr
+/m/n/10 ; $[] \OT1/cmr/m/n/10 = ([]\OML/cmm/m/it/10 ; :::; []\OT1/cmr/m/n/10 )[
+]\OML/cmm/m/it/10 ; [] \OT1/cmr/m/n/10 =
+ []
+
+[5]) (./section3-6.tex [6]
+Overfull \hbox (1.06003pt too wide) in paragraph at lines 81--83
 \TU/lmtt/m/n/10 normalize(\TU/lmr/m/it/10 norm_method\TU/lmtt/m/n/10 ) \TU/lmr/
 m/n/10 specifies one of the four available normalization tech-
  []
 
 
-Overfull \hbox (35.03003pt too wide) in paragraph at lines 116--118
+Overfull \hbox (35.03003pt too wide) in paragraph at lines 115--117
 \TU/lmtt/m/n/10 genwxvars \TU/lmr/m/n/10 generates the spatial Durbin terms. It
  is activated only when \TU/lmtt/m/n/10 wxvars(\TU/lmr/m/it/10 varlist\TU/lmtt/
 m/n/10 )
  []
 
-[7] (./spsfa_DGP1.log.tex
-Overfull \hbox (96.30408pt too wide) in paragraph at lines 14--14
- []\TU/lmtt/m/n/8 . spxtsfa y x, uhet(z) noconstant  wy(w1,mata) wx(w1,mata) wu
-(w1,mata) wv(w1,mata) wxvars(x) nolog[] 
+[7] (./xtsfsp_DGP1.log.tex
+Overfull \hbox (70.81609pt too wide) in paragraph at lines 14--14
+ []\TU/lmtt/m/n/8 . xtsfsp y x, uhet(z) wu(w1,mata) wy(w1,mata) wv(w1,mata) wx(
+w1,mata) wxvars(x) te(te) nolog[] 
  []
 
 
@@ -632,12 +646,12 @@ f obs =     6,000[]
 
 Overfull \hbox (11.34407pt too wide) in paragraph at lines 17--17
  []                                                     \TU/lmtt/m/n/8 Wald chi
-2(2)  = 118937.24[] 
+2(2)  = 113733.00[] 
  []
 
 
 Overfull \hbox (11.34406pt too wide) in paragraph at lines 18--18
- []\TU/lmtt/m/n/8 Log likelihood = -1727.016                           Prob > c
+ []\TU/lmtt/m/n/8 Log likelihood = -3953.6034                          Prob > c
 hi2   =    0.0000[] 
  []
 
@@ -661,173 +675,32 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 22--22
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 24--24
- []           \TU/lmtt/m/n/8 x  |   1.993915   .0065251   305.58   0.000     1.
-981126    2.006704[] 
+ []           \TU/lmtt/m/n/8 x  |   2.006736   .0082953   241.91   0.000     1.
+990477    2.022994[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 25--25
- []         \TU/lmtt/m/n/8 W_x  |   .4435823   .0373189    11.89   0.000     .3
-704386     .516726[] 
+ []         \TU/lmtt/m/n/8 W_x  |   .5457545   .0709898     7.69   0.000     .4
+066171    .6848919[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 26--26
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 28--28
- []           \TU/lmtt/m/n/8 z  |   2.000371   .0013412  1491.49   0.000     1.
-997742    2.002999[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 29--29
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-
-Overfull \hbox (11.34402pt too wide) in paragraph at lines 30--30
- [] \TU/lmtt/m/n/8 /lnsigma2_u  |  -2.098104   .3163094    -6.63   0.000    -2.
-718059   -1.478149[] 
- []
-
-
-Overfull \hbox (11.34402pt too wide) in paragraph at lines 31--31
- [] \TU/lmtt/m/n/8 /lnsigma2_v  |  -1.637609    .018401   -89.00   0.000    -1.
-673674   -1.601544[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 32--32
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 34--34
- []       \TU/lmtt/m/n/8 _cons  |   .6605993   .0317043    20.84   0.000     .5
-984599    .7227386[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 35--35
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 37--37
- []       \TU/lmtt/m/n/8 _cons  |   .5806681   .0318346    18.24   0.000     .5
-182735    .6430627[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 38--38
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 40--40
- []       \TU/lmtt/m/n/8 _cons  |   .5745429    .051903    11.07   0.000     .4
-728148     .676271[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 41--41
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 42--42
- []    \TU/lmtt/m/n/8 sigma2_u  |   .1226888   .0388076     3.16   0.002     .0
-660027    .2280593[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 43--43
- []    \TU/lmtt/m/n/8 sigma2_v  |   .1944444    .003578    54.34   0.000     .1
-875567    .2015851[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 44--44
- []         \TU/lmtt/m/n/8 rho  |   .3187581   .0142397    22.39   0.000     .2
-905787    .3463849[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 45--45
- []         \TU/lmtt/m/n/8 tau  |    .282414    .014646    19.28   0.000     .2
-534626    .3108598[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 46--46
- []       \TU/lmtt/m/n/8 gamma  |   .2795936     .02392    11.69   0.000     .2
-320763    .3257792[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 47--47
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-) [8] (./spsfa_DGP2.log.tex
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <8> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 17.
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 19--19
- []\TU/lmtt/m/n/8 Spatial frontier model(uv-SAR)                        Number 
-of obs =    3,000[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 20--20
- []                                                      \TU/lmtt/m/n/8 Wald ch
-i2(1)  = 43686.91[] 
- []
-
-
-Overfull \hbox (11.34406pt too wide) in paragraph at lines 21--21
- []\TU/lmtt/m/n/8 Log likelihood = -1336.482                            Prob > 
-chi2   =   0.0000[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 23--23
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-
-Overfull \hbox (11.34406pt too wide) in paragraph at lines 24--24
- []           \TU/lmtt/m/n/8 y  | Coefficient  Std. err.      z    P>|z|     [9
-5% conf. interval][] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 25--25
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
+ []       \TU/lmtt/m/n/8 _cons  |   1.008833   .0460347    21.91   0.000     .9
+186065    1.099059[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 27--27
- []           \TU/lmtt/m/n/8 x  |   2.015288   .0096419   209.01   0.000      1
-.99639    2.034186[] 
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 28--28
- []       \TU/lmtt/m/n/8 _cons  |   .9415143   .0160786    58.56   0.000     .9
-100008    .9730278[] 
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 28--28
+ []    \TU/lmtt/m/n/8 /lnsigv2  |  -1.566886   .0184019   -85.15   0.000    -1.
+602953   -1.530819[] 
  []
 
 
@@ -838,38 +711,186 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 29--29
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 31--31
- []           \TU/lmtt/m/n/8 z  |   2.000242   .0020671   967.66   0.000      1
-.99619    2.004293[] 
+ []           \TU/lmtt/m/n/8 z  |   .9858524   .0385881    25.55   0.000      .
+910221    1.061484[] 
  []
 
 
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 32--32
+ []       \TU/lmtt/m/n/8 _cons  |  -1.533232   .3361919    -4.56   0.000    -2.
+192156   -.8743081[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 33--33
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 35--35
+ []       \TU/lmtt/m/n/8 _cons  |     .57773    .062202     9.29   0.000     .4
+558163    .6996436[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 36--36
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 38--38
+ []       \TU/lmtt/m/n/8 _cons  |   .6066382   .0743834     8.16   0.000     .4
+608494     .752427[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 39--39
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+[8]
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 41--41
+ []       \TU/lmtt/m/n/8 _cons  |   .6584973   .0938095     7.02   0.000      .
+474634    .8423606[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 42--42
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 43--43
+ []         \TU/lmtt/m/n/8 rho  |   .2810617   .0286408     9.81   0.000     .2
+240201    .3361839[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 44--44
+ []       \TU/lmtt/m/n/8 gamma  |   .2943177    .033966     8.67   0.000     .2
+264087    .3593786[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 45--45
+ []         \TU/lmtt/m/n/8 tau  |   .3178137    .042162     7.54   0.000     .2
+329366    .3978845[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 46--46
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (45.32806pt too wide) in paragraph at lines 48--48
+ []      \TU/lmtt/m/n/8 rho, gamma and tau are their origin metrics in spatial 
+components, repsectively.[] 
+ []
+
+) (./xtsfsp_DGP2.log.tex
+Overfull \hbox (270.47215pt too wide) in paragraph at lines 3--3
+ []\TU/lmtt/m/n/8 (loading w1[300,300], w10[300,300], w2[300,300], w3[300,300],
+ w4[300,300], w5[300,300], w6[300,300], w7[300,300], w8[300,300], w9[300,300])[
+] 
+ []
+
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <8> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 19.
+
+Overfull \hbox (91.96007pt too wide) in paragraph at lines 19--19
+ []\TU/lmtt/m/n/8 . xtsfsp y x, cost uhet(z) wu(w2,mata) wv(w1,mata) wxvars(x) 
+wx(\TU/lmtt/b/n/8  ̀\TU/lmtt/m/n/8 w\TU/lmtt/b/n/8  ́\TU/lmtt/m/n/8 ,mata) init
+(b) genwxvars nolog[] 
+ []
+
+
+Overfull \hbox (11.34407pt too wide) in paragraph at lines 21--21
+ []\TU/lmtt/m/n/8 Spatial frontier model(xuv-SAR)                       Number 
+of obs =    3,000[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 22--22
+ []                                                      \TU/lmtt/m/n/8 Wald ch
+i2(2)  = 57441.23[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 23--23
+ []\TU/lmtt/m/n/8 Log likelihood = -1911.966                            Prob > 
+chi2   =   0.0000[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 25--25
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 26--26
+ []           \TU/lmtt/m/n/8 y  | Coefficient  Std. err.      z    P>|z|     [9
+5% conf. interval][] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 27--27
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 29--29
+ []           \TU/lmtt/m/n/8 x  |   1.995755   .0083855   238.00   0.000      1
+.97932     2.01219[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 30--30
+ []         \TU/lmtt/m/n/8 W_x  |   .5069274   .0221354    22.90   0.000     .4
+635428    .5503121[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 31--31
+ []       \TU/lmtt/m/n/8 _cons  |   .9917396   .0127299    77.91   0.000     .9
+667894     1.01669[] 
+ []
+
+[9]
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 32--32
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
-Overfull \hbox (11.34402pt too wide) in paragraph at lines 33--33
- [] \TU/lmtt/m/n/8 /lnsigma2_u  |  -2.006684   .4473506    -4.49   0.000    -2.
-883475   -1.129893[] 
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 33--33
+ []    \TU/lmtt/m/n/8 /lnsigv2  |  -1.614693   .0260288   -62.03   0.000    -1.
+665708   -1.563677[] 
  []
 
 
-Overfull \hbox (11.34402pt too wide) in paragraph at lines 34--34
- [] \TU/lmtt/m/n/8 /lnsigma2_v  |  -1.300024   .0260099   -49.98   0.000    -1.
-351002   -1.249045[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 35--35
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 34--34
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 37--37
- []       \TU/lmtt/m/n/8 _cons  |    .582383   .0031549   184.59   0.000     .5
-761995    .5885666[] 
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 36--36
+ []           \TU/lmtt/m/n/8 z  |   3.999532    .002155  1855.90   0.000     3.
+995308    4.003755[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 37--37
+ []       \TU/lmtt/m/n/8 _cons  |  -1.699077   .4472546    -3.80   0.000     -2
+.57568   -.8224746[] 
  []
 
 
@@ -880,8 +901,8 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 38--38
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 40--40
- []       \TU/lmtt/m/n/8 _cons  |   .5374655   .0601775     8.93   0.000     .4
-195198    .6554113[] 
+ []       \TU/lmtt/m/n/8 _cons  |   .5877882   .0584159    10.06   0.000     .4
+732951    .7022812[] 
  []
 
 
@@ -891,81 +912,107 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 41--41
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 42--42
- []    \TU/lmtt/m/n/8 sigma2_u  |   .1344337    .060139     2.24   0.025       
-.05594    .3230678[] 
- []
-
-
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 43--43
- []    \TU/lmtt/m/n/8 sigma2_v  |   .2725253   .0070883    38.45   0.000     .2
-589806    .2867784[] 
+ []       \TU/lmtt/m/n/8 _cons  |   .6214134   .0008532   728.34   0.000     .6
+197412    .6230857[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 44--44
- []         \TU/lmtt/m/n/8 tau  |   .2832028   .0014508   195.21   0.000     .2
-803569    .2860438[] 
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 45--45
- []       \TU/lmtt/m/n/8 gamma  |    .262419   .0280135     9.37   0.000      .
-206716    .3164261[] 
+ []         \TU/lmtt/m/n/8 tau  |   .3010498   .0003879   776.12   0.000     .3
+002893    .3018098[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 46--46
+ []       \TU/lmtt/m/n/8 gamma  |   .2856864   .0268209    10.65   0.000     .2
+323035     .337353[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 47--47
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
-[9]) (./spsfa_DGP2a.log.tex) (./spsfa_DGP2b.log.tex
+
+Overfull \hbox (24.08806pt too wide) in paragraph at lines 49--49
+ []      \TU/lmtt/m/n/8 gamma and tau are their origin metrics in spatial compo
+nents, repsectively.[] 
+ []
+
+) (./xtsfsp_DGP2a.log.tex
+Overfull \hbox (49.48007pt too wide) in paragraph at lines 8--8
+ []\TU/lmtt/m/n/8 . xtsfsp y x, cost uhet(z) wu(w2,mata) wv(w1,mata) wxvars(x) 
+wx(\TU/lmtt/b/n/8  ̀\TU/lmtt/m/n/8 w\TU/lmtt/b/n/8  ́\TU/lmtt/m/n/8 ,mata) init
+(b) nolog[] 
+ []
+
+) (./xtsfsp_DGP2b.log.tex
+Overfull \hbox (96.20807pt too wide) in paragraph at lines 4--4
+ []\TU/lmtt/m/n/8 . xtsfsp y x, cost uhet(z) wu(w2,mata) wv(w1,mata) wxvars(x) 
+wx(\TU/lmtt/b/n/8  ̀\TU/lmtt/m/n/8 w\TU/lmtt/b/n/8  ́\TU/lmtt/m/n/8 ,mata) init
+(b) delmissing nolog[] 
+ []
+
+
+Overfull \hbox (11.34407pt too wide) in paragraph at lines 7--7
+ []\TU/lmtt/m/n/8 Spatial frontier model(xuv-SAR)                       Number 
+of obs =    2,998[] 
+ []
+
+
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 8--8
- []\TU/lmtt/m/n/8 Spatial frontier model(uv-SAR)                        Number 
-of obs =    2,999[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 9--9
  []                                                      \TU/lmtt/m/n/8 Wald ch
-i2(1)  = 43688.15[] 
+i2(2)  = 57427.27[] 
  []
 
 
-Overfull \hbox (11.34406pt too wide) in paragraph at lines 10--10
- []\TU/lmtt/m/n/8 Log likelihood = -1336.2158                           Prob > 
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 9--9
+ []\TU/lmtt/m/n/8 Log likelihood = -1909.3843                           Prob > 
 chi2   =   0.0000[] 
  []
 
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 12--12
+[10]
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 11--11
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
-Overfull \hbox (11.34406pt too wide) in paragraph at lines 13--13
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 12--12
  []           \TU/lmtt/m/n/8 y  | Coefficient  Std. err.      z    P>|z|     [9
 5% conf. interval][] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 14--14
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 13--13
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 15--15
+ []           \TU/lmtt/m/n/8 x  |   1.996019   .0083865   238.00   0.000     1.
+979582    2.012456[] 
+ []
+
+
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 16--16
- []           \TU/lmtt/m/n/8 x  |    2.01521   .0096414   209.02   0.000     1.
-996313    2.034106[] 
+ []         \TU/lmtt/m/n/8 W_x  |   .5065641   .0221317    22.89   0.000     .4
+631868    .5499415[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 17--17
- []       \TU/lmtt/m/n/8 _cons  |   .9409358   .0160983    58.45   0.000     .9
-093837     .972488[] 
+ []       \TU/lmtt/m/n/8 _cons  |   .9914628   .0127155    77.97   0.000     .9
+665409    1.016385[] 
  []
 
 
@@ -975,27 +1022,27 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 18--18
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 20--20
- []           \TU/lmtt/m/n/8 z  |   2.000244   .0020675   967.48   0.000     1.
-996192    2.004296[] 
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 19--19
+ []    \TU/lmtt/m/n/8 /lnsigv2  |  -1.615516   .0260354   -62.05   0.000    -1.
+666545   -1.564488[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 21--21
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 20--20
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
-Overfull \hbox (11.34404pt too wide) in paragraph at lines 22--22
- [] \TU/lmtt/m/n/8 /lnsigma2_u  |  -2.006689   .4473506    -4.49   0.000     -2
-.88348   -1.129898[] 
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 22--22
+ []           \TU/lmtt/m/n/8 z  |   3.999476   .0021537  1857.00   0.000     3.
+995254    4.003697[] 
  []
 
 
-Overfull \hbox (11.34402pt too wide) in paragraph at lines 23--23
- [] \TU/lmtt/m/n/8 /lnsigma2_v  |  -1.300032   .0260157   -49.97   0.000    -1.
-351022   -1.249042[] 
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 23--23
+ []       \TU/lmtt/m/n/8 _cons  |   -1.69889   .4472536    -3.80   0.000    -2.
+575491   -.8222893[] 
  []
 
 
@@ -1006,8 +1053,8 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 24--24
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 26--26
- []       \TU/lmtt/m/n/8 _cons  |   .5823337   .0031574   184.44   0.000     .5
-761453     .588522[] 
+ []       \TU/lmtt/m/n/8 _cons  |   .5864895   .0584601    10.03   0.000     .4
+719098    .7010692[] 
  []
 
 
@@ -1018,8 +1065,8 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 27--27
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 29--29
- []       \TU/lmtt/m/n/8 _cons  |   .5400995   .0602196     8.97   0.000     .4
-220712    .6581278[] 
+ []       \TU/lmtt/m/n/8 _cons  |   .6214135   .0008526   728.87   0.000     .6
+197425    .6230845[] 
  []
 
 
@@ -1030,192 +1077,607 @@ Overfull \hbox (11.34409pt too wide) in paragraph at lines 30--30
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 31--31
- []    \TU/lmtt/m/n/8 sigma2_u  |    .134433   .0601387     2.24   0.025     .0
-559397    .3230661[] 
+ []         \TU/lmtt/m/n/8 tau  |   .3010498   .0003876   776.69   0.000     .3
+002899    .3018093[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 32--32
- []    \TU/lmtt/m/n/8 sigma2_v  |   .2725231   .0070899    38.44   0.000     .2
-589755    .2867794[] 
+ []       \TU/lmtt/m/n/8 gamma  |     .28509   .0268512    10.62   0.000     .2
+316482    .3368159[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 33--33
- []         \TU/lmtt/m/n/8 tau  |   .2831801   .0014519   195.04   0.000     .2
-803319    .2860233[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 34--34
- []       \TU/lmtt/m/n/8 gamma  |   .2636448   .0280137     9.41   0.000     .2
-079367    .3176476[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 35--35
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
- []
-
-) [10] (./spsfa_DGP3.log.tex
-Overfull \hbox (11.34407pt too wide) in paragraph at lines 22--22
- []\TU/lmtt/m/n/8 Spatial frontier model(xuv-SAR)                       Number 
-of obs =    3,000[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 23--23
- []                                                      \TU/lmtt/m/n/8 Wald ch
-i2(2)  = 57430.99[] 
- []
-
-
-Overfull \hbox (11.34406pt too wide) in paragraph at lines 24--24
- []\TU/lmtt/m/n/8 Log likelihood = -872.06794                           Prob > 
-chi2   =   0.0000[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 26--26
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
-Overfull \hbox (11.34406pt too wide) in paragraph at lines 27--27
+Overfull \hbox (24.08806pt too wide) in paragraph at lines 35--35
+ []      \TU/lmtt/m/n/8 gamma and tau are their origin metrics in spatial compo
+nents, repsectively.[] 
+ []
+
+) (./xtsfsp_DGP3.log.tex
+Overfull \hbox (270.47215pt too wide) in paragraph at lines 3--3
+ []\TU/lmtt/m/n/8 (loading w1[300,300], w10[300,300], w2[300,300], w3[300,300],
+ w4[300,300], w5[300,300], w6[300,300], w7[300,300], w8[300,300], w9[300,300])[
+] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 17--17
+ []\TU/lmtt/m/n/8 Spatial frontier model(uv-SAR)                         Number
+ of obs =   3,000[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 18--18
+ []                                                       \TU/lmtt/m/n/8 Wald c
+hi2(1)  = 7472.38[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 19--19
+ []\TU/lmtt/m/n/8 Log likelihood = -5803.0516                            Prob >
+ chi2   =  0.0000[] 
+ []
+
+[11]
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 21--21
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 22--22
  []           \TU/lmtt/m/n/8 y  | Coefficient  Std. err.      z    P>|z|     [9
 5% conf. interval][] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 28--28
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 23--23
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 25--25
+ []           \TU/lmtt/m/n/8 x  |   1.988108   .0229991    86.44   0.000     1.
+943031    2.033185[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 26--26
+ []       \TU/lmtt/m/n/8 _cons  |   .8997916   .0737763    12.20   0.000     .7
+551927    1.044391[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 27--27
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 29--29
+ []           \TU/lmtt/m/n/8 d  |   .9897965   .0259185    38.19   0.000     .9
+389972    1.040596[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 30--30
- []           \TU/lmtt/m/n/8 x  |   1.995734   .0083857   237.99   0.000     1.
-979298    2.012169[] 
+ []       \TU/lmtt/m/n/8 _cons  |   .9950927   .0259519    38.34   0.000      .
+944228    1.045957[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 31--31
- []         \TU/lmtt/m/n/8 W_x  |   .5065867   .0221169    22.90   0.000     .4
-632384     .549935[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 32--32
- []       \TU/lmtt/m/n/8 _cons  |   .9916378   .0126993    78.09   0.000     .9
-667476    1.016528[] 
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 33--33
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
+ []           \TU/lmtt/m/n/8 z  |   1.019351   .0458701    22.22   0.000     .9
+294473    1.109255[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 34--34
+ []       \TU/lmtt/m/n/8 _cons  |   1.122574   .4629594     2.42   0.015     .2
+151904    2.029958[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 35--35
- []           \TU/lmtt/m/n/8 z  |    1.99976   .0010759  1858.74   0.000     1.
-997652    2.001869[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 36--36
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
-Overfull \hbox (11.34404pt too wide) in paragraph at lines 37--37
- [] \TU/lmtt/m/n/8 /lnsigma2_u  |  -1.699017   .4472788    -3.80   0.000    -2.
-575668    -.822367[] 
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 37--37
+ []       \TU/lmtt/m/n/8 _cons  |   .6171649   .0431991    14.29   0.000     .5
+324961    .7018337[] 
  []
 
 
-Overfull \hbox (11.34404pt too wide) in paragraph at lines 38--38
- [] \TU/lmtt/m/n/8 /lnsigma2_v  |  -1.615448   .0260424   -62.03   0.000     -1
-.66649   -1.564406[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 39--39
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 38--38
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 40--40
+ []       \TU/lmtt/m/n/8 _cons  |   .6471479   .0703691     9.20   0.000      .
+509227    .7850688[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 41--41
- []       \TU/lmtt/m/n/8 _cons  |   .6214083   .0008566   725.44   0.000     .6
-197294    .6230872[] 
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 42--42
- []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||[] 
+ []         \TU/lmtt/m/n/8 tau  |    .299117   .0196647    15.21   0.000     .2
+601042    .3371547[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 43--43
+ []       \TU/lmtt/m/n/8 gamma  |   .3127036   .0317402     9.85   0.000     .2
+492256    .3735057[] 
  []
 
 
 Overfull \hbox (11.34409pt too wide) in paragraph at lines 44--44
- []       \TU/lmtt/m/n/8 _cons  |   .6001869   .0595911    10.07   0.000     .4
-833905    .7169833[] 
- []
-
-
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 45--45
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 46--46
- []    \TU/lmtt/m/n/8 sigma2_u  |   .1828631   .0817908     2.24   0.025      .
-076103    .4393904[] 
+Overfull \hbox (24.08806pt too wide) in paragraph at lines 46--46
+ []      \TU/lmtt/m/n/8 gamma and tau are their origin metrics in spatial compo
+nents, repsectively.[] 
+ []
+
+) (./xtsfsp_ex4.log.tex [12]
+Overfull \hbox (45.32808pt too wide) in paragraph at lines 69--69
+ []\TU/lmtt/m/n/8 . xtsfsp lnY $x, uhet($z) wy(wm,mata) wu(wm,mata) wv(wm,mata)
+ init(b1) te(tesp1) nolog[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 47--47
- []    \TU/lmtt/m/n/8 sigma2_v  |   .1988017   .0051773    38.40   0.000      .
-188909    .2092123[] 
+Overfull \hbox (11.34407pt too wide) in paragraph at lines 71--71
+ []\TU/lmtt/m/n/8 Spatial frontier model(yuv-SAR)                       Number 
+of obs =      630[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 48--48
- []         \TU/lmtt/m/n/8 tau  |   .3010474   .0003894   773.04   0.000      .
-300284    .3018105[] 
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 72--72
+ []                                                      \TU/lmtt/m/n/8 Wald ch
+i2(9)  = 16704.73[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 49--49
- []       \TU/lmtt/m/n/8 gamma  |    .291369   .0272628    10.69   0.000     .2
-370726    .3438504[] 
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 73--73
+ []\TU/lmtt/m/n/8 Log likelihood = 328.51183                            Prob > 
+chi2   =   0.0000[] 
  []
 
 
-Overfull \hbox (11.34409pt too wide) in paragraph at lines 50--50
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 75--75
  []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||[] 
  []
 
-) [11]) (./manuscript.bbl [12] [13]))
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 76--76
+ []         \TU/lmtt/m/n/8 lnY  | Coefficient  Std. err.      z    P>|z|     [9
+5% conf. interval][] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 77--77
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 79--79
+ []         \TU/lmtt/m/n/8 lnK  |   .6720836   .0259441    25.91   0.000     .6
+212341    .7229331[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 80--80
+ []         \TU/lmtt/m/n/8 lnL  |   .3390601   .0185192    18.31   0.000      .
+302763    .3753571[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 81--81
+ []          \TU/lmtt/m/n/8 _t  |   .0141493   .0051647     2.74   0.006     .0
+040267    .0242719[] 
+ []
+
+
+Overfull \hbox (11.34407pt too wide) in paragraph at lines 82--82
+ []     \TU/lmtt/m/n/8 lnK_lnL  |   .0075504    .051805     0.15   0.884    -.0
+939855    .1090864[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 83--83
+ []      \TU/lmtt/m/n/8 _t_lnK  |   .0425662   .0115137     3.70   0.000     .0
+199998    .0651326[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 84--84
+ []      \TU/lmtt/m/n/8 _t_lnL  |  -.0034571   .0079979    -0.43   0.666    -.0
+191327    .0122186[] 
+ []
+
+
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 85--85
+ []        \TU/lmtt/m/n/8 _t_2  |  -.0069112   .0013048    -5.30   0.000    -.0
+094686   -.0043539[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 86--86
+ []       \TU/lmtt/m/n/8 lnK_2  |  -.0875718   .0344022    -2.55   0.011     -.
+154999   -.0201446[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 87--87
+ []       \TU/lmtt/m/n/8 lnL_2  |  -.0388746   .0377404    -1.03   0.303    -.1
+128443    .0350952[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 88--88
+ []       \TU/lmtt/m/n/8 _cons  |   .4968023    .043107    11.52   0.000     .4
+123142    .5812903[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 89--89
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 90--90
+ []    \TU/lmtt/m/n/8 /lnsigv2  |  -4.025468   .0581939   -69.17   0.000    -4.
+139526    -3.91141[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 91--91
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 93--93
+ []      \TU/lmtt/m/n/8 fiscal  |   .0098788   .0056888     1.74   0.082     -.
+001271    .0210287[] 
+ []
+
+
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 94--94
+ []       \TU/lmtt/m/n/8 trade  |  -.0911438   .0213384    -4.27   0.000    -.1
+329663   -.0493212[] 
+ []
+
+[13]
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 95--95
+ []         \TU/lmtt/m/n/8 fdi  |  -.0185831   .0100212    -1.85   0.064    -.0
+382243    .0010582[] 
+ []
+
+
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 96--96
+ []       \TU/lmtt/m/n/8 _cons  |  -1.963808   .3894655    -5.04   0.000    -2.
+727146   -1.200469[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 97--97
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 99--99
+ []       \TU/lmtt/m/n/8 _cons  |  -.0467557   .0362548    -1.29   0.197    -.1
+178138    .0243023[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 100--100
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 102--102
+ []       \TU/lmtt/m/n/8 _cons  |  -.0671769   .1600686    -0.42   0.675    -.3
+809057    .2465518[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 103--103
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 105--105
+ []       \TU/lmtt/m/n/8 _cons  |   1.280422   .2367245     5.41   0.000       
+.81645    1.744393[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 106--106
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34407pt too wide) in paragraph at lines 107--107
+ []         \TU/lmtt/m/n/8 rho  |  -.0233713   .0181157    -1.29   0.197     -.
+058833    .0121493[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 108--108
+ []       \TU/lmtt/m/n/8 gamma  |  -.0335725   .0799361    -0.42   0.674    -.1
+881642     .122643[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 109--109
+ []         \TU/lmtt/m/n/8 tau  |   .5649866   .0805643     7.01   0.000     .3
+869258    .7024182[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 110--110
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (45.32806pt too wide) in paragraph at lines 112--112
+ []      \TU/lmtt/m/n/8 rho, gamma and tau are their origin metrics in spatial 
+components, repsectively.[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 120--120
+ []\TU/lmtt/m/n/8 Spatial frontier model:u-SAR                          Number 
+of obs =      630[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 121--121
+ []                                                      \TU/lmtt/m/n/8 Wald ch
+i2(9)  = 16174.91[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 122--122
+ []\TU/lmtt/m/n/8 Log likelihood = 327.60816                            Prob > 
+chi2   =   0.0000[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 124--124
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 125--125
+ []         \TU/lmtt/m/n/8 lnY  | Coefficient  Std. err.      z    P>|z|     [9
+5% conf. interval][] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 126--126
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 128--128
+ []         \TU/lmtt/m/n/8 lnK  |    .672366   .0264662    25.40   0.000     .6
+204932    .7242388[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 129--129
+ []         \TU/lmtt/m/n/8 lnL  |   .3392661   .0184417    18.40   0.000     .3
+031209    .3754113[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 130--130
+ []          \TU/lmtt/m/n/8 _t  |   .0114801    .004803     2.39   0.017     .0
+020664    .0208937[] 
+ []
+
+
+Overfull \hbox (11.34407pt too wide) in paragraph at lines 131--131
+ []     \TU/lmtt/m/n/8 lnK_lnL  |   .0128618   .0467126     0.28   0.783    -.0
+786932    .1044169[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 132--132
+ []      \TU/lmtt/m/n/8 _t_lnK  |   .0422561   .0108054     3.91   0.000     .0
+210779    .0634344[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 133--133
+ []      \TU/lmtt/m/n/8 _t_lnL  |  -.0027543   .0074782    -0.37   0.713    -.0
+174113    .0119027[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 134--134
+ []        \TU/lmtt/m/n/8 _t_2  |  -.0066348   .0012629    -5.25   0.000      -
+.00911   -.0041595[] 
+ []
+
+
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 135--135
+ []       \TU/lmtt/m/n/8 lnK_2  |  -.0915034   .0326073    -2.81   0.005    -.1
+554126   -.0275942[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 136--136
+ []       \TU/lmtt/m/n/8 lnL_2  |  -.0395255   .0328292    -1.20   0.229    -.1
+038696    .0248185[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 137--137
+ []       \TU/lmtt/m/n/8 _cons  |   .4644181   .0315665    14.71   0.000     .4
+025489    .5262874[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 138--138
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 139--139
+ []    \TU/lmtt/m/n/8 /lnsigv2  |  -4.013496   .0575493   -69.74   0.000     -4
+.12629   -3.900701[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 140--140
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 142--142
+ []      \TU/lmtt/m/n/8 fiscal  |   .0097757      .0055     1.78   0.076     -.
+001004    .0205555[] 
+ []
+
+
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 143--143
+ []       \TU/lmtt/m/n/8 trade  |  -.0869182   .0204711    -4.25   0.000    -.1
+270408   -.0467956[] 
+ []
+
+
+Overfull \hbox (11.34406pt too wide) in paragraph at lines 144--144
+ []         \TU/lmtt/m/n/8 fdi  |  -.0133135   .0090702    -1.47   0.142    -.0
+310908    .0044638[] 
+ []
+
+
+Overfull \hbox (11.34404pt too wide) in paragraph at lines 145--145
+ []       \TU/lmtt/m/n/8 _cons  |  -1.986602   .3822161    -5.20   0.000    -2.
+735732   -1.237472[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 146--146
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 148--148
+ []       \TU/lmtt/m/n/8 _cons  |    1.07423   .1922999     5.59   0.000     .6
+973292    1.451131[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 149--149
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 150--150
+ []         \TU/lmtt/m/n/8 tau  |    .490752   .0729815     6.72   0.000     .3
+351572    .6202829[] 
+ []
+
+
+Overfull \hbox (11.34409pt too wide) in paragraph at lines 151--151
+ []||||||||||||| [] |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||[] 
+ []
+
+
+Overfull \hbox (19.64806pt too wide) in paragraph at lines 159--159
+ []\TU/lmtt/m/n/8 . display "Likelihood-ratio test: LR chi2(2) = \TU/lmtt/b/n/8
+  ̀\TU/lmtt/m/n/8 lrtest\TU/lmtt/b/n/8  ́\TU/lmtt/m/n/8 , Prob > chi2 = \TU/lmt
+t/b/n/8  ̀\TU/lmtt/m/n/8 pvalue\TU/lmtt/b/n/8  ́\TU/lmtt/m/n/8 "[] 
+ []
+
+
+Overfull \hbox (45.32805pt too wide) in paragraph at lines 160--160
+ []\TU/lmtt/m/n/8 Likelihood-ratio test: LR chi2(2) = 1.807357699424301, Prob >
+ chi2 = .4050766989379054[] 
+ []
+
+[14]
+Overfull \hbox (15.59203pt too wide) in paragraph at lines 163--163
+ []\TU/lmtt/m/n/8 . * Plot the density of estimates of technical efficiency fro
+m different models[] 
+ []
+
+
+Overfull \hbox (36.83206pt too wide) in paragraph at lines 168--168
+ []\TU/lmtt/m/n/8 >         label(2 Spatial Stoc. Frontier:yuv) label(3 Spatial
+ Stoc. Frontier:u)) ///[] 
+ []
+
+)
+File: ../output/fig1.eps Graphic file (type eps)
+<../output/fig1.eps>
+
+Overfull \hbox (16.36102pt too wide) in paragraph at lines 196--197
+ [][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15] [16]) (./manuscript.bbl [17]) [18])
 \openout4 = `manuscript.pp1'.
 
- [14] (./manuscript.aux)
+ [19] (./manuscript.aux)
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
 (rerunfilecheck)             Checksum: CD6A5DAEFA226E5707B47E24BA40F134;530.
  ) 
 Here is how much of TeX's memory you used:
- 11401 strings out of 476179
- 179069 string characters out of 5809545
- 497863 words of memory out of 5000000
- 31908 multiletter control sequences out of 15000+600000
+ 11550 strings out of 476179
+ 181898 string characters out of 5809545
+ 507044 words of memory out of 5000000
+ 32030 multiletter control sequences out of 15000+600000
  475593 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,12n,64p,1968b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60i,12n,64p,1968b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on manuscript.pdf (14 pages).
+Output written on manuscript.pdf (19 pages).

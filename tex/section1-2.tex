@@ -41,32 +41,32 @@ Based on the transposed version of \cite{wang2010estimating} model, \cite{orea20
 	\tilde{u}_{it} =u_{it}+ \tau W_{i}^{ut}\tilde{u}_{.t} 
 \end{equation}
 
- Eq.\eqref{eq1}  describes the stochastic frontier function where $Y_{it}$ is the dependent variable and $X_{it}$ is a $k \times 1$ vector of variables shaping the frontier; $s=1$ for the production function and  $s=-1$ for the cost function; $\tilde{v}_{it}$ and $\tilde{u}_{it}$ represent  idiosyncratic noise and inefficiency, respectively. In  Eqs.\eqref{eq2} and \eqref{eq3}, $W_{i}^{vt}=(W_{i1}^{vt},...,W_{iN}^{vt})$ and $W_{i}^{vt}=(W_{i1}^{vt},...,W_{iN}^{vt})$ are two known $1 \times N$ cross-sectional weight vectors  depicting the structure of the  cross-sectional relationship for idiosyncratic noise and inefficiency terms, respectively; $\tilde{v}_{.t}=(\tilde{v}_{1t},...,\tilde{v}_{Nt})' $ and $\tilde{u}_{.t}=(\tilde{u}_{1t},...,\tilde{u}_{Nt})'$; $v_{it}$  is a random variable following the distribution $N(0,\sigma_v^2)$ and $u_{it}=h(Z_{it}'\delta)u_t^*$. $h(Z_{it}'\delta)$ is the scaling function where $Z_{it}$ is a $l \times 1$ vector of variables affecting individuals' inefficiency  and $u_t^*$ is a non-negative random variable following the distribution $N^+(0,\sigma_{u}^2)$.  Using matrix notation, we can rewrite Eqs.\eqref{eq2} and \eqref{eq3} as
+  Eq.\eqref{eq1}  describes the stochastic frontier function where $Y_{it}$ is the dependent variable and $X_{it}$ is a $k \times 1$ vector of variables shaping the frontier; $s=1$ for the production function and  $s=-1$ for the cost function; $\tilde{v}_{it}$ and $\tilde{u}_{it}$ represent  idiosyncratic noise and inefficiency, respectively. In  Eqs.\eqref{eq2} and \eqref{eq3}, $W_{i}^{vt}=(W_{i1}^{vt},...,W_{iN}^{vt})$ and $W_{i}^{vt}=(W_{i1}^{vt},...,W_{iN}^{vt})$ are two known $1 \times N$ cross-sectional weight vectors  depicting the structure of the  cross-sectional relationship for idiosyncratic noise and inefficiency terms, respectively; $\tilde{v}_{.t}=(\tilde{v}_{1t},...,\tilde{v}_{Nt})' $ and $\tilde{u}_{.t}=(\tilde{u}_{1t},...,\tilde{u}_{Nt})'$; $v_{it}$  is a random variable following the distribution $N(0,\sigma_{v,it}^2)$ and $u_{it}=h(Z_{it}'\delta)u_t^*$. $h(Z_{it}'\delta)=\sqrt{exp(Z_{it}'\delta)}$ is the scaling function where $Z_{it}$ is a $l \times 1$ vector of variables affecting individuals' inefficiency  and $u_t^*$ is a non-negative random variable following the distribution $N^+(0,1)$.  Different from the original setting in \cite{orea2019new}, we assume $\sigma_{v,it}^2=exp(D_{it}'\eta)$ to account for idiosyncratic error variance which depends on a vector of variables $D_{it}$\footnote{If $D_{it}=1$, the error term is conditional homoscedasticity.}. Furthermore, we enforce the variance of $u_t^*$ to be equal to one, thus allowing the term $Z_{it}$ to include a constant. Using matrix notation, we can rewrite Eqs.\eqref{eq2} and \eqref{eq3} as
  
  \begin{equation}\label{eq2b}
  	\tilde{v}_{.t} =(I_N-\gamma W^{vt})^{-1}v_{.t} 
  \end{equation}
  
  \begin{equation}\label{eq3b}
- 		\tilde{u}_{.t} =(I_N-\tau W^{ut})^{-1}h(Z_{.t}\delta)u_t^* = \tilde{h}_{.t}u_t^*
+ 	\tilde{u}_{.t} =(I_N-\tau W^{ut})^{-1}h(Z_{.t}\delta)u_t^* = \tilde{h}_{.t}u_t^*
  \end{equation}
  where $Z_{.t}=(Z_{1t},...,Z_{Nt})'$;$\tilde{h}_{.t}=(I_N-\tau W^{ut})^{-1}h(Z_{.t}\delta)$.
  
-  The above model captures the spatial correlation of  the random error and inefficiency terms with the spatial autoregressive (SAR) process \footnote{\cite{orea2019new} also considered a specification of the spatial moving average process.}.  Referring to \cite{wang2010estimating}, we can obtain the following log-likelihood function for each period $t$:
-  \begin{equation}\label{eq5}
+ The above model captures the spatial correlation of  the random error and inefficiency terms with the spatial autoregressive (SAR) process \footnote{\cite{orea2019new} also considered a specification of the spatial moving average process.}.  Referring to \cite{wang2010estimating}, we can obtain the following log-likelihood function for each period $t$:
+ \begin{equation}\label{eq5}
  	\begin{aligned}
- 		\ln L_{t}= & -\frac{N}{2} \ln (2 \pi)-\frac{1}{2} \ln |\Pi|-\frac{1}{2} \tilde{\varepsilon}_{.t} \Pi^{-1} \tilde{\varepsilon}_{.t} \\
- 		& +\frac{1}{2}\left(\frac{\mu_{*}^{2}}{\sigma_{*}^{2}}\right)+\ln \left[\sigma_{*} \Phi\left(\frac{\mu_{*}}{\sigma_{*}}\right)\right]-\ln \left(\frac{1}{2}\sigma_{u} \right)
+ 		\ln L_{t}= & -\frac{N}{2} \ln (2 \pi)-\frac{1}{2} \ln |\Pi_t|-\frac{1}{2} \tilde{\varepsilon}_{.t} \Pi^{-1} \tilde{\varepsilon}_{.t} \\
+ 		& +\frac{1}{2}\left(\frac{\mu_{*}^{2}}{\sigma_{*}^{2}}\right)+\ln \left[\sigma_{*} \Phi\left(\frac{\mu_{*}}{\sigma_{*}}\right)\right]-\ln \left(\frac{1}{2} \right)
  	\end{aligned}
  \end{equation}
-where $\Pi=\sigma_v^2(I_N-\rho W^{yt})^{-1}[(I_N-\rho W^{yt})^{-1}]'$; $ \tilde{\varepsilon}_{.t} = ( \tilde{\varepsilon}_{1t},..., \tilde{\varepsilon}_{Nt})', \tilde{\varepsilon}_{it}=s(Y_{it}-X_{it}' \beta)$, and 
-\begin{equation}
-	\mu_*  =\frac{-\tilde{\varepsilon}_{.t}^{\prime} \Pi^{-1} \tilde{h}_{.t}}{\tilde{h}_{.t}' \Pi^{-1} \tilde{h}_{.t}+1 / \sigma_u^2}
-\end{equation}
-\begin{equation}
-	\sigma_*^2  =\frac{1}{\tilde{h}_{.t}^{\prime} \Pi^{-1} \tilde{h}_{.t}+1 / \sigma_u^2}
-\end{equation}
-
+ where $\Pi_t=(I_N-\rho W^{yt})^{-1}diag(\sigma_{v,.t}^2)[(I_N-\rho W^{yt})^{-1}]'$ \footnote{The term $diag(\sigma_{v,.t}^2)$ represents a diagonal matrix with $\sigma_{v,.t}^2=(\sigma_{v,1t}^2,...,\sigma_{v,Nt}^2)'$ as the diagonal elements}; $ \tilde{\varepsilon}_{.t} = ( \tilde{\varepsilon}_{1t},..., \tilde{\varepsilon}_{Nt})', \tilde{\varepsilon}_{it}=s(Y_{it}-X_{it}' \beta)$, and 
+ \begin{equation}
+ 	\mu_*  =\frac{-\tilde{\varepsilon}_{.t}^{\prime} \Pi_{t}^{-1} \tilde{h}_{.t}}{\tilde{h}_{.t}' \Pi_{t}^{-1} \tilde{h}_{.t}+1}
+ \end{equation}
+ \begin{equation}
+ 	\sigma_*^2  =\frac{1}{\tilde{h}_{.t}^{\prime} \Pi_{t}^{-1} \tilde{h}_{.t}+1 }
+ \end{equation}
+ 
  
 \cite{galli2022spatial} further incorporated the spatial lags of the dependent variable and the input variables into \cite{orea2019new} model, which additionally measures global and local spatial spillovers affecting the frontier function.  The model is expressed as
 \begin{equation}\label{gallimodel}
@@ -76,8 +76,8 @@ where $W_{i}^{yt}=(W_{i1}^{yt},...,W_{iN}^{yt})$ and $W_{i}^{xt}=(W_{i1}^{xt},..
 
   \begin{equation}\label{gallilik}
 	\begin{aligned}
-		\ln L_{t}= & ln|I_N - \rho W^{yt}|-\frac{N}{2} \ln (2 \pi)-\frac{1}{2} \ln |\Pi|-\frac{1}{2} \tilde{\varepsilon}_{.t} \Pi^{-1} \tilde{\varepsilon}_{.t} \\
-		& +\frac{1}{2}\left(\frac{\mu_{*}^{2}}{\sigma_{*}^{2}}\right)+\ln \left[\sigma_{*} \Phi\left(\frac{\mu_{*}}{\sigma_{*}}\right)\right]-\ln \left(\frac{1}{2}\sigma_{u} \right)
+		\ln L_{t}= & ln|I_N - \rho W^{yt}|-\frac{N}{2} \ln (2 \pi)-\frac{1}{2} \ln |\Pi_t|-\frac{1}{2} \tilde{\varepsilon}_{.t} \Pi^{-1} \tilde{\varepsilon}_{.t} \\
+		& +\frac{1}{2}\left(\frac{\mu_{*}^{2}}{\sigma_{*}^{2}}\right)+\ln \left[\sigma_{*} \Phi\left(\frac{\mu_{*}}{\sigma_{*}}\right)\right]-\ln \left(\frac{1}{2}\right)
 	\end{aligned}
 \end{equation}
 where $ \tilde{\varepsilon}_{.t} = ( \tilde{\varepsilon}_{1t},..., \tilde{\varepsilon}_{Nt})', \tilde{\varepsilon}_{it}=s(Y_{it}-X_{it}' \beta - \rho W_{i}^{yt}Y_{.t} -W_{i}^{xt}X_{.t} \theta)$. 
@@ -104,6 +104,7 @@ In summary, \cite{galli2022spatial} provided a fully comprehensive specification
 	\caption{Specific  models with restricted parameters}
 	
 	\label{Tab01}
+	\begin{threeparttable}
 	\begin{tabular}{@{}llllllllllll@{}}
 		\toprule
 		 & $yuv$ & $xuv$ & $yv$ & $yu$ & $y$ & $xuv$ & $xv$ & $xu$ & $uv$ & $u$ & $v$  \\ \midrule
@@ -112,6 +113,11 @@ In summary, \cite{galli2022spatial} provided a fully comprehensive specification
 		$\gamma$ &     &     &    & 0  & 0 &     &    & 0  &    & 0 &   \\
 		$\tau$   &     &     & 0  &    & 0 &     & 0  &    &    &   & 0 \\ \bottomrule
 	\end{tabular}
+	\begin{tablenotes}
+		\footnotesize
+		\item Note: 0 indicates the corresponding parameter is restricted to be zero.
+	\end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 

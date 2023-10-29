@@ -1,6 +1,6 @@
-\ifnum 23=1 \def\bibname{Reference}
+\ifnum 24=1 \def\bibname{Reference}
 \else \def\bibname{References} \fi
-\begin{thebibliography}{23}
+\begin{thebibliography}{24}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -12,12 +12,6 @@ Aigner, D., C.~Lovell, and P.~Schmidt. 1977.
 \newblock Formulation and Estimation of Stochastic Frontier Production Function
   Models.
 \newblock \emph{Journal of Econometrics} 6(1): 21--37.
-
-\bibitem[{Barry and Kelley~Pace(1999)}]{BARRY199941}
-Barry, R.~P., and R.~Kelley~Pace. 1999.
-\newblock Monte {{Carlo}} Estimates of the Log Determinant of Large Sparse
-  Matrices.
-\newblock \emph{Linear Algebra and its Applications} 289(1): 41--54.
 
 \bibitem[{Battese and Coelli(1995)}]{battese1995model}
 Battese, G.~E., and T.~J. Coelli. 1995.
@@ -72,6 +66,19 @@ Gude, A., I.~{\'A}lvarez, and L.~Orea. 2018.
   Spatial Stochastic Frontier Model.
 \newblock \emph{Journal of Productivity Analysis} 50(3): 155--173.
 
+\bibitem[{Jann(2005)}]{BenJann}
+Jann, B. 2005.
+\newblock {MOREMATA: Stata module (Mata) to provide various functions}.
+\newblock Statistical Software Components, Boston College Department of
+  Economics.
+\urlprefix\url{https://ideas.repec.org/c/boc/bocode/s455001.html.}
+\bibitem[{Jeanty(2010)}]{Wilner2010}
+Jeanty, P.~W. 2010.
+\newblock {SPWMATRIX: Stata module to generate, import, and export spatial
+  weights}.
+\newblock Statistical Software Components, Boston College Department of
+  Economics.
+\urlprefix\url{https://ideas.repec.org/c/boc/bocode/s457111.html.}
 \bibitem[{Karakaplan(2018)}]{mustafaugurkarakaplan2018xtsfkk}
 Karakaplan, M. 2018.
 \newblock {{XTSFKK}}: {{Stata}} Module to Estimate Endogenous Panel Stochastic

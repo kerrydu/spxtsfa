@@ -1,0 +1,51 @@
+. * importing spatial weight matrices from xtsfsp_w2.mmat
+. mata mata matuse xtsfsp_w2.mmat,replace
+(loading w1[300,300], w10[300,300], w2[300,300], w3[300,300], w4[300,300], w5[300,300], w6[300,300],
+ w7[300,300], w8[300,300], w9[300,300])
+{\smallskip}
+. local w w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+{\smallskip}
+. use xtsfsp_ex2.dta
+{\smallskip}
+. xtset id t 
+{\smallskip}
+Panel variable: id (strongly balanced)
+ Time variable: t, 1 to 10
+         Delta: 1 unit
+{\smallskip}
+. * initial values for estimated parameters
+. mat b=(2,0.5,1,-1.5,4,-1.5,0.6,0.6)
+{\smallskip}
+. * fitting the model
+. xtsfsp y x, cost uhet(z) wu(w2,mata) wv(w1,mata) wxvars(x) wx(`w',mata) init(b) genwxvars nolog
+{\smallskip}
+Spatial frontier model(xuv-SAR)                       Number of obs =    3,000
+                                                      Wald chi2(2)  = 57442.57
+Log likelihood = -1911.966                            Prob > chi2   =   0.0000
+{\smallskip}
+\HLI{13}{\TOPT}\HLI{64}
+           y {\VBAR} Coefficient  Std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+frontier     {\VBAR}
+           x {\VBAR}   1.995755   .0083855   238.00   0.000      1.97932     2.01219
+         W_x {\VBAR}   .5069275   .0221351    22.90   0.000     .4635435    .5503115
+       _cons {\VBAR}   .9917396   .0127293    77.91   0.000     .9667906    1.016689
+\HLI{13}{\PLUS}\HLI{64}
+    /lnsigv2 {\VBAR}  -1.614693   .0260257   -62.04   0.000    -1.665702   -1.563683
+\HLI{13}{\PLUS}\HLI{64}
+uhet         {\VBAR}
+           z {\VBAR}   3.999532    .002155  1855.94   0.000     3.995308    4.003755
+       _cons {\VBAR}   -1.69907   .4472607    -3.80   0.000    -2.575685   -.8224549
+\HLI{13}{\PLUS}\HLI{64}
+Wv           {\VBAR}
+       _cons {\VBAR}   .5877877   .0584046    10.06   0.000     .4733168    .7022585
+\HLI{13}{\PLUS}\HLI{64}
+Wu           {\VBAR}
+       _cons {\VBAR}   .6214134   .0008532   728.34   0.000     .6197412    .6230857
+\HLI{13}{\PLUS}\HLI{64}
+         tau {\VBAR}   .3010498   .0003879   776.13   0.000     .3002894    .3018098
+       gamma {\VBAR}   .2856862   .0268157    10.65   0.000     .2323138    .3373429
+\HLI{13}{\BOTT}\HLI{64}
+Note: Wv:_cons and Wu:_cons are the transformed parameters;
+      gamma and tau are their origin metrics in spatial components, repsectively.
+      W_(x) represent Spatial Durbin terms W(x)

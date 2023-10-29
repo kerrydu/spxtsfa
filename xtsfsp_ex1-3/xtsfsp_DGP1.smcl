@@ -1,0 +1,52 @@
+{com}. use xtsfsp_ex1.dta
+{txt}
+{com}. xtset id t 
+{res}
+{col 1}{txt:Panel variable: }{res:id}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:t}{txt:, }{res:{bind:1}}{txt: to }{res:{bind:20}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}
+{com}. * importing spatial weight matrix from xtsfsp_wmat1.mmat
+. mata mata matuse xtsfsp_w1.mmat,replace
+{res}{txt}{p 0 1 2}
+(loading
+w1[300,300])
+{p_end}
+
+{com}. * fitting the model
+. xtsfsp y x, uhet(z) wu(w1,mata) wy(w1,mata) wv(w1,mata) wx(w1,mata) wxvars(x) te(te) nolog
+{res}
+{txt}{col 1}Spatial frontier model(yxuv-SAR){col 54}{lalign 13:Number of obs}{col 67} = {res}{ralign 9:6,000}
+{txt}{col 54}{lalign 13:Wald chi2({res:2})}{col 67} = {res}{ralign 9:113733.00}
+{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 10:-3953.6034}{txt}{col 54}{lalign 13:Prob > chi2}{col 67} = {res}{ralign 9:0.0000}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           y{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}frontier     {txt}{c |}
+{space 11}x {c |}{col 14}{res}{space 2} 2.006736{col 26}{space 2} .0082953{col 37}{space 1}  241.91{col 46}{space 3}0.000{col 54}{space 4} 1.990477{col 67}{space 3} 2.022994
+{txt}{space 9}W_x {c |}{col 14}{res}{space 2} .5457549{col 26}{space 2} .0709898{col 37}{space 1}    7.69{col 46}{space 3}0.000{col 54}{space 4} .4066175{col 67}{space 3} .6848924
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.008833{col 26}{space 2} .0460347{col 37}{space 1}   21.91{col 46}{space 3}0.000{col 54}{space 4} .9186068{col 67}{space 3}  1.09906
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}/lnsigv2 {c |}{col 14}{res}{space 2}-1.566886{col 26}{space 2} .0184019{col 37}{space 1}  -85.15{col 46}{space 3}0.000{col 54}{space 4}-1.602953{col 67}{space 3}-1.530819
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}uhet         {txt}{c |}
+{space 11}z {c |}{col 14}{res}{space 2} .9858523{col 26}{space 2} .0385881{col 37}{space 1}   25.55{col 46}{space 3}0.000{col 54}{space 4}  .910221{col 67}{space 3} 1.061484
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.533232{col 26}{space 2} .3361919{col 37}{space 1}   -4.56{col 46}{space 3}0.000{col 54}{space 4}-2.192156{col 67}{space 3}-.8743084
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wy           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .5777296{col 26}{space 2}  .062202{col 37}{space 1}    9.29{col 46}{space 3}0.000{col 54}{space 4} .4558159{col 67}{space 3} .6996432
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wv           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .6066385{col 26}{space 2} .0743834{col 37}{space 1}    8.16{col 46}{space 3}0.000{col 54}{space 4} .4608498{col 67}{space 3} .7524273
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wu           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .6584978{col 26}{space 2} .0938095{col 37}{space 1}    7.02{col 46}{space 3}0.000{col 54}{space 4} .4746345{col 67}{space 3}  .842361
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         rho {c |}{col 14}{res}{space 2} .2810615{col 26}{space 2} .0286408{col 37}{space 1}    9.81{col 46}{space 3}0.000{col 54}{space 4} .2240199{col 67}{space 3} .3361837
+{txt}       gamma {c |}{col 14}{res}{space 2} .2943178{col 26}{space 2}  .033966{col 37}{space 1}    8.67{col 46}{space 3}0.000{col 54}{space 4} .2264089{col 67}{space 3} .3593788
+{txt}         tau {c |}{col 14}{res}{space 2} .3178139{col 26}{space 2} .0421619{col 37}{space 1}    7.54{col 46}{space 3}0.000{col 54}{space 4} .2329369{col 67}{space 3} .3978847
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+Note: Wy:_cons, Wv:_cons and Wu:_cons are the transfromed parameters;
+      rho, gamma and tau are their origin metrics in spatial components, repsectively.
+      W_(x) represent Spatial Durbin terms W(x)

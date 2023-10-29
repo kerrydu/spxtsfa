@@ -5,44 +5,44 @@ The style file: sj.bst
 Database file #1: sj.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 23 entries,
+You've used 24 entries,
             3193 wiz_defined-function locations,
-            811 strings with 9586 characters,
-and the built_in function-call counts, 12270 in all, are:
-= -- 1124
+            814 strings with 9765 characters,
+and the built_in function-call counts, 12436 in all, are:
+= -- 1137
 > -- 541
-< -- 16
-+ -- 194
+< -- 17
++ -- 195
 - -- 153
 * -- 1190
-:= -- 2105
-add.period$ -- 92
-call.type$ -- 23
-change.case$ -- 258
-chr.to.int$ -- 23
-cite$ -- 23
-duplicate$ -- 574
-empty$ -- 893
-format.name$ -- 230
-if$ -- 2360
+:= -- 2151
+add.period$ -- 96
+call.type$ -- 24
+change.case$ -- 267
+chr.to.int$ -- 24
+cite$ -- 24
+duplicate$ -- 587
+empty$ -- 906
+format.name$ -- 227
+if$ -- 2385
 int.to.chr$ -- 1
 int.to.str$ -- 2
-missing$ -- 24
-newline$ -- 124
-num.names$ -- 92
-pop$ -- 168
+missing$ -- 23
+newline$ -- 129
+num.names$ -- 96
+pop$ -- 176
 preamble$ -- 1
-purify$ -- 258
+purify$ -- 267
 quote$ -- 0
-skip$ -- 430
+skip$ -- 435
 stack$ -- 0
-substring$ -- 673
-swap$ -- 82
+substring$ -- 665
+swap$ -- 78
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
+type$ -- 213
 warning$ -- 0
-while$ -- 106
+while$ -- 107
 width$ -- 0
-write$ -- 304
+write$ -- 317

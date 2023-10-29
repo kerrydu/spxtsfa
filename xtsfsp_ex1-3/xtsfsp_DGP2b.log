@@ -1,0 +1,38 @@
+. * re-estimation with delmissing option 
+. local w w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+
+. cap noi xtsfsp y x, cost uhet(z) wu(w2,mata) wv(w1,mata) wxvars(x) wx(`w',mata) init(b) delmissing nolog
+missing values found. The corresponding units are deleted from the spmatrix
+
+Spatial frontier model(xuv-SAR)                       Number of obs =    2,998
+                                                      Wald chi2(2)  = 57433.89
+Log likelihood = -1909.3843                           Prob > chi2   =   0.0000
+
+------------------------------------------------------------------------------
+           y | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+frontier     |
+           x |   1.996019    .008386   238.02   0.000     1.979583    2.012455
+         W_x |   .5065641   .0221295    22.89   0.000     .4631912    .5499371
+       _cons |   .9914628    .012715    77.98   0.000     .9665418    1.016384
+-------------+----------------------------------------------------------------
+    /lnsigv2 |  -1.615516   .0260341   -62.05   0.000    -1.666542    -1.56449
+-------------+----------------------------------------------------------------
+uhet         |
+           z |   3.999476   .0021537  1857.01   0.000     3.995254    4.003697
+       _cons |  -1.698894   .4472168    -3.80   0.000    -2.575423   -.8223653
+-------------+----------------------------------------------------------------
+Wv           |
+       _cons |   .5864895   .0584501    10.03   0.000     .4719295    .7010496
+-------------+----------------------------------------------------------------
+Wu           |
+       _cons |   .6214135   .0008525   728.95   0.000     .6197427    .6230843
+-------------+----------------------------------------------------------------
+         tau |   .3010498   .0003876   776.78   0.000       .30029    .3018092
+       gamma |     .28509   .0268466    10.62   0.000     .2316575    .3368072
+------------------------------------------------------------------------------
+Note: Wv:_cons and Wu:_cons are the transformed parameters;
+      gamma and tau are their origin metrics in spatial components, repsectively.
+      W_(x) represent Spatial Durbin terms W(x)
+      Missing values found
+      The regression sample recorded by variable __e_sample__

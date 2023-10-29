@@ -1,0 +1,211 @@
+. * Translate shapefile to Stata format
+. cap spshape2dta province
+{\smallskip}
+. 
+. use province 
+{\smallskip}
+. drop if _ID == 26 | _ID>31
+(4 observations deleted)
+{\smallskip}
+. spset 
+{\smallskip}
+      Sp dataset: province.dta
+Linked shapefile: province_shp.dta
+            Data: Cross sectional
+ Spatial-unit ID: _ID
+     Coordinates: _CX, _CY (planar)
+{\smallskip}
+. * Create spatial contiguity matrix
+. spmatrix create contiguity w_con, normalize(none) 
+  weighting matrix in w_con contains 1 island
+{\smallskip}
+. * Obtain spatial matrix as Mata matrix wm from w_con 
+. spmatrix matafromsp wm id = w_con
+{\smallskip}
+. * Match the iland (_ID = 21) with the nearest province(_ID =19)
+. mata: wm[19,21]=1
+{\smallskip}
+. mata: wm[21,19]=1
+{\smallskip}
+. * Create spmatrix w_con from Mata matrix wm and rwo-normalized the matrix 
+. spmatrix spfrommata w_con= wm id, normalize(row) replace
+{\smallskip}
+. * Obtain the new spatial matrix as Mata matrix wm from w_con 
+. spmatrix matafromsp wm id = w_con
+{\smallskip}
+. 
+. use chnempirical.dta,clear
+{\smallskip}
+. * Generate varables for the translog function
+. qui translog Y K L , time(year) norm 
+{\smallskip}
+. global x  lnK lnL _t lnK_lnL _t_lnK _t_lnL _t_2 lnK_2 lnL_2
+{\smallskip}
+. global z fiscal trade fdi
+{\smallskip}
+. * Fit the model with frontier command
+. frontier lnY \$x,uhet(\$z) nolog
+{\smallskip}
+Stoc. frontier normal/half-normal model               Number of obs =      630
+                                                      Wald chi2(9)  = 33273.49
+Log likelihood = 307.21728                            Prob > chi2   =   0.0000
+{\smallskip}
+\HLI{13}{\TOPT}\HLI{64}
+         lnY {\VBAR} Coefficient  Std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+lnY          {\VBAR}
+         lnK {\VBAR}   .7939407    .020148    39.41   0.000     .7544513      .83343
+         lnL {\VBAR}   .2423919   .0152754    15.87   0.000     .2124527    .2723312
+          _t {\VBAR}  -.0159651   .0029995    -5.32   0.000     -.021844   -.0100862
+     lnK_lnL {\VBAR}  -.0239117   .0463983    -0.52   0.606    -.1148507    .0670274
+      _t_lnK {\VBAR}   .0385162   .0100006     3.85   0.000     .0189153     .058117
+      _t_lnL {\VBAR}  -.0212483   .0070556    -3.01   0.003     -.035077   -.0074197
+        _t_2 {\VBAR}  -.0064186   .0009174    -7.00   0.000    -.0082166   -.0046206
+       lnK_2 {\VBAR}  -.0151869   .0327529    -0.46   0.643    -.0793815    .0490077
+       lnL_2 {\VBAR}  -.0604274    .031823    -1.90   0.058    -.1227993    .0019444
+       _cons {\VBAR}   .3105853   .0138557    22.42   0.000     .2834287    .3377419
+\HLI{13}{\PLUS}\HLI{64}
+lnsig2v      {\VBAR}
+       _cons {\VBAR}  -4.491706   .0912372   -49.23   0.000    -4.670528   -4.312885
+\HLI{13}{\PLUS}\HLI{64}
+lnsig2u      {\VBAR}
+      fiscal {\VBAR}   .0724787   .0116298     6.23   0.000     .0496848    .0952726
+       trade {\VBAR}  -.0790757   .0165127    -4.79   0.000      -.11144   -.0467115
+         fdi {\VBAR}  -.0262741    .006819    -3.85   0.000    -.0396391   -.0129091
+       _cons {\VBAR}  -2.964112   .3476526    -8.53   0.000    -3.645499   -2.282726
+\HLI{13}{\PLUS}\HLI{64}
+     sigma_v {\VBAR}   .1058372   .0048281                      .0967849    .1157361
+\HLI{13}{\BOTT}\HLI{64}
+{\smallskip}
+. * Predict the inefficiency term and efficiency scores
+. predict double uhat, u
+{\smallskip}
+. gen double te0 = exp(-u) 
+{\smallskip}
+. * Store the estimated parameters
+. mat b0=e(b)
+{\smallskip}
+. 
+. * Fit the model with xtsfsp command
+. xtset _ID year
+{\smallskip}
+Panel variable: _ID (strongly balanced)
+ Time variable: year, 1997 to 2017
+         Delta: 1 unit
+{\smallskip}
+. mat b1 = b0,0.6,0.6,0.6
+{\smallskip}
+. xtsfsp lnY \$x, uhet(\$z) wy(wm,mata) wu(wm,mata) wv(wm,mata) init(b1) te(tesp1) nolog 
+{\smallskip}
+Spatial frontier model(yuv-SAR)                       Number of obs =      630
+                                                      Wald chi2(9)  = 16704.73
+Log likelihood = 328.51183                            Prob > chi2   =   0.0000
+{\smallskip}
+\HLI{13}{\TOPT}\HLI{64}
+         lnY {\VBAR} Coefficient  Std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+frontier     {\VBAR}
+         lnK {\VBAR}   .6720836   .0259441    25.91   0.000     .6212341    .7229331
+         lnL {\VBAR}   .3390601   .0185192    18.31   0.000     .3027631    .3753571
+          _t {\VBAR}   .0141493   .0051647     2.74   0.006     .0040267    .0242718
+     lnK_lnL {\VBAR}   .0075505   .0518048     0.15   0.884    -.0939851    .1090861
+      _t_lnK {\VBAR}   .0425662   .0115136     3.70   0.000     .0199998    .0651325
+      _t_lnL {\VBAR}   -.003457   .0079979    -0.43   0.666    -.0191326    .0122185
+        _t_2 {\VBAR}  -.0069112   .0013048    -5.30   0.000    -.0094685   -.0043539
+       lnK_2 {\VBAR}  -.0875718   .0344021    -2.55   0.011    -.1549987   -.0201449
+       lnL_2 {\VBAR}  -.0388746   .0377403    -1.03   0.303    -.1128442     .035095
+       _cons {\VBAR}   .4968022   .0431069    11.52   0.000     .4123142    .5812902
+\HLI{13}{\PLUS}\HLI{64}
+    /lnsigv2 {\VBAR}  -4.025468   .0581939   -69.17   0.000    -4.139526    -3.91141
+\HLI{13}{\PLUS}\HLI{64}
+uhet         {\VBAR}
+      fiscal {\VBAR}   .0098789   .0056888     1.74   0.082     -.001271    .0210287
+       trade {\VBAR}  -.0911437   .0213384    -4.27   0.000    -.1329661   -.0493212
+         fdi {\VBAR}  -.0185831   .0100212    -1.85   0.064    -.0382243    .0010582
+       _cons {\VBAR}  -1.963809   .3894652    -5.04   0.000    -2.727147   -1.200472
+\HLI{13}{\PLUS}\HLI{64}
+Wy           {\VBAR}
+       _cons {\VBAR}  -.0467557   .0362547    -1.29   0.197    -.1178137    .0243023
+\HLI{13}{\PLUS}\HLI{64}
+Wv           {\VBAR}
+       _cons {\VBAR}  -.0671767   .1600685    -0.42   0.675    -.3809053    .2465518
+\HLI{13}{\PLUS}\HLI{64}
+Wu           {\VBAR}
+       _cons {\VBAR}   1.280421   .2367242     5.41   0.000     .8164501    1.744392
+\HLI{13}{\PLUS}\HLI{64}
+         rho {\VBAR}  -.0233713   .0181157    -1.29   0.197    -.0588329    .0121493
+       gamma {\VBAR}  -.0335724    .079936    -0.42   0.674     -.188164     .122643
+         tau {\VBAR}   .5649863   .0805642     7.01   0.000     .3869259    .7024178
+\HLI{13}{\BOTT}\HLI{64}
+Note: Wy:_cons, Wv:_cons and Wu:_cons are the transfromed parameters;
+      rho, gamma and tau are their origin metrics in spatial components, repsectively.
+{\smallskip}
+. scalar loglikehood1 =  e(ll)
+{\smallskip}
+. mat b1 = b0,0.6
+{\smallskip}
+. xtsfsp lnY \$x, uhet(\$z)  wu(wm,mata)  init(b1) te(tesp2)  nolog
+{\smallskip}
+Spatial frontier model:u-SAR                          Number of obs =      630
+                                                      Wald chi2(9)  = 16174.92
+Log likelihood = 327.60816                            Prob > chi2   =   0.0000
+{\smallskip}
+\HLI{13}{\TOPT}\HLI{64}
+         lnY {\VBAR} Coefficient  Std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+frontier     {\VBAR}
+         lnK {\VBAR}   .6723661   .0264662    25.40   0.000     .6204933    .7242389
+         lnL {\VBAR}   .3392661   .0184417    18.40   0.000     .3031209    .3754112
+          _t {\VBAR}     .01148    .004803     2.39   0.017     .0020664    .0208937
+     lnK_lnL {\VBAR}   .0128618   .0467126     0.28   0.783    -.0786932    .1044168
+      _t_lnK {\VBAR}   .0422561   .0108054     3.91   0.000     .0210779    .0634344
+      _t_lnL {\VBAR}  -.0027543   .0074782    -0.37   0.713    -.0174113    .0119027
+        _t_2 {\VBAR}  -.0066348   .0012629    -5.25   0.000      -.00911   -.0041595
+       lnK_2 {\VBAR}  -.0915034   .0326073    -2.81   0.005    -.1554126   -.0275942
+       lnL_2 {\VBAR}  -.0395255   .0328292    -1.20   0.229    -.1038696    .0248185
+       _cons {\VBAR}   .4644182   .0315665    14.71   0.000     .4025489    .5262875
+\HLI{13}{\PLUS}\HLI{64}
+    /lnsigv2 {\VBAR}  -4.013496   .0575493   -69.74   0.000     -4.12629   -3.900701
+\HLI{13}{\PLUS}\HLI{64}
+uhet         {\VBAR}
+      fiscal {\VBAR}   .0097757      .0055     1.78   0.076     -.001004    .0205555
+       trade {\VBAR}  -.0869182   .0204711    -4.25   0.000    -.1270408   -.0467956
+         fdi {\VBAR}  -.0133135   .0090702    -1.47   0.142    -.0310908    .0044638
+       _cons {\VBAR}  -1.986602   .3822162    -5.20   0.000    -2.735732   -1.237472
+\HLI{13}{\PLUS}\HLI{64}
+Wu           {\VBAR}
+       _cons {\VBAR}   1.074231   .1923001     5.59   0.000     .6973292    1.451132
+\HLI{13}{\PLUS}\HLI{64}
+         tau {\VBAR}   .4907522   .0729816     6.72   0.000     .3351572    .6202831
+\HLI{13}{\BOTT}\HLI{64}
+{\smallskip}
+. scalar loglikehood2 =  e(ll)
+{\smallskip}
+. local lrtest = -2*(loglikehood2-loglikehood1)
+{\smallskip}
+. local pvalue = 1- chi2(2,`lrtest')
+{\smallskip}
+. display "Likelihood-ratio test: LR chi2(2) = `lrtest', Prob > chi2 = `pvalue'"
+Likelihood-ratio test: LR chi2(2) = 1.80735769935643, Prob > chi2 = .405076698951652
+{\smallskip}
+. 
+. * Plot the density of estimates of technical efficiency from different models
+. twoway (kdensity te0, color(black) lpattern(solid)) ///
+>        (kdensity tesp1,color(red) lpattern(dash))   ///
+>            (kdensity tesp2,color(blue) lpattern(longdash)),  ///
+>            legend(pos(10) ring(0) label(1 Non-spatial Stoc. Frontier) ///
+>            label(2 Spatial Stoc. Frontier:yuv) label(3 Spatial Stoc. Frontier:u)) ///
+>            xtitle("Technical Efficiency") ytitle("Density")
+{\smallskip}
+. graph2tex, epsfile(fig1) caption(Distribution of efficency scores) label(fig1)
+\% exported graph to fig1.eps
+\% We can see in Figure \\ref{\lbr}fig:fig1{\rbr} that
+\\begin{\lbr}figure{\rbr}[h]
+\\begin{\lbr}centering{\rbr}
+  \\includegraphics[height=3in]{\lbr}fig1{\rbr}
+  \\caption{\lbr}Distribution of efficency scores{\rbr}
+  \\label{\lbr}fig:fig1{\rbr}
+\\end{\lbr}centering{\rbr}
+\\end{\lbr}figure{\rbr}
+{\smallskip}
+. 

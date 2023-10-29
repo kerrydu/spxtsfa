@@ -1,0 +1,58 @@
+{com}. * importing spatial weight matrices from xtsfsp_w3.mmat
+. mata mata matuse xtsfsp_w3,replace
+{res}{txt}{p 0 1 2}
+(loading
+w1[300,300],
+w10[300,300],
+w2[300,300],
+w3[300,300],
+w4[300,300],
+w5[300,300],
+w6[300,300],
+w7[300,300],
+w8[300,300],
+w9[300,300])
+{p_end}
+
+{com}. local w w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+{txt}
+{com}. use xtsfsp_ex3.dta
+{txt}
+{com}. xtset id t
+{res}
+{col 1}{txt:Panel variable: }{res:id}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:t}{txt:, }{res:{bind:1}}{txt: to }{res:{bind:10}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}
+{com}. xtsfsp y x, wu(`w',mata) wv(`w',mata) uhet(z) vhet(d) nolog
+{res}
+{txt}{col 1}Spatial frontier model(uv-SAR){col 56}{lalign 13:Number of obs}{col 69} = {res}{ralign 7:3,000}
+{txt}{col 56}{lalign 13:Wald chi2({res:1})}{col 69} = {res}{ralign 7:7472.38}
+{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 10:-5803.0516}{txt}{col 56}{lalign 13:Prob > chi2}{col 69} = {res}{ralign 7:0.0000}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           y{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}frontier     {txt}{c |}
+{space 11}x {c |}{col 14}{res}{space 2} 1.988108{col 26}{space 2} .0229991{col 37}{space 1}   86.44{col 46}{space 3}0.000{col 54}{space 4} 1.943031{col 67}{space 3} 2.033185
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .8997916{col 26}{space 2} .0737763{col 37}{space 1}   12.20{col 46}{space 3}0.000{col 54}{space 4} .7551927{col 67}{space 3} 1.044391
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}lnsigv2      {txt}{c |}
+{space 11}d {c |}{col 14}{res}{space 2} .9897965{col 26}{space 2} .0259185{col 37}{space 1}   38.19{col 46}{space 3}0.000{col 54}{space 4} .9389972{col 67}{space 3} 1.040596
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .9950927{col 26}{space 2} .0259519{col 37}{space 1}   38.34{col 46}{space 3}0.000{col 54}{space 4}  .944228{col 67}{space 3} 1.045957
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}uhet         {txt}{c |}
+{space 11}z {c |}{col 14}{res}{space 2} 1.019351{col 26}{space 2} .0458701{col 37}{space 1}   22.22{col 46}{space 3}0.000{col 54}{space 4} .9294473{col 67}{space 3} 1.109255
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.122574{col 26}{space 2} .4629594{col 37}{space 1}    2.42{col 46}{space 3}0.015{col 54}{space 4} .2151904{col 67}{space 3} 2.029958
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wv           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .6171649{col 26}{space 2} .0431991{col 37}{space 1}   14.29{col 46}{space 3}0.000{col 54}{space 4} .5324961{col 67}{space 3} .7018337
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wu           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .6471479{col 26}{space 2} .0703691{col 37}{space 1}    9.20{col 46}{space 3}0.000{col 54}{space 4}  .509227{col 67}{space 3} .7850688
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         tau {c |}{col 14}{res}{space 2}  .299117{col 26}{space 2} .0196647{col 37}{space 1}   15.21{col 46}{space 3}0.000{col 54}{space 4} .2601042{col 67}{space 3} .3371547
+{txt}       gamma {c |}{col 14}{res}{space 2} .3127036{col 26}{space 2} .0317402{col 37}{space 1}    9.85{col 46}{space 3}0.000{col 54}{space 4} .2492256{col 67}{space 3} .3735057
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+Note: Wv:_cons and Wu:_cons are the transformed parameters
+      gamma and tau are their origin metrics in spatial components, repsectively.
