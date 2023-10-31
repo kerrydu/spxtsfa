@@ -1,0 +1,212 @@
+{com}. * Translate shapefile to Stata format
+. cap spshape2dta province
+{txt}
+{com}. 
+. use province 
+{txt}
+{com}. drop if _ID == 26 | _ID>31
+{txt}(4 observations deleted)
+
+{com}. spset 
+{res}
+{txt}{ralign 16:Sp dataset}: {res:province.dta}
+Linked shapefile: {res:province_shp.dta}
+{ralign 16:Data}: Cross sectional
+{ralign 16:Spatial-unit ID}: {res:_ID}
+{ralign 16:Coordinates}: {res:_CX}, {res:_CY} (planar)
+
+{com}. * Create spatial contiguity matrix
+. spmatrix create contiguity w_con, normalize(none) 
+{res}{p 2 2 2}{txt} weighting matrix in {inp}w_con {txt}contains 1 island
+{p_end}
+
+{com}. * Obtain spatial matrix as Mata matrix wm from w_con 
+. spmatrix matafromsp wm id = w_con
+{res}{txt}
+{com}. * Match the iland (_ID = 21) with the nearest province(_ID =19)
+. mata: wm[19,21]=1
+{res}{txt}
+{com}. mata: wm[21,19]=1
+{res}{txt}
+{com}. * Create spmatrix w_con from Mata matrix wm and rwo-normalized the matrix 
+. spmatrix spfrommata w_con= wm id, normalize(row) replace
+{res}{txt}
+{com}. * Obtain the new spatial matrix as Mata matrix wm from w_con 
+. spmatrix matafromsp wm id = w_con
+{res}{txt}
+{com}. 
+. use chnempirical.dta,clear
+{txt}
+{com}. * Generate varables for the translog function
+. qui translog Y K L , time(year) norm 
+{txt}
+{com}. global x  lnK lnL _t lnK_lnL _t_lnK _t_lnL _t_2 lnK_2 lnL_2
+{txt}
+{com}. global z fiscal trade fdi
+{txt}
+{com}. * Fit the model with frontier command
+. frontier lnY $x,uhet($z) nolog
+{res}
+{txt}{col 1}Stoc. frontier normal/half-normal model{col 55}{lalign 13:Number of obs}{col 68} = {res}{ralign 8:630}
+{txt}{col 55}{lalign 13:Wald chi2({res:9})}{col 68} = {res}{ralign 8:33273.49}
+{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 9:307.21728}{txt}{col 55}{lalign 13:Prob > chi2}{col 68} = {res}{ralign 8:0.0000}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         lnY{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}lnY          {txt}{c |}
+{space 9}lnK {c |}{col 14}{res}{space 2} .7939407{col 26}{space 2}  .020148{col 37}{space 1}   39.41{col 46}{space 3}0.000{col 54}{space 4} .7544513{col 67}{space 3}   .83343
+{txt}{space 9}lnL {c |}{col 14}{res}{space 2} .2423919{col 26}{space 2} .0152754{col 37}{space 1}   15.87{col 46}{space 3}0.000{col 54}{space 4} .2124527{col 67}{space 3} .2723312
+{txt}{space 10}_t {c |}{col 14}{res}{space 2}-.0159651{col 26}{space 2} .0029995{col 37}{space 1}   -5.32{col 46}{space 3}0.000{col 54}{space 4} -.021844{col 67}{space 3}-.0100862
+{txt}{space 5}lnK_lnL {c |}{col 14}{res}{space 2}-.0239117{col 26}{space 2} .0463983{col 37}{space 1}   -0.52{col 46}{space 3}0.606{col 54}{space 4}-.1148507{col 67}{space 3} .0670274
+{txt}{space 6}_t_lnK {c |}{col 14}{res}{space 2} .0385162{col 26}{space 2} .0100006{col 37}{space 1}    3.85{col 46}{space 3}0.000{col 54}{space 4} .0189153{col 67}{space 3}  .058117
+{txt}{space 6}_t_lnL {c |}{col 14}{res}{space 2}-.0212483{col 26}{space 2} .0070556{col 37}{space 1}   -3.01{col 46}{space 3}0.003{col 54}{space 4} -.035077{col 67}{space 3}-.0074197
+{txt}{space 8}_t_2 {c |}{col 14}{res}{space 2}-.0064186{col 26}{space 2} .0009174{col 37}{space 1}   -7.00{col 46}{space 3}0.000{col 54}{space 4}-.0082166{col 67}{space 3}-.0046206
+{txt}{space 7}lnK_2 {c |}{col 14}{res}{space 2}-.0151869{col 26}{space 2} .0327529{col 37}{space 1}   -0.46{col 46}{space 3}0.643{col 54}{space 4}-.0793815{col 67}{space 3} .0490077
+{txt}{space 7}lnL_2 {c |}{col 14}{res}{space 2}-.0604274{col 26}{space 2}  .031823{col 37}{space 1}   -1.90{col 46}{space 3}0.058{col 54}{space 4}-.1227993{col 67}{space 3} .0019444
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3105853{col 26}{space 2} .0138557{col 37}{space 1}   22.42{col 46}{space 3}0.000{col 54}{space 4} .2834287{col 67}{space 3} .3377419
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}lnsig2v      {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-4.491706{col 26}{space 2} .0912372{col 37}{space 1}  -49.23{col 46}{space 3}0.000{col 54}{space 4}-4.670528{col 67}{space 3}-4.312885
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}lnsig2u      {txt}{c |}
+{space 6}fiscal {c |}{col 14}{res}{space 2} .0724787{col 26}{space 2} .0116298{col 37}{space 1}    6.23{col 46}{space 3}0.000{col 54}{space 4} .0496848{col 67}{space 3} .0952726
+{txt}{space 7}trade {c |}{col 14}{res}{space 2}-.0790757{col 26}{space 2} .0165127{col 37}{space 1}   -4.79{col 46}{space 3}0.000{col 54}{space 4}  -.11144{col 67}{space 3}-.0467115
+{txt}{space 9}fdi {c |}{col 14}{res}{space 2}-.0262741{col 26}{space 2}  .006819{col 37}{space 1}   -3.85{col 46}{space 3}0.000{col 54}{space 4}-.0396391{col 67}{space 3}-.0129091
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.964112{col 26}{space 2} .3476526{col 37}{space 1}   -8.53{col 46}{space 3}0.000{col 54}{space 4}-3.645499{col 67}{space 3}-2.282726
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+     sigma_v {c |}{col 14}{res}{space 2} .1058372{col 26}{space 2} .0048281{col 54}{space 4} .0967849{col 67}{space 3} .1157361
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. * Predict the inefficiency term and efficiency scores
+. predict double uhat, u
+{txt}
+{com}. gen double te0 = exp(-u) 
+{txt}
+{com}. * Store the estimated parameters
+. mat b0=e(b)
+{txt}
+{com}. 
+. * Fit the model with xtsfsp command
+. xtset _ID year
+{res}
+{col 1}{txt:Panel variable: }{res:_ID}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:year}{txt:, }{res:{bind:1997}}{txt: to }{res:{bind:2017}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}
+{com}. mat b1 = b0,0.6,0.6,0.6
+{txt}
+{com}. xtsfsp lnY $x, uhet($z) wy(wm,mata) wu(wm,mata) wv(wm,mata) init(b1) te(tesp1) nolog 
+{res}
+{txt}{col 1}Spatial frontier model(yuv-SAR){col 55}{lalign 13:Number of obs}{col 68} = {res}{ralign 8:630}
+{txt}{col 55}{lalign 13:Wald chi2({res:9})}{col 68} = {res}{ralign 8:16704.73}
+{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 9:328.51183}{txt}{col 55}{lalign 13:Prob > chi2}{col 68} = {res}{ralign 8:0.0000}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         lnY{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}frontier     {txt}{c |}
+{space 9}lnK {c |}{col 14}{res}{space 2} .6720836{col 26}{space 2} .0259441{col 37}{space 1}   25.91{col 46}{space 3}0.000{col 54}{space 4} .6212341{col 67}{space 3} .7229331
+{txt}{space 9}lnL {c |}{col 14}{res}{space 2} .3390601{col 26}{space 2} .0185192{col 37}{space 1}   18.31{col 46}{space 3}0.000{col 54}{space 4}  .302763{col 67}{space 3} .3753571
+{txt}{space 10}_t {c |}{col 14}{res}{space 2} .0141493{col 26}{space 2} .0051647{col 37}{space 1}    2.74{col 46}{space 3}0.006{col 54}{space 4} .0040267{col 67}{space 3} .0242719
+{txt}{space 5}lnK_lnL {c |}{col 14}{res}{space 2} .0075504{col 26}{space 2}  .051805{col 37}{space 1}    0.15{col 46}{space 3}0.884{col 54}{space 4}-.0939855{col 67}{space 3} .1090864
+{txt}{space 6}_t_lnK {c |}{col 14}{res}{space 2} .0425662{col 26}{space 2} .0115137{col 37}{space 1}    3.70{col 46}{space 3}0.000{col 54}{space 4} .0199998{col 67}{space 3} .0651326
+{txt}{space 6}_t_lnL {c |}{col 14}{res}{space 2}-.0034571{col 26}{space 2} .0079979{col 37}{space 1}   -0.43{col 46}{space 3}0.666{col 54}{space 4}-.0191327{col 67}{space 3} .0122186
+{txt}{space 8}_t_2 {c |}{col 14}{res}{space 2}-.0069112{col 26}{space 2} .0013048{col 37}{space 1}   -5.30{col 46}{space 3}0.000{col 54}{space 4}-.0094686{col 67}{space 3}-.0043539
+{txt}{space 7}lnK_2 {c |}{col 14}{res}{space 2}-.0875718{col 26}{space 2} .0344022{col 37}{space 1}   -2.55{col 46}{space 3}0.011{col 54}{space 4} -.154999{col 67}{space 3}-.0201446
+{txt}{space 7}lnL_2 {c |}{col 14}{res}{space 2}-.0388746{col 26}{space 2} .0377404{col 37}{space 1}   -1.03{col 46}{space 3}0.303{col 54}{space 4}-.1128443{col 67}{space 3} .0350952
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4968023{col 26}{space 2}  .043107{col 37}{space 1}   11.52{col 46}{space 3}0.000{col 54}{space 4} .4123142{col 67}{space 3} .5812903
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}/lnsigv2 {c |}{col 14}{res}{space 2}-4.025468{col 26}{space 2} .0581939{col 37}{space 1}  -69.17{col 46}{space 3}0.000{col 54}{space 4}-4.139526{col 67}{space 3} -3.91141
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}uhet         {txt}{c |}
+{space 6}fiscal {c |}{col 14}{res}{space 2} .0098788{col 26}{space 2} .0056888{col 37}{space 1}    1.74{col 46}{space 3}0.082{col 54}{space 4} -.001271{col 67}{space 3} .0210287
+{txt}{space 7}trade {c |}{col 14}{res}{space 2}-.0911438{col 26}{space 2} .0213384{col 37}{space 1}   -4.27{col 46}{space 3}0.000{col 54}{space 4}-.1329663{col 67}{space 3}-.0493212
+{txt}{space 9}fdi {c |}{col 14}{res}{space 2}-.0185831{col 26}{space 2} .0100212{col 37}{space 1}   -1.85{col 46}{space 3}0.064{col 54}{space 4}-.0382243{col 67}{space 3} .0010582
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.963808{col 26}{space 2} .3894655{col 37}{space 1}   -5.04{col 46}{space 3}0.000{col 54}{space 4}-2.727146{col 67}{space 3}-1.200469
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wy           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.0467557{col 26}{space 2} .0362548{col 37}{space 1}   -1.29{col 46}{space 3}0.197{col 54}{space 4}-.1178138{col 67}{space 3} .0243023
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wv           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.0671769{col 26}{space 2} .1600686{col 37}{space 1}   -0.42{col 46}{space 3}0.675{col 54}{space 4}-.3809057{col 67}{space 3} .2465518
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wu           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.280422{col 26}{space 2} .2367245{col 37}{space 1}    5.41{col 46}{space 3}0.000{col 54}{space 4}   .81645{col 67}{space 3} 1.744393
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         rho {c |}{col 14}{res}{space 2}-.0233713{col 26}{space 2} .0181157{col 37}{space 1}   -1.29{col 46}{space 3}0.197{col 54}{space 4} -.058833{col 67}{space 3} .0121493
+{txt}       gamma {c |}{col 14}{res}{space 2}-.0335725{col 26}{space 2} .0799361{col 37}{space 1}   -0.42{col 46}{space 3}0.674{col 54}{space 4}-.1881642{col 67}{space 3}  .122643
+{txt}         tau {c |}{col 14}{res}{space 2} .5649866{col 26}{space 2} .0805643{col 37}{space 1}    7.01{col 46}{space 3}0.000{col 54}{space 4} .3869258{col 67}{space 3} .7024182
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+Note: Wy:_cons, Wv:_cons and Wu:_cons are the transfromed parameters;
+      rho, gamma and tau are their origin metrics in spatial components, repsectively.
+{res}{txt}
+{com}. scalar loglikehood1 =  e(ll)
+{txt}
+{com}. mat b1 = b0,0.6
+{txt}
+{com}. xtsfsp lnY $x, uhet($z)  wu(wm,mata)  init(b1) te(tesp2)  nolog
+{res}
+{txt}{col 1}Spatial frontier model:u-SAR{col 55}{lalign 13:Number of obs}{col 68} = {res}{ralign 8:630}
+{txt}{col 55}{lalign 13:Wald chi2({res:9})}{col 68} = {res}{ralign 8:16174.91}
+{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 9:327.60816}{txt}{col 55}{lalign 13:Prob > chi2}{col 68} = {res}{ralign 8:0.0000}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         lnY{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}frontier     {txt}{c |}
+{space 9}lnK {c |}{col 14}{res}{space 2}  .672366{col 26}{space 2} .0264662{col 37}{space 1}   25.40{col 46}{space 3}0.000{col 54}{space 4} .6204932{col 67}{space 3} .7242388
+{txt}{space 9}lnL {c |}{col 14}{res}{space 2} .3392661{col 26}{space 2} .0184417{col 37}{space 1}   18.40{col 46}{space 3}0.000{col 54}{space 4} .3031209{col 67}{space 3} .3754113
+{txt}{space 10}_t {c |}{col 14}{res}{space 2} .0114801{col 26}{space 2}  .004803{col 37}{space 1}    2.39{col 46}{space 3}0.017{col 54}{space 4} .0020664{col 67}{space 3} .0208937
+{txt}{space 5}lnK_lnL {c |}{col 14}{res}{space 2} .0128618{col 26}{space 2} .0467126{col 37}{space 1}    0.28{col 46}{space 3}0.783{col 54}{space 4}-.0786932{col 67}{space 3} .1044169
+{txt}{space 6}_t_lnK {c |}{col 14}{res}{space 2} .0422561{col 26}{space 2} .0108054{col 37}{space 1}    3.91{col 46}{space 3}0.000{col 54}{space 4} .0210779{col 67}{space 3} .0634344
+{txt}{space 6}_t_lnL {c |}{col 14}{res}{space 2}-.0027543{col 26}{space 2} .0074782{col 37}{space 1}   -0.37{col 46}{space 3}0.713{col 54}{space 4}-.0174113{col 67}{space 3} .0119027
+{txt}{space 8}_t_2 {c |}{col 14}{res}{space 2}-.0066348{col 26}{space 2} .0012629{col 37}{space 1}   -5.25{col 46}{space 3}0.000{col 54}{space 4}  -.00911{col 67}{space 3}-.0041595
+{txt}{space 7}lnK_2 {c |}{col 14}{res}{space 2}-.0915034{col 26}{space 2} .0326073{col 37}{space 1}   -2.81{col 46}{space 3}0.005{col 54}{space 4}-.1554126{col 67}{space 3}-.0275942
+{txt}{space 7}lnL_2 {c |}{col 14}{res}{space 2}-.0395255{col 26}{space 2} .0328292{col 37}{space 1}   -1.20{col 46}{space 3}0.229{col 54}{space 4}-.1038696{col 67}{space 3} .0248185
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4644181{col 26}{space 2} .0315665{col 37}{space 1}   14.71{col 46}{space 3}0.000{col 54}{space 4} .4025489{col 67}{space 3} .5262874
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}/lnsigv2 {c |}{col 14}{res}{space 2}-4.013496{col 26}{space 2} .0575493{col 37}{space 1}  -69.74{col 46}{space 3}0.000{col 54}{space 4} -4.12629{col 67}{space 3}-3.900701
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}uhet         {txt}{c |}
+{space 6}fiscal {c |}{col 14}{res}{space 2} .0097757{col 26}{space 2}    .0055{col 37}{space 1}    1.78{col 46}{space 3}0.076{col 54}{space 4} -.001004{col 67}{space 3} .0205555
+{txt}{space 7}trade {c |}{col 14}{res}{space 2}-.0869182{col 26}{space 2} .0204711{col 37}{space 1}   -4.25{col 46}{space 3}0.000{col 54}{space 4}-.1270408{col 67}{space 3}-.0467956
+{txt}{space 9}fdi {c |}{col 14}{res}{space 2}-.0133135{col 26}{space 2} .0090702{col 37}{space 1}   -1.47{col 46}{space 3}0.142{col 54}{space 4}-.0310908{col 67}{space 3} .0044638
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.986602{col 26}{space 2} .3822161{col 37}{space 1}   -5.20{col 46}{space 3}0.000{col 54}{space 4}-2.735732{col 67}{space 3}-1.237472
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Wu           {txt}{c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}  1.07423{col 26}{space 2} .1922999{col 37}{space 1}    5.59{col 46}{space 3}0.000{col 54}{space 4} .6973292{col 67}{space 3} 1.451131
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         tau {c |}{col 14}{res}{space 2}  .490752{col 26}{space 2} .0729815{col 37}{space 1}    6.72{col 46}{space 3}0.000{col 54}{space 4} .3351572{col 67}{space 3} .6202829
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. scalar loglikehood2 =  e(ll)
+{txt}
+{com}. local lrtest = -2*(loglikehood2-loglikehood1)
+{txt}
+{com}. local pvalue = 1- chi2(2,`lrtest')
+{txt}
+{com}. display "Likelihood-ratio test: LR chi2(2) = `lrtest', Prob > chi2 = `pvalue'"
+{res}Likelihood-ratio test: LR chi2(2) = 1.807357699424301, Prob > chi2 = .4050766989379054
+{txt}
+{com}. 
+. * Plot the density of estimates of technical efficiency from different models
+. twoway (kdensity te0, color(black) lpattern(solid)) ///
+>        (kdensity tesp1,color(red) lpattern(dash))   ///
+>            (kdensity tesp2,color(blue) lpattern(longdash)),  ///
+>         legend(pos(10) ring(0) label(1 Non-spatial Stoc. Frontier) ///
+>         label(2 Spatial Stoc. Frontier:yuv) label(3 Spatial Stoc. Frontier:u)) ///
+>         xtitle("Technical Efficiency") ytitle("Density")
+{res}{txt}
+{com}. graph2tex, epsfile("../output/fig1") caption(Distribution of efficency scores) label(fig1)
+% exported graph to ../output/fig1.eps
+% We can see in Figure \ref{fig:fig1} that
+\begin{figure}[h]
+\begin{centering}
+  \includegraphics[height=3in]{../output/fig1}
+  \caption{Distribution of efficency scores}
+  \label{fig:fig1}
+\end{centering}
+\end{figure}
+{txt}
+{com}. 
