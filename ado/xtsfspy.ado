@@ -393,7 +393,7 @@ end
 
 
 //////////////////////////////////////
-
+* This command is browed from Morad Zekhnini's nwxtregress package
 capture program drop issorted
 program define issorted
 	syntax	varlist 

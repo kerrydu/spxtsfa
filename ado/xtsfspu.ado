@@ -260,10 +260,9 @@ program Replay
 	ml display , level(`level')	`options'		///
 		diparm(Wu, label(tau) prob function($rmin/(1+exp(@))+$rmax*exp(@)/(1+exp(@))) /*
        */ d(exp(@)*(($rmax-$rmin)/(1+exp(@))^2))) 
-end
 di "Note: Wu:_cons is the transformed parameters;"
 di "      tau is the origin metric in the spatial components."
-
+end
 ////////////////////////
 //////utility comands and function for spxtsfa////
 
@@ -406,7 +405,7 @@ end
 
 
 //////////////////////////////////////
-
+* This command is browed from Morad Zekhnini's nwxtregress package
 capture program drop issorted
 program define issorted
 	syntax	varlist 

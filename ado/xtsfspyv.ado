@@ -306,8 +306,8 @@ program Replay
        */ d(exp(@)*(($rymax-$rymin)/(1+exp(@))^2))) ///  
 	   	diparm(Wv, label(gamma) prob function($rvmin/(1+exp(@))+$rvmax*exp(@)/(1+exp(@))) /*
        */ d(exp(@)*(($rvmax-$rvmin)/(1+exp(@))^2)))  
-	di "Note: Wy:_cons and Wv:_cons are the transfromed parameters;"
-	di "      rho and gamma  are their origin metrics in spatial components, repsectively."	   
+	di "Note: Wy:_cons and Wv:_cons are the transformed parameters;"
+	di "      rho and gamma  are their origin metrics in spatial components, respectively."	   
 	   
 end
 
@@ -453,7 +453,7 @@ end
 
 
 //////////////////////////////////////
-
+* This command is browed from Morad Zekhnini's nwxtregress package
 capture program drop issorted
 program define issorted
 	syntax	varlist 

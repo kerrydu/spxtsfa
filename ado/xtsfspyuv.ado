@@ -401,7 +401,7 @@ program Replay
 	   diparm(Wu, label(tau) prob function($rumin/(1+exp(@))+$rumax*exp(@)/(1+exp(@))) /*
        */ d(exp(@)*(($rumax-$rumin)/(1+exp(@))^2))) 	   
 	di "Note: Wy:_cons, Wv:_cons and Wu:_cons are the transformed parameters;"
-	di "      rho, gamma and tau are their origin metrics, repsectively"
+	di "      rho, gamma and tau are their origin metrics, respectively"
 end
 
 ///////////////////
@@ -546,7 +546,7 @@ end
 
 
 //////////////////////////////////////
-
+* This command is browed from Morad Zekhnini's nwxtregress package
 capture program drop issorted
 program define issorted
 	syntax	varlist 
