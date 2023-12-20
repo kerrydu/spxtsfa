@@ -37,7 +37,7 @@ Replay syntax
 {syntab :Frontier}
 {synopt :{opt nocons:tant}}suppress constant term{p_end}
 {synopt :{opt cost}}fit cost frontier model; default is {cmd:production}{p_end}
-{synopt :{cmd:wxvars({it:varlist})}}spatially lagged independent variables{p_end}
+{synopt :{cmd:wxvars({it:varlist})}}specify variables of spatial Durbin terms{p_end}
 
 {syntab :Variance function}
 {synopt :{cmdab:u:het(}{it:{help varlist}}[{cmd:,} {opt nocons:tant}]{cmd:)}}explanatory
@@ -48,10 +48,10 @@ variables for idiosyncratic error variance function; use {opt noconstant}
 to suppress constant term{p_end}
 
 {syntab :Spatial weight matrix}
-{synopt :{cmd:wy(}{it:W1 [W2...WT][,mata array]}{cmd:)}}specify spatial weight matrix for lagged dependent variable{p_end}
-{synopt :{cmd:wx(}{it:W1 [W2...WT][,mata array]}{cmd:)}}specify spatial weight matrix for lagged independent variables{p_end}
+{synopt :{cmd:wy(}{it:W1 [W2...WT][,mata array]}{cmd:)}}specify spatial weight matrix for the dependent variable{p_end}
+{synopt :{cmd:wx(}{it:W1 [W2...WT][,mata array]}{cmd:)}}specify spatial weight matrix for the independent variables{p_end}
 {synopt :{cmd:wu(}{it:W1 [W2...WT][,mata array]}{cmd:)}}specify spatial weight matrix for technical inefficiency{p_end}
-{synopt :{cmd:wv(}{it:W1 [W2...WT][,mata array]}{cmd:)}}specify spatial weight matrix for the error term{p_end}
+{synopt :{cmd:wv(}{it:W1 [W2...WT][,mata array]}{cmd:)}}specify spatial weight matrix for the random error{p_end}
 {synopt :{cmd:normalize(}{it:string}{cmd:)}}specify the normalized method of spatial weight matrixs{p_end}
 
 {syntab :Regression}
@@ -102,7 +102,7 @@ explanation of their methodology and empirical analyses.
 default is {cmd:production}.
 
 {phang}
-{cmd: wxvars({it:varlist})} specifies spatially lagged independent variables.
+{cmd: wxvars({it:varlist})} specifies variables for spatial Durbin terms.
 
 {dlgtab:Ineffciency}
 
@@ -113,10 +113,10 @@ in the technical inefficiency variance function.
 {dlgtab:Spatial weught matrix}
 
 {phang}
-{opt wy(W1 [W2 ... WT][,mata array])} specifies that the spatial weight matrix for lagged dependent variable. 
+{opt wy(W1 [W2 ... WT][,mata array])} specifies that the spatial weight matrix for the dependent variable. 
 
 {phang}
-{opt wx(W1 [W2 ... WT][,mata array])} specifies that the spatial weight matrix for lagged independent variable. 
+{opt wx(W1 [W2 ... WT][,mata array])} specifies that the spatial weight matrix for the independent variables. 
 
 {phang}
 {opt wu(W1 [W2 ... WT][,mata array])} specifies spatial weight matrix for technical inefficiency{p_end}

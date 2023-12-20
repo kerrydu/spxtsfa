@@ -1,0 +1,59 @@
+. use xtsfsp_ex1.dta
+{\smallskip}
+. xtset id t 
+{\smallskip}
+Panel variable: id (strongly balanced)
+ Time variable: t, 1 to 20
+         Delta: 1 unit
+{\smallskip}
+. * importing spatial weight matrix from xtsfsp_wmat1.mmat
+. mata mata matuse xtsfsp_w1.mmat,replace
+(loading w1[300,300])
+{\smallskip}
+. * fitting the model
+. tic
+Timer is turned on!
+{\smallskip}
+. xtsfsp y x, uhet(z) wu(w1,mata) wy(w1,mata) wv(w1,mata) ///
+>             wx(w1,mata) wxvars(x) te(te) nolog
+{\smallskip}
+Spatial frontier model(yxuv-SAR)                     Number of obs =     6,000
+                                                     Wald chi2(2)  = 113733.00
+Log likelihood = -3953.6034                          Prob > chi2   =    0.0000
+{\smallskip}
+\HLI{13}{\TOPT}\HLI{64}
+           y {\VBAR} Coefficient  Std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+frontier     {\VBAR}
+           x {\VBAR}   2.006736   .0082953   241.91   0.000     1.990477    2.022994
+         W_x {\VBAR}   .5457545   .0709898     7.69   0.000     .4066171    .6848919
+       _cons {\VBAR}   1.008833   .0460347    21.91   0.000     .9186065    1.099059
+\HLI{13}{\PLUS}\HLI{64}
+    /lnsigv2 {\VBAR}  -1.566886   .0184019   -85.15   0.000    -1.602953   -1.530819
+\HLI{13}{\PLUS}\HLI{64}
+uhet         {\VBAR}
+           z {\VBAR}   .9858524   .0385881    25.55   0.000      .910221    1.061484
+       _cons {\VBAR}  -1.533232   .3361919    -4.56   0.000    -2.192156   -.8743081
+\HLI{13}{\PLUS}\HLI{64}
+Wy           {\VBAR}
+       _cons {\VBAR}     .57773    .062202     9.29   0.000     .4558163    .6996436
+\HLI{13}{\PLUS}\HLI{64}
+Wv           {\VBAR}
+       _cons {\VBAR}   .6066382   .0743834     8.16   0.000     .4608494     .752427
+\HLI{13}{\PLUS}\HLI{64}
+Wu           {\VBAR}
+       _cons {\VBAR}   .6584973   .0938095     7.02   0.000      .474634    .8423606
+\HLI{13}{\PLUS}\HLI{64}
+         rho {\VBAR}   .2810617   .0286408     9.81   0.000     .2240201    .3361839
+       gamma {\VBAR}   .2943177    .033966     8.67   0.000     .2264087    .3593786
+         tau {\VBAR}   .3178137    .042162     7.54   0.000     .2329366    .3978845
+\HLI{13}{\BOTT}\HLI{64}
+Note: Wy:_cons, Wv:_cons and Wu:_cons are the transformed parameters;
+      rho, gamma and tau are their origin metrics in spatial components, respectiv
+> ely.
+      W_(x) represent Spatial Durbin terms W(x)
+{\smallskip}
+. toc
+Elapsed time: 252.347 sec
+             =4 min \& 12.347 sec
+{\smallskip}

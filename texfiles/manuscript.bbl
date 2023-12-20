@@ -1,0 +1,200 @@
+\ifnum 32=1 \def\bibname{Reference}
+\else \def\bibname{References} \fi
+\begin{thebibliography}{32}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Aigner et~al.\@(1977)Aigner, Lovell, and
+  Schmidt}]{aignerFormulationEstimationStochastic1977}
+Aigner, D., C.~Lovell, and P.~Schmidt. 1977.
+\newblock Formulation and estimation of stochastic frontier production function
+  models.
+\newblock \emph{Journal of Econometrics} 6: 21--37.
+
+\bibitem[{Ayouba(2023)}]{ayouba2023spatial}
+Ayouba, K. 2023.
+\newblock Spatial dependence in production frontier models.
+\newblock \emph{Journal of Productivity Analysis} 60: 21--36.
+
+\bibitem[{Battese and Coelli(1995)}]{battese1995model}
+Battese, G.~E., and T.~J. Coelli. 1995.
+\newblock A model for technical inefficiency effects in a stochastic frontier
+  production function for panel data.
+\newblock \emph{Empirical Economics} 20: 325--332.
+
+\bibitem[{Belotti et~al.\@(2013)Belotti, Daidone, Ilardi, and
+  Atella}]{belotti2013stochastic}
+Belotti, F., S.~Daidone, G.~Ilardi, and V.~Atella. 2013.
+\newblock Stochastic {{frontier analysis}} using {{Stata}}.
+\newblock \emph{Stata Journal} 13: 719--758.
+
+\bibitem[{Belotti and Ilardi(2018)}]{belotti2018consistent}
+Belotti, F., and G.~Ilardi. 2018.
+\newblock Consistent inference in fixed-effects stochastic frontier models.
+\newblock \emph{Journal of Econometrics} 202: 161--177.
+
+\bibitem[{Chen et~al.\@(2014)Chen, Schmidt, and Wang}]{chen2014consistent}
+Chen, Y.-Y., P.~Schmidt, and H.-J. Wang. 2014.
+\newblock Consistent estimation of the fixed effects stochastic frontier model.
+\newblock \emph{Journal of Econometrics} 181: 65--76.
+
+\bibitem[{Druska and Horrace(2004)}]{druska2004generalized}
+Druska, V., and W.~C. Horrace. 2004.
+\newblock Generalized moments estimation for spatial panel data: Indonesian
+  rice farming.
+\newblock \emph{American Journal of Agricultural Economics}  185--198.
+
+\bibitem[{Du(2017)}]{translog}
+Du, K. 2017.
+\newblock TRANSLOG: Stata module to create new variables for a translog
+  function.
+
+\bibitem[{Fe and Hofler(2020)}]{eduardo2020}
+Fe, E., and R.~Hofler. 2020.
+\newblock sfcount: Command for count-data stochastic frontiers and
+  underreported and overreported counts.
+\newblock \emph{Stata Journal} 20: 532--547.
+
+\bibitem[{Galli(2022)}]{galli2022spatial}
+Galli, F. 2022.
+\newblock A spatial stochastic frontier model including both frontier and
+  error-based spatial cross-sectional dependence.
+\newblock \emph{Spatial Economic Analysis}  1--20.
+
+\bibitem[{Glass et~al.\@(2016)Glass, Kenjegalieva, and
+  Sickles}]{glass2016spatial}
+Glass, A.~J., K.~Kenjegalieva, and R.~C. Sickles. 2016.
+\newblock A spatial autoregressive stochastic frontier model for panel data
+  with asymmetric efficiency spillovers.
+\newblock \emph{Journal of Econometrics} 190: 289--300.
+
+\bibitem[{Greene(2005)}]{greene2005fixed}
+Greene, W. 2005.
+\newblock Fixed and {{random effects}} in {{stochastic frontier models}}.
+\newblock \emph{Journal of Productivity Analysis} 23: 7--32.
+
+\bibitem[{Gude et~al.\@(2018)Gude, {\'A}lvarez, and
+  Orea}]{gude2018heterogeneous}
+Gude, A., I.~{\'A}lvarez, and L.~Orea. 2018.
+\newblock Heterogeneous spillovers among {{Spanish}} provinces: A generalized
+  spatial stochastic frontier model.
+\newblock \emph{Journal of Productivity Analysis} 50: 155--173.
+
+\bibitem[{Jann(2005)}]{BenJann}
+Jann, B. 2005.
+\newblock {MOREMATA: Stata module (Mata) to provide various functions}.
+\newblock Statistical Software Components, Boston College Department of
+  Economics.
+
+\bibitem[{Jeanty(2010)}]{Wilner2010}
+Jeanty, P.~W. 2010.
+\newblock {SPWMATRIX: Stata module to generate, import, and export spatial
+  weights}.
+\newblock Statistical Software Components, Boston College Department of
+  Economics.
+
+\bibitem[{Kabátek(2022)}]{tictoc}
+Kabátek, J. 2022.
+\newblock {TICTOC: Stata module to provide simplified timer commands}.
+\newblock Statistical Software Components, Boston College Department of
+  Economics.
+
+\bibitem[{Karakaplan(2018)}]{mustafaugurkarakaplan2018xtsfkk}
+Karakaplan, M. 2018.
+\newblock {{XTSFKK}}: {{Stata}} module to estimate endogenous panel stochastic
+  frontier models in the style of {{Karakaplan}} and {{Kutlu}}.
+\newblock \emph{Boston College Department of Economics} Statistical Software
+  Components S458445.
+
+\bibitem[{Karakaplan and Kutlu(2017)}]{karakaplan2017handling}
+Karakaplan, M., and L.~Kutlu. 2017.
+\newblock Handling endogeneity in stochastic frontier analysis.
+\newblock \emph{Economics Bulletin} 37: 889--901.
+
+\bibitem[{Karakaplan(2017)}]{karakaplan2017fitting}
+Karakaplan, M.~U. 2017.
+\newblock Fitting {{endogenous stochastic frontier models}} in {{Stata}}.
+\newblock \emph{Stata Journal} 17: 39--55.
+
+\bibitem[{Kumbhakar et~al.\@(2015)Kumbhakar, Wang, and
+  Horncastle}]{kumbhakarpractitioner}
+Kumbhakar, S.~C., H.~Wang, and A.~P. Horncastle. 2015.
+\newblock \emph{A practitioner's guide to stochastic frontier analysis using
+  Stata}.
+\newblock Cambridge University Press.
+
+\bibitem[{Kutlu et~al.\@(2020)Kutlu, Tran, and
+  Tsionas}]{kutluSpatialStochasticFrontier2020}
+Kutlu, L., K.~C. Tran, and M.~G. Tsionas. 2020.
+\newblock A spatial stochastic frontier model with endogenous frontier and
+  environmental variables.
+\newblock \emph{European Journal of Operational Research} 286: 389--399.
+
+\bibitem[{Lian et~al.\@(2023)Lian, Liu, and Parmeter}]{lian2023}
+Lian, Y., C.~Liu, and C.~F. Parmeter. 2023.
+\newblock Two-tier stochastic frontier analysis using Stata.
+\newblock \emph{Stata Journal} 23: 197--229.
+
+\bibitem[{Liu and Sickles(2023)}]{liu2023industry}
+Liu, W., and R.~C. Sickles. 2023.
+\newblock Industry-specific productivity and spillovers through input--output
+  linkages: Evidence from Asia-Pacific value chain.
+\newblock \emph{Review of Income and Wealth}  forthcoming.
+\urlprefix\url{https://doi.org/10.1111/roiw.12639}.
+\bibitem[{Meeusen and Julien(1977)}]{meeusen1977efficiency}
+Meeusen, W., and v.~D.~B. Julien. 1977.
+\newblock Efficiency {{estimation}} from {{Cobb-Douglas production functions}}
+  with {{composed error}}.
+\newblock \emph{International Economic Review} 18: 435--444.
+
+\bibitem[{Orea and {\'A}lvarez(2019)}]{orea2019new}
+Orea, L., and I.~C. {\'A}lvarez. 2019.
+\newblock A new stochastic frontier model with cross-sectional effects in both
+  noise and inefficiency terms.
+\newblock \emph{Journal of Econometrics} 213: 556--577.
+
+\bibitem[{Orea et~al.\@(2018)Orea, {\'A}lvarez, and Jamasb}]{orea2018spatial}
+Orea, L., I.~C. {\'A}lvarez, and T.~Jamasb. 2018.
+\newblock A spatial stochastic frontier model with omitted variables:
+  Electricity distribution in Norway.
+\newblock \emph{The Energy Journal} 39: 93--116.
+
+\bibitem[{Orea et~al.\@(2023)Orea, {\'A}lvarez, and Servén}]{orea2023industry}
+Orea, L., I.~C. {\'A}lvarez, and L.~Servén. 2023.
+\newblock The structural and productivity effects of infrastructure provision
+  in developed and developing countries.
+\newblock In \emph{Essays in Honor of Subal Kumbhakar (Advances in
+  Econometrics), Parmeter, C., Tsionas, M. and Wang, H-J. (eds)}. Emerald
+  Publishing Limited, Leeds, England.
+
+\bibitem[{Restuccia and Rogerson(2013)}]{restuccia2013misallocation}
+Restuccia, D., and R.~Rogerson. 2013.
+\newblock Misallocation and productivity.
+\newblock \emph{Review of Economic Dynamics} 16: 1--10.
+
+\bibitem[{{Statistical Consulting Group}(2017)}]{graph2tex}
+{Statistical Consulting Group}. 2017.
+\newblock GRAPH2TEX: Convert Stata graph to .eps with LATEX code.
+\newblock UCLA: Statistical Consulting Group.
+\urlprefix\url{https://stats.idre.ucla.edu/stat/stata/ado/analysis}.
+\bibitem[{Straub(2011)}]{straub2011infrastructure}
+Straub, S. 2011.
+\newblock Infrastructure and {{development}}: {{A critical appraisal}} of the
+  {{macro-level literature}}.
+\newblock \emph{Journal of Development Studies} 47: 683--708.
+
+\bibitem[{Wang(2003)}]{wang2003stochastic}
+Wang, H.-J. 2003.
+\newblock A {{stochastic frontier analysis}} of {{financing constraints}} on
+  {{investment}}: {{The case}} of {{financial liberalization}} in {{Taiwan}}.
+\newblock \emph{Journal of Business \& Economic Statistics} 21: 406--419.
+
+\bibitem[{Wang and Ho(2010)}]{wang2010estimating}
+Wang, H.-J., and C.-W. Ho. 2010.
+\newblock Estimating fixed-effect panel stochastic frontier models by model
+  transformation.
+\newblock \emph{Journal of Econometrics} 157: 286--296.
+
+\end{thebibliography}

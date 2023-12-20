@@ -1,0 +1,71 @@
+% readme.tex -- a short example of how each Stata Journal insert should be
+% organized.
+
+\inserttype[st0001]{article}
+
+\author{Short article author list}{%
+	Kerui Du\\
+	School of Management\\
+	Xiamen University\\
+	Xiamen, China\\
+	Email: kerrydu@xmu.edu.cn \\
+	\\
+	
+	\and
+	Luis Orea \\
+	Department of Economics \\
+	School of Economics and Business\\
+	University of Oviedo \\
+	Oviedo, Spain \\
+	Email: lorea@uniovi.es \\
+	\\
+	
+	\and
+	Inmaculada C. {\'A}lvarez \\
+	Department of Economics \\
+	Universidad Aut{\'o}noma de Madrid \\
+	Madrid, Spain\\
+	Email: inmaculada.alvarez@uam.es
+  
+  
+}
+
+\title[Fitting spatial stochastic frontier]{Fitting spatial stochastic frontier models in Stata}
+\maketitle
+
+
+\begin{abstract}
+In this article, we introduce a new command \stcmd{xtsfsp} for fitting spatial stochastic frontier models in Stata. Over the last decades, stochastic frontier models have seen important theoretical progress via the incorporation of various types of spatial components. Models with the ability to account for spatial dependence and spillovers have been developed for efficiency and productivity analysis, drawing extensive attention from industry and academia. Due to the unavailability of the statistical packages, the empirical applications of the new stochastic frontier models appear to be lagging. The \stcmd{xtsfsp} command provides a procedure for estimating spatial stochastic frontier models in the style of \cite{orea2019new} and \cite{galli2022spatial}, enabling users to handle different sources of spatial dependence. In the present article, we introduce spatial stochastic frontier models, describing the syntax and options of the new command, and providing several examples to illustrate its usage.
+	
+	\keywords{stochastic frontier models, SFA, spatial dependence, technical efficiency, spillovers }
+\end{abstract}
+
+
+% discussion of the Stata Journal document class.
+%\input sj.tex
+% discussion of the Stata Press LaTeX package for Stata output.
+%\input stata.tex
+\input{section1-2.tex}
+% discussion of the Stata Press LaTeX package for Stata output.
+\input{section3-6.tex}
+
+
+\bibliographystyle{sj}
+\bibliography{sj}
+
+
+\begin{aboutauthors}
+
+Kerui Du is an associate professor at the School of Management, Xiamen University. His primary research interests include applied econometrics, energy and environmental economics.
+
+Luis Orea is a full professor at the School of Economics and Business, University of Oviedo. His primary research interests include efficiency and productivity analysis, econometric modelling, agricultural economics, energy economics, regulation and competition and spatial economics.
+
+Inmaculada C. Álvarez is a full professor at the Department of Economics, Universidad Autónoma de Madrid. Her primary research interests include infrastructures, efficiency and productivity, economic growth and development, spatial economics and quantitative methods.
+
+	
+
+	
+\end{aboutauthors}
+
+
+\endinput
