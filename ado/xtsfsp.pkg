@@ -5,26 +5,26 @@ d
 
 
 
-f  xtspsf.ado 
-f xtspsf.sthlp 
-f lxtspsf.mlib 
-f xtspsfy.ado 
-f xtspsfyu.ado 
-f xtspsfyv.ado 
-f xtspsfyuv0.ado 
-f xtspsfyuv.ado 
-f xtspsfu.ado 
-f xtspsfv.ado 
-f xtspsfuv.ado 
-f xtspsfuv0.ado 
+f xtsfsp.ado 
+f xtsfsp.sthlp 
+f lxtsfsp.mlib 
+f xtsfspy.ado 
+f xtsfspyu.ado 
+f xtsfspyv.ado 
+f xtsfspyuv0.ado 
+f xtsfspyuv.ado 
+f xtsfspu.ado 
+f xtsfspv.ado 
+f xtsfspuv.ado 
+f xtsfspuv0.ado 
 f distinct2.ado 
 
 
 
-f xtspsf_ex1.dta 
-f xtspsf_ex2.dta 
-f xtspsf_ex3.dta 
-f xtspsf_w1.mmat 
-f xtspsf_w2.mmat 
-f xtspsf_w3.mmat 
+f xtsfsp_ex1.dta 
+f xtsfsp_ex2.dta 
+f xtsfsp_ex3.dta 
+f xtsfsp_w1.mmat 
+f xtsfsp_w2.mmat 
+f xtsfsp_w3.mmat 
 
